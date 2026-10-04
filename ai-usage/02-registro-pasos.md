@@ -16,3 +16,6 @@
 | 18:28:26 | 00:04:41 | VALIDADO | Seudónimos: 'Robert Galbraith' -> wbsearchentities devuelve Q34660 (J.K. Rowling) por alias con sim=100 y además un ítem-seudónimo Q110929251 (no humano). Hay que filtrar a humanos y dejar que el QID colapse el duplicado. |
 | 18:28:26 | 00:04:41 | DESCARTADO | Mi prueba con 'Dostoevsky' falló por entrada errónea mía; la semilla real dice 'Fyodor Dostoevsky' (línea 222). No es un problema del buscador. |
 | 18:28:26 | 00:04:41 | PROPUESTA | Añadir segunda búsqueda CirrusSearch (list=search + haswbstatement:P31=Q5): recupera 'Leopoldo Alas Clarín' (Q312747, sim solo 78.8 por label 'Leopoldo Alas') y 'Samuel Clemens' -> Q7245 (alias no devuelto antes). Candidatos = unión de ambas búsquedas. |
+| 18:28:43 | 00:04:58 | PEDIDO | Usuario pide copiar el CLAUDE.md global a ai-usage/ como instrucciones, y mostrar resultados a medida que avance la normalización. |
+| 18:28:43 | 00:04:58 | VALIDADO | Copiado CLAUDE.md a ai-usage/03-claude-md-instrucciones.md (revisado: sin claves ni tokens, solo placeholders). |
+| 18:28:43 | 00:04:58 | VALIDADO | normalize() sobre la semilla real: 500 filas, 498 válidas, 2 inválidas (Anonymous, Various Authors), 0 cambios de clean_name, 0 colisiones de match_key (sin duplicados por grafía; los seudónimos se detectarán por QID). |
