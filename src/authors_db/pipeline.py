@@ -9,6 +9,7 @@ from pathlib import Path
 import duckdb
 
 from authors_db import config, storage
+from authors_db.adjudicate import Adjudication, OllamaClient, adjudicate_one
 from authors_db.http import CachedClient
 from authors_db.normalize import normalize
 from authors_db.scoring import ScoredCandidate, rank
@@ -56,7 +57,19 @@ def export_final_tables(con: duckdb.DuckDBPyConnection, output_dir: Path) -> Non
         con.execute(f"COPY {table} TO '{output_dir / table}.parquet' (FORMAT PARQUET)")  # noqa: S608
 
 
-def run(limit: int | None = None, offline: bool = False) -> str:
+def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection, offline: bool) -> list[Adjudication]:
+    """Ask the model about each `ambiguous` row. The answers are cached."""
+    evidence = storage.read_ambiguous_evidence(
+        con, config.MAX_CANDIDATES_FOR_ADJUDICATION, config.MIN_MARGIN
+    )
+    client = OllamaClient(config.CACHE_DIR / "ollama", offline=offline)
+    return [
+        adjudicate_one(client, row_number, seed_name, candidates)
+        for row_number, (seed_name, candidates) in evidence.items()
+    ]
+
+
+def run(limit: int | None = None, offline: bool = False, adjudicate: bool = False) -> str:
     """Run all steps. Return the run id."""
     started = datetime.now(UTC)
     run_id = started.strftime("%Y%m%dT%H%M%SZ") + "-" + uuid.uuid4().hex[:6]
@@ -76,7 +89,17 @@ def run(limit: int | None = None, offline: bool = False) -> str:
         con, run_id, "raw_openlibrary_responses", config.CACHE_DIR / "openlibrary"
     )
     storage.build_stg_candidates_and_scores(con, run_id, scored)
-    storage.build_stg_match_decisions(con, run_id, config.MIN_MATCH_SCORE, config.MIN_MARGIN)
+    decision_args = (
+        config.MIN_MATCH_SCORE,
+        config.MIN_MARGIN,
+        config.DOMINANCE_RATIO,
+        config.RESOLVED_CONFIDENCE_FACTOR,
+    )
+    storage.build_stg_slm_adjudications(con, run_id, [])
+    storage.build_stg_match_decisions(con, run_id, *decision_args)
+    if adjudicate:
+        storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con, offline))
+        storage.build_stg_match_decisions(con, run_id, *decision_args)
     storage.build_authors(con, run_id)
     export_final_tables(con, config.OUTPUT_DIR)
     storage.record_pipeline_run(

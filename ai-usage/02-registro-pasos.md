@@ -37,3 +37,4 @@
 | 19:17:44 | 00:53:59 | VALIDADO | Pipeline completo offline (python -m authors_db run --offline, 47s): matched 453, ambiguous 45, invalid 2, not_found 0. Los 45 ambiguous son casi todos homónimos/parientes (Jane Austen vs Anna Austen); el único genuinamente ambiguo es Alexandre Dumas (margen 0.0, padre vs hijo). |
 | 19:17:44 | 00:53:59 | PROPUESTA | Descarga del modelo qwen2.5:7b-instruct-q4_K_M en Ollama (GPU RTX 2060 6GB) para el árbitro SLM; se fijará la versión por digest. |
 | 19:18:20 | 00:54:35 | PROPUESTA | Nombre canónico: etiqueta 'mul' antes que 'en' (Huidobro). Test añadido. |
+| 19:25:29 | 01:01:44 | PROPUESTA | adjudicate.py (SlmAnswer con Pydantic, OllamaClient temp 0 + seed 0 + digest fijado + caché gz), prompts.py versionado (adjudicate-v1), stg_slm_adjudications y decisiones en SQL: SLM primero, regla de dominancia (>=3x sitelinks y similitud de nombre no menor) solo si el SLM no elige, confianza x0.8. 43 tests. |

@@ -64,7 +64,9 @@ def test_build_raw_responses_with_missing_cache_creates_empty_table(con, tmp_pat
     assert con.execute("SELECT COUNT(*) FROM raw_openlibrary_responses").fetchone() == (0,)
 
 
-def scored_candidate(qid: str, score: float, label: str = "L"):
+def scored_candidate(
+    qid: str, score: float, label: str = "L", sitelinks: int = 1, sim: float = 100.0
+):
     from authors_db.scoring import ScoredCandidate
     from authors_db.wikidata import Candidate
 
@@ -75,17 +77,18 @@ def scored_candidate(qid: str, score: float, label: str = "L"):
         names=[label],
         is_writer=True,
         open_library_id="OL1A",
-        sitelinks=1,
+        sitelinks=sitelinks,
         birth="1900-01-01",
         death=None,
     )
-    return ScoredCandidate(cand, score, 100.0, label, "reason")
+    return ScoredCandidate(cand, score, sim, label, "reason")
 
 
 def build_chain(con, tmp_path, names, scored):
     storage.build_raw_seed(con, RUN, write_seed(tmp_path, names))
     storage.build_stg_seed_normalized(con, RUN)
     storage.build_stg_candidates_and_scores(con, RUN, scored)
+    storage.build_stg_slm_adjudications(con, RUN, [])
     storage.build_stg_match_decisions(con, RUN, min_score=80.0, min_margin=10.0)
     storage.build_authors(con, RUN)
 
@@ -131,4 +134,78 @@ def test_authors_marks_duplicate_of_for_seed_names_with_same_qid(con, tmp_path):
 def test_authors_has_no_qid_for_ambiguous_rows(con, tmp_path):
     scored = {1: ("Close", [scored_candidate("Q2", 98), scored_candidate("Q8", 95)])}
     build_chain(con, tmp_path, ["Close"], scored)
+    assert con.execute("SELECT match_status, qid FROM authors").fetchone() == ("ambiguous", None)
+
+
+def adjudication(chosen_qid: str | None, row_number: int = 1):
+    from authors_db.adjudicate import Adjudication
+
+    return Adjudication(
+        row_number,
+        "Close",
+        "m",
+        "d",
+        "v1",
+        [],
+        "A" if chosen_qid else "none",
+        chosen_qid,
+        "because",
+        True,
+        "{}",
+    )
+
+
+def rebuild_with(con, adjudications):
+    storage.build_stg_slm_adjudications(con, RUN, adjudications)
+    storage.build_stg_match_decisions(con, RUN, 80.0, 10.0, dominance_ratio=3.0)
+    storage.build_authors(con, RUN)
+
+
+def ambiguous_pair(sitelinks_top: int, sitelinks_second: int, sim_second: float = 100.0):
+    return {
+        1: (
+            "Close",
+            [
+                scored_candidate("Q2", 98, sitelinks=sitelinks_top),
+                scored_candidate("Q8", 95, sitelinks=sitelinks_second, sim=sim_second),
+            ],
+        )
+    }
+
+
+def test_slm_choice_resolves_ambiguous_row_with_lower_confidence(con, tmp_path):
+    build_chain(con, tmp_path, ["Close"], ambiguous_pair(1, 1))
+    rebuild_with(con, [adjudication("Q8")])
+    row = con.execute("SELECT match_status, qid, resolved_by, confidence FROM authors").fetchone()
+    assert row == ("matched", "Q8", "slm", 0.76)
+
+
+def test_dominance_rule_applies_only_after_the_model_gave_no_choice(con, tmp_path):
+    build_chain(con, tmp_path, ["Close"], ambiguous_pair(90, 10))
+    assert con.execute("SELECT match_status FROM authors").fetchone() == ("ambiguous",)
+    rebuild_with(con, [adjudication(None)])
+    row = con.execute("SELECT match_status, qid, resolved_by FROM authors").fetchone()
+    assert row == ("matched", "Q2", "dominance_rule")
+
+
+def test_dominance_rule_does_not_choose_a_candidate_with_lower_name_similarity(con, tmp_path):
+    scored = {
+        1: (
+            "Close",
+            [
+                scored_candidate("Q2", 98, sitelinks=10, sim=100),
+                scored_candidate("Q8", 95, sitelinks=90, sim=91),
+            ],
+        )
+    }
+    build_chain(con, tmp_path, ["Close"], scored)
+    rebuild_with(con, [adjudication(None)])
+    row = con.execute("SELECT match_status, qid, resolved_by FROM authors").fetchone()
+    assert row == ("matched", "Q2", "dominance_rule") or row == ("ambiguous", None, "rule")
+    assert row[1] != "Q8"
+
+
+def test_row_stays_ambiguous_when_model_and_dominance_rule_give_no_choice(con, tmp_path):
+    build_chain(con, tmp_path, ["Close"], ambiguous_pair(50, 40))
+    rebuild_with(con, [adjudication(None)])
     assert con.execute("SELECT match_status, qid FROM authors").fetchone() == ("ambiguous", None)

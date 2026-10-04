@@ -9,6 +9,7 @@ from pathlib import Path
 import duckdb
 import pandas as pd
 
+from authors_db.adjudicate import Adjudication, CandidateEvidence
 from authors_db.normalize import normalize
 from authors_db.scoring import ScoredCandidate
 
@@ -187,7 +188,7 @@ def build_stg_candidates_and_scores(
                 "found_via",
                 "via_pseudonym",
             ],
-        ),
+        ).astype({"row_number": "int64", "sitelinks": "int64"}),
     )
     _register_and_create(
         con,
@@ -208,45 +209,182 @@ def build_stg_candidates_and_scores(
                 "sitelinks",
                 "reason",
             ],
+        ).astype(
+            {
+                "row_number": "int64",
+                "qid": "string",
+                "best_name": "string",
+                "reason": "string",
+                "rank": "int64",
+                "score": "float64",
+                "name_similarity": "float64",
+                "sitelinks": "int64",
+            }
         ),
     )
 
 
-def build_stg_match_decisions(
-    con: duckdb.DuckDBPyConnection, run_id: str, min_score: float, min_margin: float
+def build_stg_slm_adjudications(
+    con: duckdb.DuckDBPyConnection, run_id: str, results: list[Adjudication]
 ) -> None:
-    """Create `stg_match_decisions` with SQL. The thresholds are constants from `config`."""
+    """Create `stg_slm_adjudications`. The table is empty if the run has no adjudication."""
+    rows = [
+        (
+            run_id,
+            a.row_number,
+            a.seed_name,
+            a.model,
+            a.model_digest,
+            a.prompt_version,
+            json.dumps([c.__dict__ for c in a.candidates], ensure_ascii=False),
+            a.choice,
+            a.chosen_qid,
+            a.reason,
+            a.is_valid_output,
+            a.raw_response,
+        )
+        for a in results
+    ]
+    _register_and_create(
+        con,
+        "stg_slm_adjudications",
+        pd.DataFrame(
+            rows,
+            columns=[
+                "run_id",
+                "row_number",
+                "seed_name",
+                "model",
+                "model_digest",
+                "prompt_version",
+                "candidates",
+                "choice",
+                "chosen_qid",
+                "reason",
+                "is_valid_output",
+                "raw_response",
+            ],
+        ).astype(
+            {
+                "row_number": "int64",
+                "chosen_qid": "string",
+                "reason": "string",
+                "choice": "string",
+                "is_valid_output": "bool",
+            }
+        ),
+    )
+
+
+def read_ambiguous_evidence(
+    con: duckdb.DuckDBPyConnection, max_candidates: int, margin: float
+) -> dict[int, tuple[str, list[CandidateEvidence]]]:
+    """Read the `ambiguous` rows with the evidence of the candidates that cause the doubt."""
+    rows = con.execute(f"""
+        SELECT s.row_number, s.seed_name, c.qid, c.label, s.best_name, c.description, c.birth,
+               c.death, c.is_writer, c.open_library_id IS NOT NULL, c.sitelinks
+        FROM stg_match_decisions d
+        JOIN stg_candidate_scores s ON s.row_number = d.row_number
+        JOIN stg_wikidata_candidates c ON c.row_number = s.row_number AND c.qid = s.qid
+        WHERE d.rule_status = 'ambiguous' AND s.rank <= {max_candidates}
+              AND s.score >= d.best_score - {margin}
+        ORDER BY s.row_number, s.rank
+    """).fetchall()  # noqa: S608 - the values are constants from `config`
+    out: dict[int, tuple[str, list[CandidateEvidence]]] = {}
+    for row_number, seed_name, *fields in rows:
+        out.setdefault(row_number, (seed_name, []))[1].append(CandidateEvidence(*fields))
+    return out
+
+
+def build_stg_match_decisions(
+    con: duckdb.DuckDBPyConnection,
+    run_id: str,
+    min_score: float,
+    min_margin: float,
+    dominance_ratio: float = 3.0,
+    resolved_factor: float = 0.8,
+) -> None:
+    """Create `stg_match_decisions` with SQL. The thresholds are constants from `config`.
+
+    The rule gives a first status. For an `ambiguous` row, the adjudication of the model comes
+    first. If the model gave no choice, the dominance rule decides. Else the row stays ambiguous.
+    """
     con.execute(f"""
         CREATE OR REPLACE TABLE stg_match_decisions AS
         WITH top AS (SELECT * FROM stg_candidate_scores WHERE rank = 1),
              second AS (SELECT * FROM stg_candidate_scores WHERE rank = 2),
-             joined AS (
+             rule AS (
                  SELECT n.row_number, n.seed_name, n.is_invalid, n.invalid_reason,
                         t.qid AS best_qid, t.score AS best_score,
                         s.qid AS second_qid, s.score AS second_score,
-                        t.score - COALESCE(s.score, 0) AS margin
+                        t.score - COALESCE(s.score, 0) AS margin,
+                        CASE WHEN n.is_invalid THEN 'invalid'
+                             WHEN t.qid IS NULL OR t.score < {min_score} THEN 'not_found'
+                             WHEN t.score - COALESCE(s.score, 0) < {min_margin} THEN 'ambiguous'
+                             ELSE 'matched' END AS rule_status
                  FROM stg_seed_normalized n
                  LEFT JOIN top t USING (row_number)
                  LEFT JOIN second s USING (row_number)
+             ),
+             pair AS (
+                 SELECT row_number, qid, sitelinks, ROW_NUMBER() OVER (
+                     PARTITION BY row_number ORDER BY name_similarity DESC, sitelinks DESC, qid
+                 ) AS prank
+                 FROM stg_candidate_scores WHERE rank <= 2
+             ),
+             dominant AS (
+                 SELECT a.row_number, a.qid FROM pair a
+                 JOIN pair b ON a.row_number = b.row_number AND a.prank = 1 AND b.prank = 2
+                 WHERE a.sitelinks >= {dominance_ratio} * GREATEST(b.sitelinks, 1)
+             ),
+             choice AS (
+                 SELECT r.*, m.chosen_qid AS slm_qid, m.reason AS slm_reason,
+                        m.row_number IS NOT NULL AS slm_asked, d.qid AS dominant_qid,
+                        CASE WHEN r.rule_status = 'matched' THEN 'rule'
+                             WHEN r.rule_status = 'ambiguous' AND m.chosen_qid IS NOT NULL
+                                 THEN 'slm'
+                             WHEN r.rule_status = 'ambiguous' AND m.row_number IS NOT NULL
+                                  AND d.qid IS NOT NULL THEN 'dominance_rule'
+                             ELSE 'rule' END AS resolved_by,
+                        CASE WHEN r.rule_status = 'matched' THEN r.best_qid
+                             WHEN r.rule_status = 'ambiguous' AND m.chosen_qid IS NOT NULL
+                                 THEN m.chosen_qid
+                             WHEN r.rule_status = 'ambiguous' AND m.row_number IS NOT NULL
+                                 THEN d.qid END AS chosen_qid
+                 FROM rule r
+                 LEFT JOIN stg_slm_adjudications m ON m.row_number = r.row_number
+                 LEFT JOIN dominant d ON d.row_number = r.row_number
              )
-        SELECT '{run_id}' AS run_id, row_number, seed_name,
-               CASE WHEN is_invalid THEN 'invalid'
-                    WHEN best_qid IS NULL OR best_score < {min_score} THEN 'not_found'
-                    WHEN margin < {min_margin} THEN 'ambiguous'
-                    ELSE 'matched' END AS match_status,
-               best_qid, best_score, second_qid, second_score, margin,
-               CASE WHEN is_invalid THEN 'invalid seed name: ' || invalid_reason
-                    WHEN best_qid IS NULL THEN 'no candidate found'
-                    WHEN best_score < {min_score}
-                        THEN 'top score ' || best_score || ' is below ' || {min_score}
-                    WHEN margin < {min_margin}
-                        THEN 'top score ' || best_score || ' but margin ' || ROUND(margin, 1)
+        SELECT '{run_id}' AS run_id, c.row_number, c.seed_name, c.rule_status,
+               CASE WHEN c.chosen_qid IS NOT NULL THEN 'matched' ELSE c.rule_status END
+                   AS match_status,
+               c.chosen_qid, sc.score AS chosen_score,
+               c.best_qid, c.best_score, c.second_qid, c.second_score, c.margin,
+               CASE WHEN c.is_invalid THEN 'invalid seed name: ' || c.invalid_reason
+                    WHEN c.best_qid IS NULL THEN 'no candidate found'
+                    WHEN c.best_score < {min_score}
+                        THEN 'top score ' || c.best_score || ' is below ' || {min_score}
+                    WHEN c.margin < {min_margin}
+                        THEN 'top score ' || c.best_score || ' but margin ' || ROUND(c.margin, 1)
                              || ' is below ' || {min_margin}
-                    ELSE 'top score ' || best_score || ' and margin ' || ROUND(margin, 1)
+                             || CASE c.resolved_by
+                                WHEN 'slm' THEN '; the model chose ' || c.chosen_qid || ': '
+                                                || c.slm_reason
+                                WHEN 'dominance_rule'
+                                    THEN '; the model gave no choice; the dominance rule chose '
+                                         || c.chosen_qid
+                                ELSE '' END
+                    ELSE 'top score ' || c.best_score || ' and margin ' || ROUND(c.margin, 1)
                          || ' meet the thresholds' END AS match_reason,
-               'rule' AS resolved_by,
-               CASE WHEN is_invalid THEN NULL ELSE ROUND(best_score / 100, 3) END AS confidence
-        FROM joined ORDER BY row_number
+               c.resolved_by,
+               CASE WHEN c.is_invalid THEN NULL
+                    WHEN c.chosen_qid IS NULL THEN ROUND(c.best_score / 100, 3)
+                    WHEN c.resolved_by = 'rule' THEN ROUND(sc.score / 100, 3)
+                    ELSE ROUND(sc.score / 100 * {resolved_factor}, 3) END AS confidence
+        FROM choice c
+        LEFT JOIN stg_candidate_scores sc
+               ON sc.row_number = c.row_number AND sc.qid = c.chosen_qid
+        ORDER BY c.row_number
     """)  # noqa: S608 - the values are constants from `config`
 
 
@@ -258,7 +396,7 @@ def build_authors(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
             SELECT d.row_number, d.seed_name, n.display_name, NOT n.is_invalid AS is_author,
                    n.invalid_reason, n.exact_dup_of, d.match_status, d.confidence,
                    d.match_reason, d.resolved_by,
-                   CASE WHEN d.match_status = 'matched' THEN d.best_qid END AS qid
+                   d.chosen_qid AS qid
             FROM stg_match_decisions d JOIN stg_seed_normalized n USING (row_number)
         )
         SELECT '{run_id}' AS run_id, b.row_number, b.seed_name, b.display_name, b.is_author,
