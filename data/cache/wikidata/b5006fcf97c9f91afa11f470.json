@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Inca Garcilaso de la Vega",
+  "language": "en",
+  "type": "item",
+  "limit": 7,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:27:53+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Inca Garcilaso de la Vega"
+  },
+  "search": [
+   {
+    "id": "Q334711",
+    "title": "Q334711",
+    "pageid": 320784,
+    "concepturi": "http://www.wikidata.org/entity/Q334711",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q334711",
+    "display": {
+     "label": {
+      "value": "Inca Garcilaso de la Vega",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish chronicler (1539-1616)",
+      "language": "en"
+     }
+    },
+    "label": "Inca Garcilaso de la Vega",
+    "description": "Spanish chronicler (1539-1616)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Inca Garcilaso de la Vega"
+    }
+   },
+   {
+    "id": "Q126364394",
+    "title": "Q126364394",
+    "pageid": 120390532,
+    "concepturi": "http://www.wikidata.org/entity/Q126364394",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q126364394",
+    "display": {
+     "label": {
+      "value": "Inca Garcilaso de la Vega memorial",
+      "language": "en"
+     },
+     "description": {
+      "value": "memorial in Villa Borghese gardens, Rome, Italy",
+      "language": "en"
+     }
+    },
+    "label": "Inca Garcilaso de la Vega memorial",
+    "description": "memorial in Villa Borghese gardens, Rome, Italy",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Inca Garcilaso de la Vega memorial"
+    }
+   }
+  ],
+  "success": 1
+ }
+}
