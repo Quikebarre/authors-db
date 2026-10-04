@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "W. G. Sebald haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:11+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q76952",
+     "pageid": 79555,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German writer and academic (1944-2001)",
+     "timestamp": "2026-09-24T20:22:46Z"
+    }
+   ]
+  }
+ }
+}

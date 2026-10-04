@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Mieko Kawakami",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:56+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Mieko Kawakami"
+  },
+  "search": [
+   {
+    "id": "Q455930",
+    "title": "Q455930",
+    "pageid": 430108,
+    "concepturi": "http://www.wikidata.org/entity/Q455930",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q455930",
+    "display": {
+     "label": {
+      "value": "Mieko Kawakami",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese novelist and singer",
+      "language": "en"
+     }
+    },
+    "label": "Mieko Kawakami",
+    "description": "Japanese novelist and singer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Mieko Kawakami"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

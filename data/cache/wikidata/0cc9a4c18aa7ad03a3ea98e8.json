@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Rohinton Mistry",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:26+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Rohinton Mistry"
+  },
+  "search": [
+   {
+    "id": "Q732338",
+    "title": "Q732338",
+    "pageid": 688604,
+    "concepturi": "http://www.wikidata.org/entity/Q732338",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q732338",
+    "display": {
+     "label": {
+      "value": "Rohinton Mistry",
+      "language": "en"
+     },
+     "description": {
+      "value": "Indian-born Canadian writer (born 1952)",
+      "language": "en"
+     }
+    },
+    "label": "Rohinton Mistry",
+    "description": "Indian-born Canadian writer (born 1952)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Rohinton Mistry"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

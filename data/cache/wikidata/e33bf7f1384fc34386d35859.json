@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Atul Gawande haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:57+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q2751383",
+     "pageid": 2641357,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American surgeon",
+     "timestamp": "2026-09-02T19:33:16Z"
+    }
+   ]
+  }
+ }
+}

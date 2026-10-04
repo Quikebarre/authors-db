@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Kahlil Gibran haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:56+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q47737",
+     "pageid": 49836,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Lebanese-American writer, poet, and painter (1883–1931)",
+     "timestamp": "2026-09-01T19:24:16Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6347024",
+     "pageid": 6156712,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American painter and sculptor",
+     "timestamp": "2026-06-30T04:04:57Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q100882174",
+     "pageid": 98381463,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American basketball player (born 1986)",
+     "timestamp": "2026-09-06T14:02:12Z"
+    }
+   ]
+  }
+ }
+}

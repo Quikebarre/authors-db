@@ -1,0 +1,73 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Karl Ove Knausgård",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:21+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Karl Ove Knausgård"
+  },
+  "search": [
+   {
+    "id": "Q609317",
+    "title": "Q609317",
+    "pageid": 573728,
+    "concepturi": "http://www.wikidata.org/entity/Q609317",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q609317",
+    "display": {
+     "label": {
+      "value": "Karl Ove Knausgård",
+      "language": "en"
+     },
+     "description": {
+      "value": "Norwegian author",
+      "language": "en"
+     }
+    },
+    "label": "Karl Ove Knausgård",
+    "description": "Norwegian author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Karl Ove Knausgård"
+    }
+   },
+   {
+    "id": "Q16813113",
+    "title": "Q16813113",
+    "pageid": 18419265,
+    "concepturi": "http://www.wikidata.org/entity/Q16813113",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q16813113",
+    "display": {
+     "label": {
+      "value": "Category:Novels by Karl Ove Knausgård",
+      "language": "en"
+     },
+     "description": {
+      "value": "Wikimedia category",
+      "language": "en"
+     }
+    },
+    "label": "Category:Novels by Karl Ove Knausgård",
+    "description": "Wikimedia category",
+    "match": {
+     "type": "label",
+     "language": "es",
+     "text": "Karl Ove Knausgård"
+    },
+    "aliases": [
+     "Karl Ove Knausgård"
+    ]
+   }
+  ],
+  "success": 1
+ }
+}

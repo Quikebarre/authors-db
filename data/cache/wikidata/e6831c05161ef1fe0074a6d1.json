@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Olga Tokarczuk haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:23+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q254032",
+     "pageid": 246544,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish writer and activist (born 1962)",
+     "timestamp": "2026-09-04T22:17:15Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q70569171",
+     "pageid": 70243033,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish psychologist and Son of <span class=\"searchmatch\">Olga</span> <span class=\"searchmatch\">Tokarczuk</span>",
+     "timestamp": "2026-06-22T15:06:18Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q70448031",
+     "pageid": 70105735,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish publisher and physical education teacher, the husband of <span class=\"searchmatch\">Olga</span> <span class=\"searchmatch\">Tokarczuk</span>",
+     "timestamp": "2026-05-13T15:53:50Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q72085395",
+     "pageid": 71739489,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish translator",
+     "timestamp": "2026-07-24T08:05:10Z"
+    }
+   ]
+  }
+ }
+}

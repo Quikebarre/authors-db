@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Elena Fortún haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:39+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q5359012",
+     "pageid": 5125616,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish writer (1886-1952)",
+     "timestamp": "2026-09-06T21:57:09Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6306400",
+     "pageid": 6112834,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Bolivian historian (1929-2016)",
+     "timestamp": "2026-08-04T17:56:05Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q113018301",
+     "pageid": 107857045,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentinian caricaturist",
+     "timestamp": "2026-07-21T03:33:14Z"
+    }
+   ]
+  }
+ }
+}

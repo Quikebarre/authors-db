@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Jostein Gaarder",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:36+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Jostein Gaarder"
+  },
+  "search": [
+   {
+    "id": "Q185548",
+    "title": "Q185548",
+    "pageid": 184386,
+    "concepturi": "http://www.wikidata.org/entity/Q185548",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q185548",
+    "display": {
+     "label": {
+      "value": "Jostein Gaarder",
+      "language": "en"
+     },
+     "description": {
+      "value": "Norwegian author (born 1952)",
+      "language": "en"
+     }
+    },
+    "label": "Jostein Gaarder",
+    "description": "Norwegian author (born 1952)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Jostein Gaarder"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

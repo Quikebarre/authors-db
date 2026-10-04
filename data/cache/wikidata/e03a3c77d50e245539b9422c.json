@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Italo Svevo haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:54+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q216478",
+     "pageid": 211698,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian writer (1861-1928)",
+     "timestamp": "2026-09-28T12:53:20Z"
+    }
+   ]
+  }
+ }
+}

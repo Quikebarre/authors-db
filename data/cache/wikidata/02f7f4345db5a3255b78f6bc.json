@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Bilge Karasu",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:05+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Bilge Karasu"
+  },
+  "search": [
+   {
+    "id": "Q6841352",
+    "title": "Q6841352",
+    "pageid": 6694113,
+    "concepturi": "http://www.wikidata.org/entity/Q6841352",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q6841352",
+    "display": {
+     "label": {
+      "value": "Bilge Karasu",
+      "language": "en"
+     },
+     "description": {
+      "value": "Turkish writer (1930–1995)",
+      "language": "en"
+     }
+    },
+    "label": "Bilge Karasu",
+    "description": "Turkish writer (1930–1995)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Bilge Karasu"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Steven Pinker haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:02+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q212730",
+     "pageid": 208261,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Canadian-American cognitive psychologist, linguist, and author, an advocate of evolutionary psychology and the computational theory of the mind",
+     "timestamp": "2026-09-29T08:19:38Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q115739682",
+     "pageid": 110288163,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "psychologist and an ex-wife of <span class=\"searchmatch\">Steven</span> <span class=\"searchmatch\">Pinker</span>",
+     "timestamp": "2025-02-20T08:10:39Z"
+    }
+   ]
+  }
+ }
+}

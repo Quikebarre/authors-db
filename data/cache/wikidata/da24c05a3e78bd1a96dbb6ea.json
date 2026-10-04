@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Ryunosuke Akutagawa haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:47+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q186326",
+     "pageid": 185110,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese writer (1892–1927)",
+     "timestamp": "2026-09-15T06:40:56Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Yaşar Kemal haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:01+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q327142",
+     "pageid": 314085,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Kurdish writer and human rights activist (1923–2015)",
+     "timestamp": "2026-09-01T18:34:09Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q74447800",
+     "pageid": 74070534,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Turkish association football referee",
+     "timestamp": "2026-07-10T00:22:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q93249058",
+     "pageid": 92386971,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-11-25T20:57:37Z"
+    }
+   ]
+  }
+ }
+}

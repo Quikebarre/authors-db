@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Yukio Mishima haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:44+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q134456",
+     "pageid": 136201,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese author (1925–1970)",
+     "timestamp": "2026-09-11T12:27:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q109286683",
+     "pageid": 104459100,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "genetics researcher at Niigata University, Japan",
+     "timestamp": "2025-05-25T13:05:24Z"
+    }
+   ]
+  }
+ }
+}

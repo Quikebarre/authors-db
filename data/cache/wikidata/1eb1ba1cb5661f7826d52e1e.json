@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Anita Desai haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:29+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q268495",
+     "pageid": 260039,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indian novelist, University professor (born 1937)",
+     "timestamp": "2026-09-04T20:17:25Z"
+    }
+   ]
+  }
+ }
+}

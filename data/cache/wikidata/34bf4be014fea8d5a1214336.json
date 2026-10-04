@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Maurice Sendak haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:31+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q314771",
+     "pageid": 302609,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American illustrator and writer of children&#039;s books (1928-2012)",
+     "timestamp": "2026-09-05T06:53:38Z"
+    }
+   ]
+  }
+ }
+}

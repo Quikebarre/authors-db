@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Vikram Seth",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:21+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Vikram Seth"
+  },
+  "search": [
+   {
+    "id": "Q379762",
+    "title": "Q379762",
+    "pageid": 361458,
+    "concepturi": "http://www.wikidata.org/entity/Q379762",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q379762",
+    "display": {
+     "label": {
+      "value": "Vikram Seth",
+      "language": "en"
+     },
+     "description": {
+      "value": "Indian novelist and poet",
+      "language": "en"
+     }
+    },
+    "label": "Vikram Seth",
+    "description": "Indian novelist and poet",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Vikram Seth"
+    }
+   },
+   {
+    "id": "Q97015526",
+    "title": "Q97015526",
+    "pageid": 95517711,
+    "concepturi": "http://www.wikidata.org/entity/Q97015526",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q97015526",
+    "display": {
+     "label": {
+      "value": "Vikram Sethi",
+      "language": "en"
+     },
+     "description": {
+      "value": "American author and cyber security specialist",
+      "language": "en"
+     }
+    },
+    "label": "Vikram Sethi",
+    "description": "American author and cyber security specialist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Vikram Sethi"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

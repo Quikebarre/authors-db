@@ -1,0 +1,90 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Maxine Hong Kingston",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:18+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Maxine Hong Kingston"
+  },
+  "search": [
+   {
+    "id": "Q19330",
+    "title": "Q19330",
+    "pageid": 22467,
+    "concepturi": "http://www.wikidata.org/entity/Q19330",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q19330",
+    "display": {
+     "label": {
+      "value": "Maxine Hong Kingston",
+      "language": "en"
+     },
+     "description": {
+      "value": "Chinese American author",
+      "language": "en"
+     }
+    },
+    "label": "Maxine Hong Kingston",
+    "description": "Chinese American author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Maxine Hong Kingston"
+    }
+   },
+   {
+    "id": "Q136212833",
+    "title": "Q136212833",
+    "pageid": 129921651,
+    "concepturi": "http://www.wikidata.org/entity/Q136212833",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136212833",
+    "display": {
+     "label": {
+      "value": "Maxine Hong Kingston",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2006",
+      "language": "en"
+     }
+    },
+    "label": "Maxine Hong Kingston",
+    "description": "book 2006",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Maxine Hong Kingston"
+    }
+   },
+   {
+    "id": "Q119979704",
+    "title": "Q119979704",
+    "pageid": 114447298,
+    "concepturi": "http://www.wikidata.org/entity/Q119979704",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q119979704",
+    "display": {
+     "label": {
+      "value": "Maxine Hong Kingston’s Transnational Writing in The Woman Warrior",
+      "language": "en"
+     }
+    },
+    "label": "Maxine Hong Kingston’s Transnational Writing in The Woman Warrior",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Maxine Hong Kingston’s Transnational Writing in The Woman Warrior"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Forough Farrokhzad",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:59+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Forough Farrokhzad"
+  },
+  "search": [
+   {
+    "id": "Q464394",
+    "title": "Q464394",
+    "pageid": 438008,
+    "concepturi": "http://www.wikidata.org/entity/Q464394",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q464394",
+    "display": {
+     "label": {
+      "value": "Forugh Farrokhzad",
+      "language": "en"
+     },
+     "description": {
+      "value": "Iranian poet (1935-1967)",
+      "language": "en"
+     }
+    },
+    "label": "Forugh Farrokhzad",
+    "description": "Iranian poet (1935-1967)",
+    "match": {
+     "type": "alias",
+     "language": "en",
+     "text": "Forough Farrokhzad"
+    },
+    "aliases": [
+     "Forough Farrokhzad"
+    ]
+   }
+  ],
+  "success": 1
+ }
+}

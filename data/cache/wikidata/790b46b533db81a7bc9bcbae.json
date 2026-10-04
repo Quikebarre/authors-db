@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Yuval Noah Harari haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:37+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q2484404",
+     "pageid": 2399267,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Israeli historian and author of popular science bestsellers",
+     "timestamp": "2026-10-03T20:06:10Z"
+    }
+   ]
+  }
+ }
+}

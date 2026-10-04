@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Amitav Ghosh haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:24+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q336125",
+     "pageid": 322115,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indian writer",
+     "timestamp": "2026-06-19T13:14:51Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q4746922",
+     "pageid": 4536045,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indian banker",
+     "timestamp": "2026-07-05T21:00:08Z"
+    }
+   ]
+  }
+ }
+}

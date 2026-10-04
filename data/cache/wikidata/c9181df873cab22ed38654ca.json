@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Stanisław Lem haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:28+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q6530",
+     "pageid": 7654,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish science fiction author, philosopher and futurologist, studied medical doctor (1921–2006)",
+     "timestamp": "2026-09-22T21:44:44Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q18543209",
+     "pageid": 20078202,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German translator of works by <span class=\"searchmatch\">Stanisław</span> <span class=\"searchmatch\">Lem</span>",
+     "timestamp": "2026-06-09T09:52:53Z"
+    }
+   ]
+  }
+ }
+}

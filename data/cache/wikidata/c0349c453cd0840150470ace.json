@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Cornelia Funke haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:36+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q57971",
+     "pageid": 60792,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German author (born 1958)",
+     "timestamp": "2026-10-04T10:45:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q133743249",
+     "pageid": 127590814,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-04-03T07:44:19Z"
+    }
+   ]
+  }
+ }
+}

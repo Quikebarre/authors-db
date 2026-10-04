@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Nassim Nicholas Taleb",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:57+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Nassim Nicholas Taleb"
+  },
+  "search": [
+   {
+    "id": "Q333521",
+    "title": "Q333521",
+    "pageid": 319662,
+    "concepturi": "http://www.wikidata.org/entity/Q333521",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q333521",
+    "display": {
+     "label": {
+      "value": "Nassim Nicholas Taleb",
+      "language": "en"
+     },
+     "description": {
+      "value": "Lebanese-American mathematical statistician, option trader, risk analyst and author (born 1960)",
+      "language": "en"
+     }
+    },
+    "label": "Nassim Nicholas Taleb",
+    "description": "Lebanese-American mathematical statistician, option trader, risk analyst and author (born 1960)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Nassim Nicholas Taleb"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

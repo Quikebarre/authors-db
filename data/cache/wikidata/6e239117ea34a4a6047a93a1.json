@@ -1,0 +1,90 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "George R. R. Martin",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:23+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "George R. R. Martin"
+  },
+  "search": [
+   {
+    "id": "Q181677",
+    "title": "Q181677",
+    "pageid": 180833,
+    "concepturi": "http://www.wikidata.org/entity/Q181677",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q181677",
+    "display": {
+     "label": {
+      "value": "George R. R. Martin",
+      "language": "en"
+     },
+     "description": {
+      "value": "American writer and television producer (born 1948)",
+      "language": "en"
+     }
+    },
+    "label": "George R. R. Martin",
+    "description": "American writer and television producer (born 1948)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "George R. R. Martin"
+    }
+   },
+   {
+    "id": "Q126958283",
+    "title": "Q126958283",
+    "pageid": 120960783,
+    "concepturi": "http://www.wikidata.org/entity/Q126958283",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q126958283",
+    "display": {
+     "label": {
+      "value": "George R. R. Martin and the Fantasy Form",
+      "language": "en"
+     }
+    },
+    "label": "George R. R. Martin and the Fantasy Form",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "George R. R. Martin and the Fantasy Form"
+    }
+   },
+   {
+    "id": "Q126958285",
+    "title": "Q126958285",
+    "pageid": 120960785,
+    "concepturi": "http://www.wikidata.org/entity/Q126958285",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q126958285",
+    "display": {
+     "label": {
+      "value": "George R. R. Martin and the Fantasy Form. Joseph Rex Young [Review]",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published in 2020",
+      "language": "en"
+     }
+    },
+    "label": "George R. R. Martin and the Fantasy Form. Joseph Rex Young [Review]",
+    "description": "scientific article published in 2020",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "George R. R. Martin and the Fantasy Form. Joseph Rex Young [Review]"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

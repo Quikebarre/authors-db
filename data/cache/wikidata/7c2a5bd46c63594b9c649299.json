@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Jean-Paul Sartre haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:51+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q9364",
+     "pageid": 10733,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French existentialist philosopher (1905–1980)",
+     "timestamp": "2026-09-20T11:51:19Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q135195927",
+     "pageid": 128953040,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-07-03T07:35:53Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q97765991",
+     "pageid": 96147993,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-10-02T14:15:19Z"
+    }
+   ]
+  }
+ }
+}

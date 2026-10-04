@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Elie Wiesel haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:07+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q18391",
+     "pageid": 21402,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Romanian-born American writer, professor, political activist, Nobel laureate, and Holocaust survivor (1928-2016)",
+     "timestamp": "2026-09-26T05:23:25Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q29514535",
+     "pageid": 31160674,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American businessman, son of Elie Wiesel",
+     "timestamp": "2026-02-07T09:11:11Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q111358539",
+     "pageid": 106330139,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-09-10T10:55:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q84770344",
+     "pageid": 84071748,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American nun and Holocaust historian",
+     "timestamp": "2026-05-02T08:57:08Z"
+    }
+   ]
+  }
+ }
+}

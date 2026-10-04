@@ -1,4 +1,4 @@
-"""Scoring explícito y explicable de candidatos. Funciones puras."""
+"""Explicit score for each candidate. Each score has a readable reason."""
 
 from dataclasses import dataclass
 
@@ -24,10 +24,10 @@ class ScoredCandidate:
 
 
 def name_similarity(key: str, names: list[str]) -> tuple[float, str]:
-    """Mejor similitud (0-100) entre la clave y cualquier etiqueta/alias.
+    """Return the best similarity (0 to 100) between the key and any label or alias.
 
-    token_set_ratio solo cuenta si la clave tiene >=2 tokens y se limita a 90, para que
-    'homer' no iguale a 'homer simpson' pero 'leopoldo alas clarin' sí acerque 'leopoldo alas'.
+    The token set ratio counts only when the key has two or more tokens. It has a cap of 90.
+    The cap keeps 'homer' different from 'homer simpson'.
     """
     best, best_name = 0.0, ""
     multi = len(key.split()) >= 2

@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Tan Twan Eng",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:25+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Tan Twan Eng"
+  },
+  "search": [
+   {
+    "id": "Q7662663",
+    "title": "Q7662663",
+    "pageid": 7586066,
+    "concepturi": "http://www.wikidata.org/entity/Q7662663",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q7662663",
+    "display": {
+     "label": {
+      "value": "Tan Twan Eng",
+      "language": "en"
+     },
+     "description": {
+      "value": "Malaysian writer",
+      "language": "en"
+     }
+    },
+    "label": "Tan Twan Eng",
+    "description": "Malaysian writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Tan Twan Eng"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

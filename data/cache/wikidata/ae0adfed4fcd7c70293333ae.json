@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Alberto Moravia haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:50+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q161933",
+     "pageid": 162761,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian writer and journalist (1907-1990)",
+     "timestamp": "2026-10-02T08:09:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q109703342",
+     "pageid": 104814489,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indonesian political candidate",
+     "timestamp": "2026-09-07T18:32:18Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q1137720",
+     "pageid": 1084486,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "daughter of Albert II, Duke of Austria, (1346-1366)",
+     "timestamp": "2025-12-20T13:39:27Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,4 +1,4 @@
-"""Normalización de nombres de autor. Funciones puras, sin I/O."""
+"""Functions that normalize author names. The functions have no input or output side effects."""
 
 import re
 import unicodedata
@@ -14,7 +14,7 @@ _SPACES_RE = re.compile(r"\s+")
 
 @dataclass(frozen=True)
 class NormalizedName:
-    """Resultado de normalizar un seed_name. El original se conserva siempre."""
+    """Result of the normalization of a seed name. The original seed name is always kept."""
 
     seed_name: str
     clean_name: str
@@ -24,7 +24,7 @@ class NormalizedName:
 
 
 def clean_name(raw: str) -> str:
-    """Trim, Unicode NFC, espacios colapsados y 'Apellido, Nombre' -> 'Nombre Apellido'."""
+    """Trim the name, apply Unicode NFC, and change 'Last, First' to 'First Last'."""
     text = _SPACES_RE.sub(" ", unicodedata.normalize("NFC", raw)).strip()
     if text.count(",") == 1:
         last, first = (part.strip() for part in text.split(","))
@@ -35,13 +35,13 @@ def clean_name(raw: str) -> str:
 
 
 def match_key(name: str) -> str:
-    """Clave de comparación: sin acentos, minúsculas, sin puntuación, espacios simples."""
+    """Return a comparison key in lowercase ASCII with no punctuation and single spaces."""
     ascii_name = unidecode(unicodedata.normalize("NFC", name)).lower()
     return _SPACES_RE.sub(" ", _PUNCT_RE.sub("", ascii_name)).strip()
 
 
 def normalize(raw: str | None) -> NormalizedName:
-    """Normaliza un seed_name y lo marca como inválido si no es un autor."""
+    """Normalize a seed name. Mark the name as invalid if it is not an author."""
     seed = raw or ""
     cleaned = clean_name(seed)
     key = match_key(cleaned)

@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Dario Fo haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:55+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q765",
+     "pageid": 1072,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian actor, playwright, comedian, singer-songwriter, theater director, painter, and political activist (1926-2016)",
+     "timestamp": "2026-09-15T23:02:19Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q444509",
+     "pageid": 419354,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian theatre actress and playwright (1929-2013)",
+     "timestamp": "2026-09-04T21:45:59Z"
+    }
+   ]
+  }
+ }
+}

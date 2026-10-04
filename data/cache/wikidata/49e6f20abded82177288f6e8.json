@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Ocean Vuong",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:14+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Ocean Vuong"
+  },
+  "search": [
+   {
+    "id": "Q18355929",
+    "title": "Q18355929",
+    "pageid": 19888773,
+    "concepturi": "http://www.wikidata.org/entity/Q18355929",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q18355929",
+    "display": {
+     "label": {
+      "value": "Ocean Vuong",
+      "language": "en"
+     },
+     "description": {
+      "value": "Vietnamese American poet, essayist and novelist (born 1988)",
+      "language": "en"
+     }
+    },
+    "label": "Ocean Vuong",
+    "description": "Vietnamese American poet, essayist and novelist (born 1988)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ocean Vuong"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

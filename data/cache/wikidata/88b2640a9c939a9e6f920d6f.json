@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Brandon Sanderson haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:26+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q457608",
+     "pageid": 431684,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American fantasy writer (born 1975)",
+     "timestamp": "2026-09-05T23:53:14Z"
+    }
+   ]
+  }
+ }
+}

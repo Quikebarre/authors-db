@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Banana Yoshimoto",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:43+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Banana Yoshimoto"
+  },
+  "search": [
+   {
+    "id": "Q238970",
+    "title": "Q238970",
+    "pageid": 232329,
+    "concepturi": "http://www.wikidata.org/entity/Q238970",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q238970",
+    "display": {
+     "label": {
+      "value": "Banana Yoshimoto",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese writer",
+      "language": "en"
+     }
+    },
+    "label": "Banana Yoshimoto",
+    "description": "Japanese writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Banana Yoshimoto"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

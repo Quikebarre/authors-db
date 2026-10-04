@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Halldór Laxness haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:29+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q80321",
+     "pageid": 82820,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Icelandic author (1902-1998)",
+     "timestamp": "2026-09-09T16:36:28Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q16422747",
+     "pageid": 18049989,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Icelandic actor, author, comedian, rapper and television personality",
+     "timestamp": "2026-09-03T21:43:20Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q14367307",
+     "pageid": 16036317,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Icelandic writer and craftswoman",
+     "timestamp": "2026-09-27T12:58:45Z"
+    }
+   ]
+  }
+ }
+}

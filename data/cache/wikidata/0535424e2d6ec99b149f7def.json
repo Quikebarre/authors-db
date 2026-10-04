@@ -1,0 +1,95 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Thich Nhat Hanh",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:07+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Thich Nhat Hanh"
+  },
+  "search": [
+   {
+    "id": "Q310913",
+    "title": "Q310913",
+    "pageid": 299146,
+    "concepturi": "http://www.wikidata.org/entity/Q310913",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q310913",
+    "display": {
+     "label": {
+      "value": "Thích Nhất Hạnh",
+      "language": "en"
+     },
+     "description": {
+      "value": "Vietnamese Buddhist monk and activist (1926–2022)",
+      "language": "en"
+     }
+    },
+    "label": "Thích Nhất Hạnh",
+    "description": "Vietnamese Buddhist monk and activist (1926–2022)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Thích Nhất Hạnh"
+    }
+   },
+   {
+    "id": "Q123487737",
+    "title": "Q123487737",
+    "pageid": 117694270,
+    "concepturi": "http://www.wikidata.org/entity/Q123487737",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q123487737",
+    "display": {
+     "label": {
+      "value": "Thich Nhat Hanh, Monk, Zen Master and Activist, Dies at 95",
+      "language": "en"
+     },
+     "description": {
+      "value": "The New York Times article (January 21, 2022)",
+      "language": "en"
+     }
+    },
+    "label": "Thich Nhat Hanh, Monk, Zen Master and Activist, Dies at 95",
+    "description": "The New York Times article (January 21, 2022)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Thich Nhat Hanh, Monk, Zen Master and Activist, Dies at 95"
+    }
+   },
+   {
+    "id": "Q115270734",
+    "title": "Q115270734",
+    "pageid": 109884006,
+    "concepturi": "http://www.wikidata.org/entity/Q115270734",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q115270734",
+    "display": {
+     "label": {
+      "value": "Thích Nhất Hạnh Program for Engaged Buddhism",
+      "language": "en"
+     },
+     "description": {
+      "value": "academic program at Union Theological Seminary in New York, N.Y.",
+      "language": "en"
+     }
+    },
+    "label": "Thích Nhất Hạnh Program for Engaged Buddhism",
+    "description": "academic program at Union Theological Seminary in New York, N.Y.",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Thích Nhất Hạnh Program for Engaged Buddhism"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

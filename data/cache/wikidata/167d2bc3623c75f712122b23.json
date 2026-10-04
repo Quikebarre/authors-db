@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Carl Sagan haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:53+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q410",
+     "pageid": 619,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American astrophysicist, cosmologist and author (1934–1996)",
+     "timestamp": "2026-10-04T15:30:29Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q113871562",
+     "pageid": 108614026,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "<span class=\"searchmatch\">Carl</span> <span class=\"searchmatch\">Sagan</span> Center for the Study of Life in the Universe; United States",
+     "timestamp": "2026-06-14T12:57:12Z"
+    }
+   ]
+  }
+ }
+}

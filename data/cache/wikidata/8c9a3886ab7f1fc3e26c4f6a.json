@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Kamila Shamsie",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:35+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Kamila Shamsie"
+  },
+  "search": [
+   {
+    "id": "Q3087962",
+    "title": "Q3087962",
+    "pageid": 2951258,
+    "concepturi": "http://www.wikidata.org/entity/Q3087962",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q3087962",
+    "display": {
+     "label": {
+      "value": "Kamila Shamsie",
+      "language": "en"
+     },
+     "description": {
+      "value": "Pakistani and British writer and novelist (born 1973)",
+      "language": "en"
+     }
+    },
+    "label": "Kamila Shamsie",
+    "description": "Pakistani and British writer and novelist (born 1973)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Kamila Shamsie"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

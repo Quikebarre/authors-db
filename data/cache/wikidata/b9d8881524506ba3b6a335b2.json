@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Hiromi Kawakami",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:55+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Hiromi Kawakami"
+  },
+  "search": [
+   {
+    "id": "Q286701",
+    "title": "Q286701",
+    "pageid": 277160,
+    "concepturi": "http://www.wikidata.org/entity/Q286701",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q286701",
+    "display": {
+     "label": {
+      "value": "Hiromi Kawakami",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese writer",
+      "language": "en"
+     }
+    },
+    "label": "Hiromi Kawakami",
+    "description": "Japanese writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Hiromi Kawakami"
+    }
+   },
+   {
+    "id": "Q71678890",
+    "title": "Q71678890",
+    "pageid": 71336780,
+    "concepturi": "http://www.wikidata.org/entity/Q71678890",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q71678890",
+    "display": {
+     "label": {
+      "value": "Hiromi Kawakami",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese voice actress",
+      "language": "en"
+     }
+    },
+    "label": "Hiromi Kawakami",
+    "description": "Japanese voice actress",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Hiromi Kawakami"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

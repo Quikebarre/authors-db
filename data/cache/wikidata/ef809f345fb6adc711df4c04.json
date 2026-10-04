@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Nâzım Hikmet haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:02+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q184906",
+     "pageid": 183823,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Turkish communist poet, playwright and novelist (1902–1963)",
+     "timestamp": "2026-09-27T10:03:05Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q137001415",
+     "pageid": 130680082,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-05-17T21:09:34Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q93248890",
+     "pageid": 92386824,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-11-25T20:36:53Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q169841",
+     "pageid": 170244,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "1st President of the Syrian Arab Republic",
+     "timestamp": "2026-10-04T14:28:37Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q112865269",
+     "pageid": 107717455,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-03-06T14:10:22Z"
+    }
+   ]
+  }
+ }
+}

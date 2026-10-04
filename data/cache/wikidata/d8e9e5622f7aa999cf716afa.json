@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Banana Yoshimoto haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:45+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q238970",
+     "pageid": 232329,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese writer",
+     "timestamp": "2026-10-03T16:47:46Z"
+    }
+   ]
+  }
+ }
+}

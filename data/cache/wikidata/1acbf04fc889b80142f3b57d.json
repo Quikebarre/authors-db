@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Nadeem Aslam",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:36+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Nadeem Aslam"
+  },
+  "search": [
+   {
+    "id": "Q1963189",
+    "title": "Q1963189",
+    "pageid": 1892315,
+    "concepturi": "http://www.wikidata.org/entity/Q1963189",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q1963189",
+    "display": {
+     "label": {
+      "value": "Nadeem Aslam",
+      "language": "en"
+     },
+     "description": {
+      "value": "British writer",
+      "language": "en"
+     }
+    },
+    "label": "Nadeem Aslam",
+    "description": "British writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Nadeem Aslam"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

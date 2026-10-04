@@ -1,4 +1,4 @@
-"""Búsqueda de candidatos en Wikidata y parseo de entidades."""
+"""Search for candidates in Wikidata and parse the entities."""
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
@@ -39,7 +39,7 @@ FETCH_BATCH = 40
 
 @dataclass
 class Candidate:
-    """Candidato humano de Wikidata con la evidencia necesaria para puntuarlo."""
+    """A human from Wikidata with the evidence that the score needs."""
 
     qid: str
     label: str
@@ -95,7 +95,7 @@ def _labels(entity: dict[str, Any]) -> tuple[str, str, list[str]]:
 
 
 def parse_candidate(entity: dict[str, Any]) -> Candidate | None:
-    """Convierte una entidad en Candidate; None si no es una persona."""
+    """Convert an entity to a candidate. Return None if the entity is not a human."""
     if HUMAN not in _item_ids(entity, "P31"):
         return None
     label, desc, names = _labels(entity)
@@ -114,7 +114,7 @@ def parse_candidate(entity: dict[str, Any]) -> Candidate | None:
 
 
 def pseudonym_targets(entity: dict[str, Any]) -> list[str]:
-    """QIDs de las personas tras un ítem-seudónimo (vacío si no es un seudónimo)."""
+    """Return the QIDs of the humans that use a pseudonym item. Return an empty list otherwise."""
     if PSEUDONYM not in _item_ids(entity, "P31"):
         return []
     for prop in PSEUDONYM_TARGET_PROPS:
@@ -125,7 +125,7 @@ def pseudonym_targets(entity: dict[str, Any]) -> list[str]:
 
 
 class WikidataSource:
-    """Obtiene candidatos para un nombre combinando dos búsquedas."""
+    """Get the candidates for a name. The class combines two searches."""
 
     def __init__(self, client: CachedClient) -> None:
         self._client = client
@@ -166,7 +166,7 @@ class WikidataSource:
         return out
 
     def candidates(self, name: str) -> list[Candidate]:
-        """Candidatos humanos; los ítems-seudónimo se traducen a la persona."""
+        """Return the human candidates. Replace each pseudonym item with its human."""
         found_via: dict[str, list[str]] = {}
         for source, qids in (
             ("entity_search", self._entity_search(name)),

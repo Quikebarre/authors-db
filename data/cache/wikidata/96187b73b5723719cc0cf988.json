@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Yasunari Kawabata haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:47+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q43736",
+     "pageid": 45926,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese novelist (1899–1972)",
+     "timestamp": "2026-09-15T06:33:42Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q87649152",
+     "pageid": 86889161,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher",
+     "timestamp": "2026-09-09T16:17:00Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q19515534",
+     "pageid": 21122527,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Yasunari Kawabata&#039;s wife",
+     "timestamp": "2025-12-18T14:51:27Z"
+    }
+   ]
+  }
+ }
+}

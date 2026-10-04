@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Shel Silverstein",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:32+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Shel Silverstein"
+  },
+  "search": [
+   {
+    "id": "Q361257",
+    "title": "Q361257",
+    "pageid": 344302,
+    "concepturi": "http://www.wikidata.org/entity/Q361257",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q361257",
+    "display": {
+     "label": {
+      "value": "Shel Silverstein",
+      "language": "en"
+     },
+     "description": {
+      "value": "American poet, cartoonist, songwriter, and children's writer (1930–1999)",
+      "language": "en"
+     }
+    },
+    "label": "Shel Silverstein",
+    "description": "American poet, cartoonist, songwriter, and children's writer (1930–1999)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Shel Silverstein"
+    }
+   },
+   {
+    "id": "Q128419749",
+    "title": "Q128419749",
+    "pageid": 122397484,
+    "concepturi": "http://www.wikidata.org/entity/Q128419749",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q128419749",
+    "display": {
+     "label": {
+      "value": "SHEL SILVERSTEIN: PENGALAMAN PENERJEMAHAN PUISI",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "SHEL SILVERSTEIN: PENGALAMAN PENERJEMAHAN PUISI",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "SHEL SILVERSTEIN: PENGALAMAN PENERJEMAHAN PUISI"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

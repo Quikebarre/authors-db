@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Mulk Raj Anand",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:30+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Mulk Raj Anand"
+  },
+  "search": [
+   {
+    "id": "Q732434",
+    "title": "Q732434",
+    "pageid": 688697,
+    "concepturi": "http://www.wikidata.org/entity/Q732434",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q732434",
+    "display": {
+     "label": {
+      "value": "Mulk Raj Anand",
+      "language": "en"
+     },
+     "description": {
+      "value": "Indian English writer (1905–2004)",
+      "language": "en"
+     }
+    },
+    "label": "Mulk Raj Anand",
+    "description": "Indian English writer (1905–2004)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Mulk Raj Anand"
+    }
+   },
+   {
+    "id": "Q129235673",
+    "title": "Q129235673",
+    "pageid": 123208203,
+    "concepturi": "http://www.wikidata.org/entity/Q129235673",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q129235673",
+    "display": {
+     "label": {
+      "value": "Mulk Raj Anand’s Vision of Social Injustice and Exploitation in the Light of Gandhian Thought",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Mulk Raj Anand’s Vision of Social Injustice and Exploitation in the Light of Gandhian Thought",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Mulk Raj Anand’s Vision of Social Injustice and Exploitation in the Light of Gandhian Thought"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

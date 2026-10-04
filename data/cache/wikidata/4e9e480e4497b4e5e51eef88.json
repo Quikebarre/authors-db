@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Viet Thanh Nguyen",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:14+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Viet Thanh Nguyen"
+  },
+  "search": [
+   {
+    "id": "Q23887092",
+    "title": "Q23887092",
+    "pageid": 25884349,
+    "concepturi": "http://www.wikidata.org/entity/Q23887092",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q23887092",
+    "display": {
+     "label": {
+      "value": "Viet Thanh Nguyen",
+      "language": "en"
+     },
+     "description": {
+      "value": "American author of fiction",
+      "language": "en"
+     }
+    },
+    "label": "Viet Thanh Nguyen",
+    "description": "American author of fiction",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Viet Thanh Nguyen"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

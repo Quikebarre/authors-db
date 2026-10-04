@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Lualhati Bautista",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:29+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Lualhati Bautista"
+  },
+  "search": [
+   {
+    "id": "Q3547747",
+    "title": "Q3547747",
+    "pageid": 3376937,
+    "concepturi": "http://www.wikidata.org/entity/Q3547747",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q3547747",
+    "display": {
+     "label": {
+      "value": "Lualhati Bautista",
+      "language": "en"
+     },
+     "description": {
+      "value": "Filipino novelist (1945-2023)",
+      "language": "en"
+     }
+    },
+    "label": "Lualhati Bautista",
+    "description": "Filipino novelist (1945-2023)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Lualhati Bautista"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

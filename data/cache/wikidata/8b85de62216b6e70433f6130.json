@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Ahdaf Soueif",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:49+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Ahdaf Soueif"
+  },
+  "search": [
+   {
+    "id": "Q4115654",
+    "title": "Q4115654",
+    "pageid": 3923477,
+    "concepturi": "http://www.wikidata.org/entity/Q4115654",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q4115654",
+    "display": {
+     "label": {
+      "value": "Ahdaf Soueif",
+      "language": "en"
+     },
+     "description": {
+      "value": "Egyptian novelist",
+      "language": "en"
+     }
+    },
+    "label": "Ahdaf Soueif",
+    "description": "Egyptian novelist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ahdaf Soueif"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

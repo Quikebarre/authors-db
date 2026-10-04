@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Sigrid Undset haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:20+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q80889",
+     "pageid": 83366,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Norwegian writer (1882–1949)",
+     "timestamp": "2026-10-04T17:17:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q118669833",
+     "pageid": 113175481,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-10-21T17:59:32Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q118669828",
+     "pageid": 113175476,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-11-27T04:40:34Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6219796",
+     "pageid": 6019851,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Norwegian archaeologist",
+     "timestamp": "2026-08-14T08:17:10Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q118669829",
+     "pageid": 113175478,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "killed during WWII (1913–1940)",
+     "timestamp": "2026-08-16T17:42:48Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "S. Y. Agnon",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:44:34+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "S. Y. Agnon"
+  },
+  "search": [
+   {
+    "id": "Q133042",
+    "title": "Q133042",
+    "pageid": 134818,
+    "concepturi": "http://www.wikidata.org/entity/Q133042",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q133042",
+    "display": {
+     "label": {
+      "value": "Shmuel Yosef Agnon",
+      "language": "en"
+     },
+     "description": {
+      "value": "Ukrainian-born Israeli Hebrew writer, Nobel laureate in Literature (1888–1970)",
+      "language": "en"
+     }
+    },
+    "label": "Shmuel Yosef Agnon",
+    "description": "Ukrainian-born Israeli Hebrew writer, Nobel laureate in Literature (1888–1970)",
+    "match": {
+     "type": "alias",
+     "language": "hr",
+     "text": "S. Y. Agnon"
+    },
+    "aliases": [
+     "S. Y. Agnon"
+    ]
+   },
+   {
+    "id": "Q49123586",
+    "title": "Q49123586",
+    "pageid": 50137229,
+    "concepturi": "http://www.wikidata.org/entity/Q49123586",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q49123586",
+    "display": {
+     "label": {
+      "value": "S. Y. Agnon's T'mol Shilshom as a medical record.",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published in January 1989",
+      "language": "en"
+     }
+    },
+    "label": "S. Y. Agnon's T'mol Shilshom as a medical record.",
+    "description": "scientific article published in January 1989",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "S. Y. Agnon's T'mol Shilshom as a medical record."
+    }
+   }
+  ],
+  "success": 1
+ }
+}

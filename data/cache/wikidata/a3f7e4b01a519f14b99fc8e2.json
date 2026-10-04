@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Giovanni Boccaccio haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:44+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q1402",
+     "pageid": 1825,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian author and poet (1313–1375)",
+     "timestamp": "2026-09-22T13:21:20Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q3766842",
+     "pageid": 3591646,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian carabinier (1781-1815)",
+     "timestamp": "2022-01-01T07:05:19Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q134919298",
+     "pageid": 128745101,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Father of <span class=\"searchmatch\">Giovanni</span> <span class=\"searchmatch\">Boccaccio</span>",
+     "timestamp": "2025-06-15T17:42:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q43256641",
+     "pageid": 44484957,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "14th-century Neapolitan noblewoman traditionally identified with <span class=\"searchmatch\">Giovanni</span> Boccaccio&#039;s beloved and muse",
+     "timestamp": "2024-03-04T17:26:07Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Thich Nhat Hanh haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:09+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q310913",
+     "pageid": 299146,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Vietnamese Buddhist monk and activist (1926–2022)",
+     "timestamp": "2026-09-26T05:29:39Z"
+    }
+   ]
+  }
+ }
+}

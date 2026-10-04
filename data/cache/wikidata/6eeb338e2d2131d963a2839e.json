@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Liu Cixin",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:05+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Liu Cixin"
+  },
+  "search": [
+   {
+    "id": "Q607588",
+    "title": "Q607588",
+    "pageid": 572063,
+    "concepturi": "http://www.wikidata.org/entity/Q607588",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q607588",
+    "display": {
+     "label": {
+      "value": "Liu Cixin",
+      "language": "en"
+     },
+     "description": {
+      "value": "Chinese science fiction writer",
+      "language": "en"
+     }
+    },
+    "label": "Liu Cixin",
+    "description": "Chinese science fiction writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Liu Cixin"
+    }
+   },
+   {
+    "id": "Q118919083",
+    "title": "Q118919083",
+    "pageid": 113424934,
+    "concepturi": "http://www.wikidata.org/entity/Q118919083",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q118919083",
+    "display": {
+     "label": {
+      "value": "Liu Cixin’s The Three-Body Problem and the Desire to the Future",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article in Theoretical Studies in Literature and Art, no. 1, 2016",
+      "language": "en"
+     }
+    },
+    "label": "Liu Cixin’s The Three-Body Problem and the Desire to the Future",
+    "description": "scholarly article in Theoretical Studies in Literature and Art, no. 1, 2016",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Liu Cixin’s The Three-Body Problem and the Desire to the Future"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

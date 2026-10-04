@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Elena Ferrante haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:40+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q368127",
+     "pageid": 350251,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "pseudonymous Italian writer",
+     "timestamp": "2026-09-16T18:38:25Z"
+    }
+   ]
+  }
+ }
+}

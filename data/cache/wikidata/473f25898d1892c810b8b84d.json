@@ -1,0 +1,4548 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbgetentities",
+  "ids": "Q140750819|Q290220",
+  "format": "json",
+  "languages": "en|es",
+  "props": "labels|aliases|descriptions|claims|sitelinks"
+ },
+ "retrieved_at": "2026-10-04T18:46:48+00:00",
+ "response": {
+  "entities": {
+   "Q140750819": {
+    "type": "item",
+    "id": "Q140750819",
+    "labels": {
+     "en": {
+      "language": "en",
+      "value": "Leila Aboulela, River Spirit. New York NY: Grove Press (hb US$27 – 978 0 8021 6066 9; pb US$17 – 978 0 8021 6275 5). 2023, 311 pp."
+     }
+    },
+    "descriptions": {
+     "en": {
+      "language": "en",
+      "value": "scholarly article published in Africa: Journal of the International African Institute, vol. 95, no. 4 (2025) (DOI: 10.1017/S0001972025101411)"
+     },
+     "es": {
+      "language": "es",
+      "value": "artículo científico publicado en 2025"
+     }
+    },
+    "aliases": {},
+    "claims": {
+     "P31": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P31",
+        "hash": "29465f78f13add11b617f0de4ade56cd1122c19c",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 13442814,
+          "id": "Q13442814"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q140750819$6226E012-57A0-4A65-B1E7-1EF398A22F50",
+       "rank": "normal"
+      }
+     ],
+     "P1476": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1476",
+        "hash": "f1bd8af71be8306fe07a70c4670b866ad2aeb377",
+        "datavalue": {
+         "value": {
+          "text": "Leila Aboulela, River Spirit. New York NY: Grove Press (hb US$27 – 978 0 8021 6066 9; pb US$17 – 978 0 8021 6275 5). 2023, 311 pp.",
+          "language": "en"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "type": "statement",
+       "id": "Q140750819$3EA5DCCF-1B8C-40D0-87EF-C5E944182F46",
+       "rank": "normal"
+      }
+     ],
+     "P356": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P356",
+        "hash": "9b16a5ad645af368f18c288afa3df9e9794060c1",
+        "datavalue": {
+         "value": "10.1017/S0001972025101411",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q140750819$D448134C-F434-4FA8-AA0E-DE89D2475E5B",
+       "rank": "normal"
+      }
+     ],
+     "P577": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P577",
+        "hash": "e41e778758ef38d5b49f4198dc989e6d521f4d15",
+        "datavalue": {
+         "value": {
+          "time": "+2025-11-01T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 10,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "type": "statement",
+       "id": "Q140750819$BCBAD58F-E40C-48B5-A6AA-4A3E9BC3EB6B",
+       "rank": "normal"
+      }
+     ],
+     "P1433": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1433",
+        "hash": "889a82001e33ae99a48d5f00d71b2506a18b6a60",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 4689536,
+          "id": "Q4689536"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q140750819$E20C5F2D-EF96-43BA-BC60-D99223539DB9",
+       "rank": "normal"
+      }
+     ],
+     "P478": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P478",
+        "hash": "f8830f72fc8d5bd8a9cfc80e037bc07e555a7a84",
+        "datavalue": {
+         "value": "95",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "type": "statement",
+       "id": "Q140750819$381A4D72-F0BF-4750-9712-3F3EC8C5C26D",
+       "rank": "normal"
+      }
+     ],
+     "P433": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P433",
+        "hash": "185b1ffb37513a089fc3a779d6838b5e7f5330c6",
+        "datavalue": {
+         "value": "4",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "type": "statement",
+       "id": "Q140750819$FEEC9117-7D07-465D-A9C1-3515019108E8",
+       "rank": "normal"
+      }
+     ],
+     "P304": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P304",
+        "hash": "0fb084eb5a661d6ef2281dd36bd84f3a6e212a43",
+        "datavalue": {
+         "value": "484-486",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "type": "statement",
+       "id": "Q140750819$C04B5C42-8DF3-4362-BCBC-B5F4FD678E78",
+       "rank": "normal"
+      }
+     ],
+     "P2093": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P2093",
+        "hash": "c8dc1e7b7e84781c0e796eb5ec4a53bd71742409",
+        "datavalue": {
+         "value": "Farah Bakaari",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P1545": [
+         {
+          "snaktype": "value",
+          "property": "P1545",
+          "hash": "2a1ced1dca90648ea7e306acbadd74fc81a10722",
+          "datavalue": {
+           "value": "1",
+           "type": "string"
+          },
+          "datatype": "string"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P1545"
+       ],
+       "id": "Q140750819$4F9FA05F-EC3A-4920-AE16-044686E375DC",
+       "rank": "normal"
+      }
+     ],
+     "P10283": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P10283",
+        "hash": "70a1c4748c2dbc2ed8f0c5574c27a4b8f57d68b5",
+        "datavalue": {
+         "value": "W7124964578",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q140750819$E8C1B0DD-58CB-4837-AC7A-0BB04AB4E4B4",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "8fae4d465586b517b9d8d377b77ed2326bac5e54",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "d4d66833789b55d2465fb48c2da67f50fcf22d4d",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 107507940,
+              "id": "Q107507940"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "f546c4289bec662da8841466a012b95b7343a106",
+            "datavalue": {
+             "value": {
+              "time": "+2026-07-28T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "14f4570464f91954771a8f8165e54fb765dd493f",
+            "datavalue": {
+             "value": "https://openalex.org/W7124964578",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P813",
+          "P854"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "sitelinks": {}
+   },
+   "Q290220": {
+    "type": "item",
+    "id": "Q290220",
+    "labels": {
+     "es": {
+      "language": "es",
+      "value": "Leila Aboulela"
+     },
+     "en": {
+      "language": "en",
+      "value": "Leila Aboulela"
+     }
+    },
+    "descriptions": {
+     "en": {
+      "language": "en",
+      "value": "Sudanese writer and playwright"
+     }
+    },
+    "aliases": {
+     "en": [
+      {
+       "language": "en",
+       "value": "Leila Abouleila"
+      },
+      {
+       "language": "en",
+       "value": "Leila Fuad Aboulela"
+      }
+     ]
+    },
+    "claims": {
+     "P214": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P214",
+        "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+        "datavalue": {
+         "value": "17443341",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$F6BB9A0D-2507-4A92-9768-73577E7BF198",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 328,
+              "id": "Q328"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        },
+        {
+         "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 48183,
+              "id": "Q48183"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      }
+     ],
+     "P213": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P213",
+        "hash": "df4908a6168a0bcf8f2dbf5d3890f40d2e78cc45",
+        "datavalue": {
+         "value": "0000000108556255",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$ED5F9AFC-8A5B-4582-A664-8268CF78C27B",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "fbc824608bf047fcbfb803c1b0f98e66f4372207",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "a376d605be64acdd4ac7934925ba96e276de7eac",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 423048,
+              "id": "Q423048"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P227": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P227",
+        "hash": "669c63336fe40983e9d47acc00b8d9575a6b07e8",
+        "datavalue": {
+         "value": "123768373",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$3AD93C7A-9CBF-4B47-89E3-E7630F75E4FD",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 48183,
+              "id": "Q48183"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      }
+     ],
+     "P244": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P244",
+        "hash": "da20a0d8dba68a8c8a22ae2aca14045997ac8891",
+        "datavalue": {
+         "value": "no00008864",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$A178239E-8F03-4285-8545-5EEF544342AD",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 48183,
+              "id": "Q48183"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      }
+     ],
+     "P18": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P18",
+        "hash": "dd16a339d16bd491a597a8c379dbb97318983499",
+        "datavalue": {
+         "value": "Leila Aboulela (2010).jpg",
+         "type": "string"
+        },
+        "datatype": "commonsMedia"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P585": [
+         {
+          "snaktype": "value",
+          "property": "P585",
+          "hash": "3c2d510317e0fcbe8582afb1d706a4b6eb08d233",
+          "datavalue": {
+           "value": {
+            "time": "+2010-00-00T00:00:00Z",
+            "timezone": 0,
+            "before": 0,
+            "after": 0,
+            "precision": 9,
+            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+           },
+           "type": "time"
+          },
+          "datatype": "time"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P585"
+       ],
+       "id": "q290220$219A64C5-0A4C-4638-AF10-19F471340BDA",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 328,
+              "id": "Q328"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P18",
+        "hash": "d6e0a511cd308b21891e304eb3eb45741463fb5e",
+        "datavalue": {
+         "value": "Leila Aboulela A036481 03.jpg",
+         "type": "string"
+        },
+        "datatype": "commonsMedia"
+       },
+       "type": "statement",
+       "id": "Q290220$16501038-4ccb-a909-0a16-cf1f0c26a8e1",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e71a7903858496c67eea189a7084d5559f788edb",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "5d3b16d350189b0a81818758208505444c86c127",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 565,
+              "id": "Q565"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P18",
+        "hash": "426cbe90b0efe1445f29a0921b1ca032d2522058",
+        "datavalue": {
+         "value": "Leila Aboulela Speaking.jpg",
+         "type": "string"
+        },
+        "datatype": "commonsMedia"
+       },
+       "type": "statement",
+       "id": "Q290220$9cc48eff-43ca-6c38-dbef-fb63340732cc",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e71a7903858496c67eea189a7084d5559f788edb",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "5d3b16d350189b0a81818758208505444c86c127",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 565,
+              "id": "Q565"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        }
+       ]
+      }
+     ],
+     "P31": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P31",
+        "hash": "ad7d38a03cdd40cdc373de0dc4e7b7fcbccb31d9",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 5,
+          "id": "Q5"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$79D238D9-3D1F-46C5-AF00-B6CBF2967557",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "057cabd9f6e000c0f25a3751123a73844822ef17",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "def9f19d84b65167a2a17ce38364d264c16127fc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 19938912,
+              "id": "Q19938912"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P268": [
+           {
+            "snaktype": "value",
+            "property": "P268",
+            "hash": "d1088d21fcf61a2e212dd69937e96043eff1fd7c",
+            "datavalue": {
+             "value": "14443617b",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "d6162a1716489623c6e595e448b17f8dca4fb2e8",
+            "datavalue": {
+             "value": {
+              "time": "+2015-10-10T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P268",
+          "P813"
+         ]
+        },
+        {
+         "hash": "baa0e773e03f563e129f8968342bd378fc7c7819",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "45037a2d1d89deebcdfc5840e9adbaa4b64cebc6",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 50358336,
+              "id": "Q50358336"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "c57884fc65017f7b587f906c34c1ffb91a3c8303",
+            "datavalue": {
+             "value": {
+              "time": "+2024-03-23T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P950": [
+           {
+            "snaktype": "value",
+            "property": "P950",
+            "hash": "60ce56cd6b4580e8216ba9f5bd5369348e6fbcc5",
+            "datavalue": {
+             "value": "XX1592111",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P813",
+          "P950"
+         ]
+        }
+       ]
+      }
+     ],
+     "P19": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P19",
+        "hash": "99a2689fdaef02733754b3e06643326a3b9975b2",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 85,
+          "id": "Q85"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$9f52792e-49f7-e760-4f39-bea6c744d513",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "d4bd87b862b12d99d26e86472d44f26858dee639",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "f30cbd35620c4ea6d0633aaf0210a8916130469b",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 8447,
+              "id": "Q8447"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        },
+        {
+         "hash": "84b48f9e57ad2eb6302264e075ba44643519e9d6",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "517394fb416dc8e434d0695dee7144c85bd29d28",
+            "datavalue": {
+             "value": "https://100women.okayafrica.com/literature-articles/2018/3/1/leila-aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854"
+         ]
+        },
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P69": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P69",
+        "hash": "c6714a05ccc30ba1cbb5698da64c0ee30951fbfd",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 656871,
+          "id": "Q656871"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$54C16DD9-845D-47A9-A53A-581D92739CE4",
+       "rank": "normal"
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P69",
+        "hash": "75b59c11a9b9a1cb40f0f0dfc7de129348f1f34d",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 16893315,
+          "id": "Q16893315"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$5D0F4FE2-0BED-4F33-9F82-E8E90F46A9BA",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P69",
+        "hash": "bb1eb76cacdabf561c5a40f564f049a94676a642",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 274570,
+          "id": "Q274570"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$7A965F76-F137-45AE-8AEF-01E0714F0AEF",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2d642b680b107f574dd2073f91dfc72f594fedf",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "7fe0857c2457cf3013ea8adc27280b1236a26571",
+            "datavalue": {
+             "value": "https://researchonline.lse.ac.uk/id/eprint/133801/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "3f450b495a44b6d4e1cad48a01a6cde8a05d5371",
+            "datavalue": {
+             "value": {
+              "time": "+2026-02-12T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P69",
+        "hash": "58b462778e3ae61c2d6b938e7775cca39ade45a0",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 174570,
+          "id": "Q174570"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$E003104F-6650-4E83-AACC-80B719397CD1",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2d642b680b107f574dd2073f91dfc72f594fedf",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "7fe0857c2457cf3013ea8adc27280b1236a26571",
+            "datavalue": {
+             "value": "https://researchonline.lse.ac.uk/id/eprint/133801/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "3f450b495a44b6d4e1cad48a01a6cde8a05d5371",
+            "datavalue": {
+             "value": {
+              "time": "+2026-02-12T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P646": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P646",
+        "hash": "2456482c45e599df319ca1168787e3a351e1ba88",
+        "datavalue": {
+         "value": "/m/0d1wg3",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$0F849E69-2C15-4270-8592-1728FB0705F9",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "2b00cb481cddcac7623114367489b5c194901c4a",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "a94b740202b097dd33355e0e6c00e54b9395e5e0",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 15241312,
+              "id": "Q15241312"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P577": [
+           {
+            "snaktype": "value",
+            "property": "P577",
+            "hash": "fde79ecb015112d2f29229ccc1ec514ed3e71fa2",
+            "datavalue": {
+             "value": {
+              "time": "+2013-10-28T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P577"
+         ]
+        }
+       ]
+      }
+     ],
+     "P569": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P569",
+        "hash": "521a24174e6b01b81a201af427ea895bdbd8bef7",
+        "datavalue": {
+         "value": {
+          "time": "+1964-01-01T00:00:00Z",
+          "timezone": 0,
+          "before": 0,
+          "after": 0,
+          "precision": 9,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+         },
+         "type": "time"
+        },
+        "datatype": "time"
+       },
+       "type": "statement",
+       "id": "Q290220$4D2759E8-DECF-4C5F-9370-E7DC9E42B4F2",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "cc3bee8077a049165adc8ca467225b277c20d981",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "019a50b7de741e0068bde41c9d9955b22a5de47b",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 36578,
+              "id": "Q36578"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P227": [
+           {
+            "snaktype": "value",
+            "property": "P227",
+            "hash": "669c63336fe40983e9d47acc00b8d9575a6b07e8",
+            "datavalue": {
+             "value": "123768373",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "f6bca98bb1580bfcb4860b86f216eebaec063d9c",
+            "datavalue": {
+             "value": {
+              "time": "+2015-10-16T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P227",
+          "P813"
+         ]
+        },
+        {
+         "hash": "5824990209aaa792fcc10e76c8206ac48a386333",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "f487c993a88b7e91732ae6e2ad2910710a462ad8",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 1798125,
+              "id": "Q1798125"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P906": [
+           {
+            "snaktype": "value",
+            "property": "P906",
+            "hash": "fce66042f278b81864aab2992feef6935420ddd4",
+            "datavalue": {
+             "value": "307691",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P1810": [
+           {
+            "snaktype": "value",
+            "property": "P1810",
+            "hash": "820ba0d1aadb88af86294e2b1be268516aec2b4c",
+            "datavalue": {
+             "value": "Leila Aboulela",
+             "type": "string"
+            },
+            "datatype": "string"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "e5f60ab0b03700bb883efce38f8022d023bc49fb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-09T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P906",
+          "P1810",
+          "P813"
+         ]
+        },
+        {
+         "hash": "5f27ccf554cdcb96b294ba3429ac6c6686db1c1a",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "ce2ad38458403bf82a1be374c1e0c4ed312c4d48",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 16744133,
+              "id": "Q16744133"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P1280": [
+           {
+            "snaktype": "value",
+            "property": "P1280",
+            "hash": "b44a438c2bcc58e6fe3ea47b88490ecc28a8920f",
+            "datavalue": {
+             "value": "79721827",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P1810": [
+           {
+            "snaktype": "value",
+            "property": "P1810",
+            "hash": "820ba0d1aadb88af86294e2b1be268516aec2b4c",
+            "datavalue": {
+             "value": "Leila Aboulela",
+             "type": "string"
+            },
+            "datatype": "string"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "e5f60ab0b03700bb883efce38f8022d023bc49fb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-09T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P1280",
+          "P1810",
+          "P813"
+         ]
+        },
+        {
+         "hash": "4036be9de76738ae7b9b190ff82add40d3d62332",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "7133ad7bdc9749d28b62d01f5b7780fde50b22cc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 46002746,
+              "id": "Q46002746"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248"
+         ]
+        },
+        {
+         "hash": "be8048799c9a210434d58911bf55b7129be04bca",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "b53da6262d92aa446b00f1d37f5a3427dab8a705",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 56640487,
+              "id": "Q56640487"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P5034": [
+           {
+            "snaktype": "value",
+            "property": "P5034",
+            "hash": "23b9b537460fd77f8aa6d29696ed187fbb554481",
+            "datavalue": {
+             "value": "KAC201328107",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P1810": [
+           {
+            "snaktype": "value",
+            "property": "P1810",
+            "hash": "820ba0d1aadb88af86294e2b1be268516aec2b4c",
+            "datavalue": {
+             "value": "Leila Aboulela",
+             "type": "string"
+            },
+            "datatype": "string"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P5034",
+          "P1810"
+         ]
+        },
+        {
+         "hash": "df36691427e761e7e930c14470aa243d14576b89",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "250e8f94fbcb533436da77e284d73e22e91765e6",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 105192847,
+              "id": "Q105192847"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P7293": [
+           {
+            "snaktype": "value",
+            "property": "P7293",
+            "hash": "3928db704758e3c75c62cc991d1de20d9ca7a813",
+            "datavalue": {
+             "value": "9810546330705606",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P1810": [
+           {
+            "snaktype": "value",
+            "property": "P1810",
+            "hash": "820ba0d1aadb88af86294e2b1be268516aec2b4c",
+            "datavalue": {
+             "value": "Leila Aboulela",
+             "type": "string"
+            },
+            "datatype": "string"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P7293",
+          "P1810"
+         ]
+        },
+        {
+         "hash": "ce9003837690d2ea85bcf2dfc88a5069f12fa2c0",
+         "snaks": {
+          "P1810": [
+           {
+            "snaktype": "value",
+            "property": "P1810",
+            "hash": "820ba0d1aadb88af86294e2b1be268516aec2b4c",
+            "datavalue": {
+             "value": "Leila Aboulela",
+             "type": "string"
+            },
+            "datatype": "string"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "ee4c45d0ce19529e2aef952dd859ce63cf68c3e8",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 18609226,
+              "id": "Q18609226"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "e5f60ab0b03700bb883efce38f8022d023bc49fb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-09T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P1315": [
+           {
+            "snaktype": "value",
+            "property": "P1315",
+            "hash": "268a1be8a2f773897c0463e45154ec702bd34929",
+            "datavalue": {
+             "value": "1242067",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P1810",
+          "P248",
+          "P813",
+          "P1315"
+         ]
+        }
+       ]
+      }
+     ],
+     "P106": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P106",
+        "hash": "7992d2aec094f84d664106049d9a4955d096082f",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 6625963,
+          "id": "Q6625963"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$B93E674C-19C2-4250-8D3C-9CD92FCB07E7",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "f8b6c09b55c5a9c6e8f7d310c425512f2ea14e82",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "006a3c17b305d4744c0d92f3babecffda3976722",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 45433,
+              "id": "Q45433"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P5364": [
+           {
+            "snaktype": "value",
+            "property": "P5364",
+            "hash": "0d4d8372136ac63c320682ad7ca59c87b94164cd",
+            "datavalue": {
+             "value": "leila-aboulela",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P5364"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P106",
+        "hash": "70541c2eb72d85fa5f74008b4ee33b004a1ff7eb",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 36180,
+          "id": "Q36180"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$12FDA33E-67C8-4A58-B463-19854343F609",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+         "snaks": {
+          "P143": [
+           {
+            "snaktype": "value",
+            "property": "P143",
+            "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 48183,
+              "id": "Q48183"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P143"
+         ]
+        },
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        },
+        {
+         "hash": "cb2d88a23c4beab9afc8747354a17dafeccdae96",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "019a50b7de741e0068bde41c9d9955b22a5de47b",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 36578,
+              "id": "Q36578"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P227": [
+           {
+            "snaktype": "value",
+            "property": "P227",
+            "hash": "669c63336fe40983e9d47acc00b8d9575a6b07e8",
+            "datavalue": {
+             "value": "123768373",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "207eee837bd6cbcb9596045fd18598dbfd0c5b0a",
+            "datavalue": {
+             "value": {
+              "time": "+2026-04-20T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P227",
+          "P813"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P106",
+        "hash": "1ecddfdb184ec1e8540abf98fb07f825697cfab5",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 214917,
+          "id": "Q214917"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$B0FFE39A-783C-4EC1-A620-161618E4B39C",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P106",
+        "hash": "052171d1474ffab5d0476f919ee991ff4586ea8b",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 11774202,
+          "id": "Q11774202"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$de12c498-4ac4-ec42-61af-abb561189617",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P735": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P735",
+        "hash": "f7baff84ff7aba73c6a29fd55d0aee29d9820beb",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 1607500,
+          "id": "Q1607500"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$83CF0B5B-ED54-448D-95D9-EF128C8DCBD9",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P1006": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1006",
+        "hash": "ec5cfa956e5b0bdbdbdc8967fddc08f7e97f301e",
+        "datavalue": {
+         "value": "234811331",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$024F8903-A4A5-4E61-8F43-8CAFAA531932",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "9c50bafa711c9d031bae2e0ff8aa32f29cf2f2f3",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "49d626ca4d77a2d814c54353ddd4cdfc13cbd1f5",
+            "datavalue": {
+             "value": {
+              "time": "+2014-12-16T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P166": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P166",
+        "hash": "973fb56115d170c958f92b8b41c779e6b01bf7bc",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 1025887,
+          "id": "Q1025887"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P585": [
+         {
+          "snaktype": "value",
+          "property": "P585",
+          "hash": "e701093471a4f4e2e08f4a95fb504eb6270222cf",
+          "datavalue": {
+           "value": {
+            "time": "+2000-00-00T00:00:00Z",
+            "timezone": 0,
+            "before": 0,
+            "after": 0,
+            "precision": 9,
+            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+           },
+           "type": "time"
+          },
+          "datatype": "time"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P585"
+       ],
+       "id": "Q290220$5eaf87c0-4ca2-483f-113c-3fe1a00fe07e",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "1b691047710058c103bfcdb42483b5137ddf6afa",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "b9388cb2955fc88a78c7c71757a608c09aabcf1e",
+            "datavalue": {
+             "value": "http://caineprize.com/previous-winners/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "d9fa5923b38d87e9cb8fdd300db2e1505ceb9325",
+            "datavalue": {
+             "value": {
+              "time": "+2018-07-27T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P166",
+        "hash": "232f520a019e7abcc2d056bb642f053a21339dbe",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 54889438,
+          "id": "Q54889438"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P585": [
+         {
+          "snaktype": "value",
+          "property": "P585",
+          "hash": "6174553681261aeec411766adf691fdeec1dee47",
+          "datavalue": {
+           "value": {
+            "time": "+2018-00-00T00:00:00Z",
+            "timezone": 0,
+            "before": 0,
+            "after": 0,
+            "precision": 9,
+            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+           },
+           "type": "time"
+          },
+          "datatype": "time"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P585"
+       ],
+       "id": "Q290220$9462ccde-4957-6dd8-8470-cf61bfe88501",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "84b48f9e57ad2eb6302264e075ba44643519e9d6",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "517394fb416dc8e434d0695dee7144c85bd29d28",
+            "datavalue": {
+             "value": "https://100women.okayafrica.com/literature-articles/2018/3/1/leila-aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854"
+         ]
+        }
+       ]
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P166",
+        "hash": "802b1b298c89c81766ba5fa95cecf3beda0dd988",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 39477935,
+          "id": "Q39477935"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P585": [
+         {
+          "snaktype": "value",
+          "property": "P585",
+          "hash": "1a3e5e8f69f70a8a6b056a6cb8cf5fce7fffa373",
+          "datavalue": {
+           "value": {
+            "time": "+2023-00-00T00:00:00Z",
+            "timezone": 0,
+            "before": 0,
+            "after": 0,
+            "precision": 9,
+            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+           },
+           "type": "time"
+          },
+          "datatype": "time"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P585"
+       ],
+       "id": "Q290220$c3ac4de6-44d3-847c-41ee-5e360b6d4a41",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "af26deac4cbab9b8fae7a662fc3dbfccf81c1d2b",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "f9a009d2224558a16abf7350aad03973b17170db",
+            "datavalue": {
+             "value": "https://rsliterature.org/fellows/leila-aboulela/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "c8a9f4bedda12e9a825d59695839acd4dd240af1",
+            "datavalue": {
+             "value": {
+              "time": "+2025-07-08T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P866": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P866",
+        "hash": "23b4236c2812e99efd16dcdae352c7ab445c5952",
+        "datavalue": {
+         "value": "leila-aboulela",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$F8D6B193-59A3-48B5-8404-6F3B06A007EA",
+       "rank": "normal"
+      }
+     ],
+     "P27": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P27",
+        "hash": "89357134ad45eeabfdd1d7d61aa5b6b658a0cea7",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 1049,
+          "id": "Q1049"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$82923334-4ADE-45BB-9409-E58A53D6D73F",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P856": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P856",
+        "hash": "e7064504fa1efce9dce4fd23d5a1050036999534",
+        "datavalue": {
+         "value": "https://leila-aboulela.com",
+         "type": "string"
+        },
+        "datatype": "url"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P1019": [
+         {
+          "snaktype": "value",
+          "property": "P1019",
+          "hash": "a3a2744332d53d2f425252af105ee864e323825f",
+          "datavalue": {
+           "value": "https://leila-aboulela.com/feed/",
+           "type": "string"
+          },
+          "datatype": "url"
+         }
+        ],
+        "P407": [
+         {
+          "snaktype": "value",
+          "property": "P407",
+          "hash": "daf1c4fcb58181b02dff9cc89deb084004ddae4b",
+          "datavalue": {
+           "value": {
+            "entity-type": "item",
+            "numeric-id": 1860,
+            "id": "Q1860"
+           },
+           "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P1019",
+        "P407"
+       ],
+       "id": "Q290220$8D371396-110F-4A33-9C45-6A633657C24B",
+       "rank": "normal"
+      }
+     ],
+     "P1315": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1315",
+        "hash": "268a1be8a2f773897c0463e45154ec702bd34929",
+        "datavalue": {
+         "value": "1242067",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$AC82B2BF-C6E4-49C2-A46E-97F90D3F3264",
+       "rank": "normal"
+      }
+     ],
+     "P1559": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1559",
+        "hash": "723d9ba1e2c9e9c19c5541c4076e80e89c075e13",
+        "datavalue": {
+         "value": {
+          "text": "ليلى أبو العلا",
+          "language": "ar"
+         },
+         "type": "monolingualtext"
+        },
+        "datatype": "monolingualtext"
+       },
+       "type": "statement",
+       "id": "Q290220$732CA4EA-2E53-4D4C-B7B2-1BAAB6E8209D",
+       "rank": "normal"
+      }
+     ],
+     "P906": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P906",
+        "hash": "fce66042f278b81864aab2992feef6935420ddd4",
+        "datavalue": {
+         "value": "307691",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$963FA64F-EC68-485D-A8A0-11EB52CA0F98",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2857b8b98a902d151e8bffde5e5873df4073963",
+         "snaks": {
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "a347416c281ceebe875ba14a5e5aebf4900c37eb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-15T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P214",
+          "P813",
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P1015": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1015",
+        "hash": "a5f83d224d1b569b5c4537ce7b6115cad97cbf24",
+        "datavalue": {
+         "value": "1085535",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$1389353C-F4DE-4071-805F-AB0F660ED2D0",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2857b8b98a902d151e8bffde5e5873df4073963",
+         "snaks": {
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "a347416c281ceebe875ba14a5e5aebf4900c37eb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-15T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P214",
+          "P813",
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P1207": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1207",
+        "hash": "d18884bc35e1571205557a4531f7265d6994c0a7",
+        "datavalue": {
+         "value": "n2009044254",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$A75EF915-24B4-4200-9368-E71A1AC86B98",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2857b8b98a902d151e8bffde5e5873df4073963",
+         "snaks": {
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "a347416c281ceebe875ba14a5e5aebf4900c37eb",
+            "datavalue": {
+             "value": {
+              "time": "+2017-10-15T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P214",
+          "P813",
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P5008": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5008",
+        "hash": "c38ba0402bf563d7e565fe9f24271301a12c7789",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 24909800,
+          "id": "Q24909800"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$BD2B8DD9-E8EF-4805-8E81-2FF923051879",
+       "rank": "normal"
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5008",
+        "hash": "ad35d66ee378fb3bd2dd9b6a126db5b599220eec",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 60687720,
+          "id": "Q60687720"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P585": [
+         {
+          "snaktype": "value",
+          "property": "P585",
+          "hash": "60634bc4e9846fc33bc656ddcba7ec09b07bc1b4",
+          "datavalue": {
+           "value": {
+            "time": "+2018-01-01T00:00:00Z",
+            "timezone": 0,
+            "before": 0,
+            "after": 0,
+            "precision": 9,
+            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+           },
+           "type": "time"
+          },
+          "datatype": "time"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P585"
+       ],
+       "id": "Q290220$94D500F5-CA6F-4DBC-B5C3-26E8BA0C23F7",
+       "rank": "normal"
+      },
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5008",
+        "hash": "5c3024d34072f3f98ee635d59b23aaf4f53e8c69",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 112895606,
+          "id": "Q112895606"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$71C48CEA-C6BA-4A6B-8C8B-0C8D13C6555B",
+       "rank": "normal"
+      }
+     ],
+     "P648": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P648",
+        "hash": "3ccb28638b13c704ad8633e274c4959cffcd565e",
+        "datavalue": {
+         "value": "OL1434517A",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$E29313A3-AAB7-41A1-9929-8CE2F5EC518B",
+       "rank": "normal"
+      }
+     ],
+     "P269": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P269",
+        "hash": "465e5ed9c851c956663dd1d2bf3b10217526583e",
+        "datavalue": {
+         "value": "060827017",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$039E22EB-8E38-49C1-8924-1E0EA8FA405C",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "5a858a70d6ac562123c1debf25a5aed93a5c4939",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "def9f19d84b65167a2a17ce38364d264c16127fc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 19938912,
+              "id": "Q19938912"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "97aefaac0484eca89d5fee539362dc40c533824e",
+            "datavalue": {
+             "value": {
+              "time": "+2015-08-26T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P1412": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1412",
+        "hash": "7056615ebf0fbde82a3ca3bb9b2c481669a46eb1",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 1860,
+          "id": "Q1860"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$69EBCF94-0BF6-4EEE-9C76-77E19CD331FD",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "057cabd9f6e000c0f25a3751123a73844822ef17",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "def9f19d84b65167a2a17ce38364d264c16127fc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 19938912,
+              "id": "Q19938912"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P268": [
+           {
+            "snaktype": "value",
+            "property": "P268",
+            "hash": "d1088d21fcf61a2e212dd69937e96043eff1fd7c",
+            "datavalue": {
+             "value": "14443617b",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "d6162a1716489623c6e595e448b17f8dca4fb2e8",
+            "datavalue": {
+             "value": {
+              "time": "+2015-10-10T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P268",
+          "P813"
+         ]
+        },
+        {
+         "hash": "968ce1877272ac38391bf90f3a12f58ee129be8b",
+         "snaks": {
+          "P1280": [
+           {
+            "snaktype": "value",
+            "property": "P1280",
+            "hash": "b44a438c2bcc58e6fe3ea47b88490ecc28a8920f",
+            "datavalue": {
+             "value": "79721827",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "ce2ad38458403bf82a1be374c1e0c4ed312c4d48",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 16744133,
+              "id": "Q16744133"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P1280",
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P5705": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5705",
+        "hash": "49dd7876654a0920b62ffb672611c1ee25aaf1ed",
+        "datavalue": {
+         "value": "leila-aboulela",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$C1370D78-3721-4388-A2D2-31871B303D4F",
+       "rank": "normal"
+      }
+     ],
+     "P5587": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5587",
+        "hash": "59157a63a15110645e4adcad7c6b97d034d0a1ac",
+        "datavalue": {
+         "value": "tr58dq7c17kp34m",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$9318C755-03AE-405B-A514-9926109BC0B9",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "24cfc0643e2bfb338ddabc7f14a7d0d187fab9bc",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "f487c993a88b7e91732ae6e2ad2910710a462ad8",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 1798125,
+              "id": "Q1798125"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P577": [
+           {
+            "snaktype": "value",
+            "property": "P577",
+            "hash": "1bc27a3ca4fcbc79295cfe03554cb5f21ab6e66f",
+            "datavalue": {
+             "value": {
+              "time": "+2008-04-10T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "a11d62bd1cf10c4155401fd7884e6013285efeaa",
+            "datavalue": {
+             "value": {
+              "time": "+2018-08-24T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P577",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P1280": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1280",
+        "hash": "b44a438c2bcc58e6fe3ea47b88490ecc28a8920f",
+        "datavalue": {
+         "value": "79721827",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P1810": [
+         {
+          "snaktype": "value",
+          "property": "P1810",
+          "hash": "85baf4454d6cd635824b841067b9c179ce730d25",
+          "datavalue": {
+           "value": "Aboulela, Leila, 1964-",
+           "type": "string"
+          },
+          "datatype": "string"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P1810"
+       ],
+       "id": "Q290220$44222930-03CB-4998-B4A1-CED64E873DC0",
+       "rank": "normal"
+      }
+     ],
+     "P1343": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1343",
+        "hash": "ef9ae2386ec2a8907bf87523b139eb3e52b16c09",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 46002746,
+          "id": "Q46002746"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P2699": [
+         {
+          "snaktype": "value",
+          "property": "P2699",
+          "hash": "87592cc5ea26a522cee53cfa69d0b5609c12eede",
+          "datavalue": {
+           "value": "http://www.oxfordreference.com/abstract/10.1093/acref/9780195382075.001.0001/acref-9780195382075-e-0036?rskey=2xwx3z&result=36",
+           "type": "string"
+          },
+          "datatype": "url"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P2699"
+       ],
+       "id": "Q290220$DD0A74A3-1001-49D9-9B90-931264984EB2",
+       "rank": "normal"
+      }
+     ],
+     "P268": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P268",
+        "hash": "d1088d21fcf61a2e212dd69937e96043eff1fd7c",
+        "datavalue": {
+         "value": "14443617b",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$B84AF724-76EC-47F7-9C52-089911F009FA",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "5fb4df717e8449f9a4dfb7fcfd5e2493141e9df3",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "a1b98b5c8bb6eca02829acaf6200c3e4a45b4dd0",
+            "datavalue": {
+             "value": {
+              "time": "+2018-10-07T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P21": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P21",
+        "hash": "5760796ff6ebc63aae12cdcbf509b07ebf0bd201",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 6581072,
+          "id": "Q6581072"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$529D5E9D-55DD-4AC5-8465-9EE097D3BD97",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "0ab7b78791f7507aa9a24827216ae9ba7bca7cbd",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "c5ef85c746750d91ac494f84ba47d211d7a2ec81",
+            "datavalue": {
+             "value": {
+              "time": "+2018-11-04T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        },
+        {
+         "hash": "057cabd9f6e000c0f25a3751123a73844822ef17",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "def9f19d84b65167a2a17ce38364d264c16127fc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 19938912,
+              "id": "Q19938912"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P268": [
+           {
+            "snaktype": "value",
+            "property": "P268",
+            "hash": "d1088d21fcf61a2e212dd69937e96043eff1fd7c",
+            "datavalue": {
+             "value": "14443617b",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "d6162a1716489623c6e595e448b17f8dca4fb2e8",
+            "datavalue": {
+             "value": {
+              "time": "+2015-10-10T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P268",
+          "P813"
+         ]
+        },
+        {
+         "hash": "4036be9de76738ae7b9b190ff82add40d3d62332",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "7133ad7bdc9749d28b62d01f5b7780fde50b22cc",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 46002746,
+              "id": "Q46002746"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P691": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P691",
+        "hash": "86eecc27af667e8bb69d751ac39ecead680ed100",
+        "datavalue": {
+         "value": "xx0013059",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$F97E6F76-AE99-4757-BC31-25C63B253F7A",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "5e7ebdce571046fcb2264ac8ff238cdfb01780b4",
+         "snaks": {
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "6cd7a3b7757ab7001b488c7fc1ac5f3e065fbb92",
+            "datavalue": {
+             "value": {
+              "time": "+2018-12-24T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P214",
+          "P248",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P5034": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P5034",
+        "hash": "23b9b537460fd77f8aa6d29696ed187fbb554481",
+        "datavalue": {
+         "value": "KAC201328107",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$7aa3cf65-fbd9-47dd-a48d-91fbc6d76418",
+       "rank": "normal"
+      }
+     ],
+     "P2163": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P2163",
+        "hash": "2cd44ddfe7f28f425cf5149568bd191437e45b81",
+        "datavalue": {
+         "value": "1961671",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$908DCE3C-FCE7-4372-ABD3-2B9C5F96528E",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "ac0c4adc1497b0c81c9c486a499a50b1dbea38ba",
+         "snaks": {
+          "P244": [
+           {
+            "snaktype": "value",
+            "property": "P244",
+            "hash": "da20a0d8dba68a8c8a22ae2aca14045997ac8891",
+            "datavalue": {
+             "value": "no00008864",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "c120f07504c77593a9d734f50361ea829f601960",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 620946,
+              "id": "Q620946"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "0cd0399e778f66d514abac5cd6109335d422e78a",
+            "datavalue": {
+             "value": {
+              "time": "+2020-03-25T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P244",
+          "P248",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P7293": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P7293",
+        "hash": "3928db704758e3c75c62cc991d1de20d9ca7a813",
+        "datavalue": {
+         "value": "9810546330705606",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$A826FB6A-73D4-4788-8703-ECEC2D126BEF",
+       "rank": "normal"
+      }
+     ],
+     "P1695": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1695",
+        "hash": "55dff4b18d1262e01e428864e201775be06593ef",
+        "datavalue": {
+         "value": "a0000002322095",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$1196e496-68ad-4661-9991-9e6aeb9a117c",
+       "rank": "normal"
+      }
+     ],
+     "P4342": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P4342",
+        "hash": "474d776261f0c8ceb02b657c115be15a0753a828",
+        "datavalue": {
+         "value": "Leila_Aboulela",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$02868946-7983-4D69-BE9B-10584EDF1D8F",
+       "rank": "normal"
+      }
+     ],
+     "P734": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P734",
+        "hash": "d0c72cde1d8ef25ad6eff7058441d80ec328fd2c",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 109918754,
+          "id": "Q109918754"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$439b87d3-4d61-034d-2576-79ba5ef56175",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P6553": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P6553",
+        "hash": "4f43d6bcba2066cd6ba9f065b04839489510914b",
+        "datavalue": {
+         "value": {
+          "entity-type": "lexeme",
+          "numeric-id": 484,
+          "id": "L484"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-lexeme"
+       },
+       "type": "statement",
+       "id": "Q290220$7721e7f2-4b4a-7ce8-25ff-4bb68ad8e2fc",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "a96af12fb5baa1f58bfdab7407fe906a1d0d2741",
+         "snaks": {
+          "P4656": [
+           {
+            "snaktype": "value",
+            "property": "P4656",
+            "hash": "417b4971c58ee3b02aeea13c29462876c33e7ae8",
+            "datavalue": {
+             "value": "https://en.wikipedia.org/wiki/Leila_Aboulela",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P4656"
+         ]
+        }
+       ]
+      }
+     ],
+     "P8189": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P8189",
+        "hash": "9ec9df28ccba3c84ba5471c5c936705a9dfa7275",
+        "datavalue": {
+         "value": "987007391307405171",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$9F97000B-C8BE-4321-BB8F-C849D10354E5",
+       "rank": "normal"
+      }
+     ],
+     "P373": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P373",
+        "hash": "5b0aba80410452b4df42d238baa52116265a89e7",
+        "datavalue": {
+         "value": "Leila Aboulela",
+         "type": "string"
+        },
+        "datatype": "string"
+       },
+       "type": "statement",
+       "id": "Q290220$17762748-6866-4d58-9c68-6a6c76609e19",
+       "rank": "normal"
+      }
+     ],
+     "P4514": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P4514",
+        "hash": "718b8af968ab0c33a9845b9bdf4e9ea8a97d7da1",
+        "datavalue": {
+         "value": "5026",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$E9F18EF6-1471-4B47-BF3D-618DBD4B5FCD",
+       "rank": "normal"
+      }
+     ],
+     "P950": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P950",
+        "hash": "60ce56cd6b4580e8216ba9f5bd5369348e6fbcc5",
+        "datavalue": {
+         "value": "XX1592111",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$12C71E86-4FB7-4A11-9ECD-91821A205157",
+       "rank": "normal"
+      }
+     ],
+     "P3630": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P3630",
+        "hash": "5bb37d14a318e7efdbd4de39b9f55256a46e4189",
+        "datavalue": {
+         "value": "33626",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$6F0D790D-9F17-40EA-9172-BC626972860C",
+       "rank": "normal"
+      }
+     ],
+     "P6868": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P6868",
+        "hash": "fb50f0d7278647c64feec8478eb5b3d69e775364",
+        "datavalue": {
+         "value": "1988530259",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$37347DA5-5CE2-444C-B9B6-B884BFDD077C",
+       "rank": "normal"
+      }
+     ],
+     "P3368": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P3368",
+        "hash": "db4234d48f1e8890be220e9e91a004af2e318218",
+        "datavalue": {
+         "value": "726676",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$8F11BC19-60CC-4E93-8D25-6533D68A7AB6",
+       "rank": "normal"
+      }
+     ],
+     "P3987": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P3987",
+        "hash": "2d177e25661d0c05a5194c61ea8fd21fdf9a5520",
+        "datavalue": {
+         "value": "687756",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$31B7BBF1-8A76-46FC-9C48-3174B5598702",
+       "rank": "normal"
+      }
+     ],
+     "P1233": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1233",
+        "hash": "b4b759832298a567ed5c004b8de7ddaaaedd5827",
+        "datavalue": {
+         "value": "315530",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$3948CBD1-CD7B-42D2-A910-0C2777C3C0DA",
+       "rank": "normal"
+      }
+     ],
+     "P3348": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P3348",
+        "hash": "9a11fcab06b49ef0a9ba987a9d1e32d2bc3cf307",
+        "datavalue": {
+         "value": "209039",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$DB448156-8234-4302-BCCF-38244392A370",
+       "rank": "normal"
+      }
+     ],
+     "P2188": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P2188",
+        "hash": "849e7da6f9f7413779c957f4c2a8703eccfdf33f",
+        "datavalue": {
+         "value": "42855",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$218BD62A-72A3-488B-8A06-6A8381F74D2F",
+       "rank": "normal"
+      }
+     ],
+     "P9984": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P9984",
+        "hash": "6ececf5331831c10723331f19158ac229eff2158",
+        "datavalue": {
+         "value": "981060413662506706",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$f8991013-4bca-05d6-f238-0c40ec26da17",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "caccd78f7c5a199dc29cf1a0a92bce1d000d6995",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "ec11100215a5926044c30f24900adbf61070d424",
+            "datavalue": {
+             "value": {
+              "time": "+2023-02-21T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P409": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P409",
+        "hash": "0c42876138f7b5e34e079834a0793577a5f96920",
+        "datavalue": {
+         "value": "41589681",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$ed028f7d-4a1b-681e-b454-a16498d95d4a",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "caccd78f7c5a199dc29cf1a0a92bce1d000d6995",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "ec11100215a5926044c30f24900adbf61070d424",
+            "datavalue": {
+             "value": {
+              "time": "+2023-02-21T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P3065": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P3065",
+        "hash": "0ffad8f54f67f083728aa22ed1e4d76692e55df5",
+        "datavalue": {
+         "value": "A021842261",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "q290220$0432e004-400a-e5bf-067e-d8656457c45b",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "caccd78f7c5a199dc29cf1a0a92bce1d000d6995",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "6b7d4330c4aac4caec4ede9de0311ce273f88ecd",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 54919,
+              "id": "Q54919"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P214": [
+           {
+            "snaktype": "value",
+            "property": "P214",
+            "hash": "a38e93699d9ebe87c9d4f89ed88a2ce3a9a02e3c",
+            "datavalue": {
+             "value": "17443341",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "ec11100215a5926044c30f24900adbf61070d424",
+            "datavalue": {
+             "value": {
+              "time": "+2023-02-21T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248",
+          "P214",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P11686": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P11686",
+        "hash": "f98d7800d2a5a1a5ef497a27bcb5ebde395acfb3",
+        "datavalue": {
+         "value": "981060413662506706",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$B5F1289A-EF4C-4440-BD2B-EBAF52362982",
+       "rank": "normal"
+      }
+     ],
+     "P1617": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1617",
+        "hash": "83d6427acdc1060b650820180617f932f52ce9de",
+        "datavalue": {
+         "value": "3e82a43f-ef68-4d49-bffb-c6d9100871f3",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$38685C58-299F-4542-9BA1-19ABE1015C5A",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "8582d8416671f1f2567247201bac753552435ca5",
+         "snaks": {
+          "P248": [
+           {
+            "snaktype": "value",
+            "property": "P248",
+            "hash": "ea55dc6ac5c3ab77c77d4ae7979e3276d0d4cd20",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 18336371,
+              "id": "Q18336371"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P248"
+         ]
+        }
+       ]
+      }
+     ],
+     "P12582": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P12582",
+        "hash": "d00542eca614578438f695016d63371fd3063c73",
+        "datavalue": {
+         "value": "20110810104310197",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$C94BAE73-E2E3-4AAB-8092-024DD83C6ACE",
+       "rank": "normal"
+      }
+     ],
+     "P10832": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P10832",
+        "hash": "d437dd31431c054abc93bb62c0e0820db40e4d1e",
+        "datavalue": {
+         "value": "E39PBJgCPpFQYvyGvv38XFwBfq",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$BD327DB0-1F51-4764-B1FC-05FA3311E48E",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "f244381587a2000e694fe2784d3f0f922582f442",
+         "snaks": {
+          "P11797": [
+           {
+            "snaktype": "value",
+            "property": "P11797",
+            "hash": "ebc61ebee105944aa63ee48264c820fab36c5571",
+            "datavalue": {
+             "value": {
+              "entity-type": "item",
+              "numeric-id": 13219454,
+              "id": "Q13219454"
+             },
+             "type": "wikibase-entityid"
+            },
+            "datatype": "wikibase-item"
+           }
+          ],
+          "P244": [
+           {
+            "snaktype": "value",
+            "property": "P244",
+            "hash": "da20a0d8dba68a8c8a22ae2aca14045997ac8891",
+            "datavalue": {
+             "value": "no00008864",
+             "type": "string"
+            },
+            "datatype": "external-id"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "7af60df801d26749ee503d3bbc7956a76159db12",
+            "datavalue": {
+             "value": {
+              "time": "+2024-04-25T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P11797",
+          "P244",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P13049": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P13049",
+        "hash": "691f5818253ffda131235580f37eae540c629f78",
+        "datavalue": {
+         "value": "123768373",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$C1B7C7D5-DB8B-47B4-A096-3306A421E66B",
+       "rank": "normal"
+      }
+     ],
+     "P11870": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P11870",
+        "hash": "5cb41b8ca7b3101a2b974c6c938a6fe441c04f5f",
+        "datavalue": {
+         "value": "12625",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$A48350A1-5516-41D3-80C8-AE757397778A",
+       "rank": "normal"
+      }
+     ],
+     "P10387": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P10387",
+        "hash": "a21b05096ad764774b4633b2f9b3cf43afcfb27a",
+        "datavalue": {
+         "value": "107281",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$78AEA43B-5527-4605-885B-915365FD7B20",
+       "rank": "normal"
+      }
+     ],
+     "P13591": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P13591",
+        "hash": "623246535c6c799c823c7ba69d5006319e230668",
+        "datavalue": {
+         "value": "person/a6aae220-68e6-4aeb-98d5-ace27ad1e3f2",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$3F6B4711-CDEF-42E2-BA0E-E4686F0F33CC",
+       "rank": "normal"
+      }
+     ],
+     "P2963": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P2963",
+        "hash": "6df9183f439940033817a5c7bba664770af91d79",
+        "datavalue": {
+         "value": "62372",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$54FBB917-0C0C-429A-AB70-4FE310EDBD90",
+       "rank": "normal"
+      }
+     ],
+     "P10400": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P10400",
+        "hash": "1239b1d2e9e784530da5d2d59bf650600f424463",
+        "datavalue": {
+         "value": "28641",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$06BC2C67-9B6F-4F05-BA52-6888F34E64A2",
+       "rank": "normal"
+      }
+     ],
+     "P1026": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P1026",
+        "hash": "84c034bee3f75ad64a3c134d83be33bffcd773ab",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 105822851,
+          "id": "Q105822851"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "qualifiers": {
+        "P4101": [
+         {
+          "snaktype": "value",
+          "property": "P4101",
+          "hash": "37fa0ab3090201909f8f91bbf00cae1ffd5fc2e9",
+          "datavalue": {
+           "value": {
+            "entity-type": "item",
+            "numeric-id": 174570,
+            "id": "Q174570"
+           },
+           "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+         }
+        ]
+       },
+       "qualifiers-order": [
+        "P4101"
+       ],
+       "id": "Q290220$60686B06-5B7B-48AF-9C19-1922C0C73C06",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2d642b680b107f574dd2073f91dfc72f594fedf",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "7fe0857c2457cf3013ea8adc27280b1236a26571",
+            "datavalue": {
+             "value": "https://researchonline.lse.ac.uk/id/eprint/133801/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "3f450b495a44b6d4e1cad48a01a6cde8a05d5371",
+            "datavalue": {
+             "value": {
+              "time": "+2026-02-12T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P512": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P512",
+        "hash": "190b41c8bace6fa2524091be66b43a8abbf3886b",
+        "datavalue": {
+         "value": {
+          "entity-type": "item",
+          "numeric-id": 1527520,
+          "id": "Q1527520"
+         },
+         "type": "wikibase-entityid"
+        },
+        "datatype": "wikibase-item"
+       },
+       "type": "statement",
+       "id": "Q290220$0C3C1DA1-CC6E-4B2A-B7CC-C6929C658818",
+       "rank": "normal",
+       "references": [
+        {
+         "hash": "e2d642b680b107f574dd2073f91dfc72f594fedf",
+         "snaks": {
+          "P854": [
+           {
+            "snaktype": "value",
+            "property": "P854",
+            "hash": "7fe0857c2457cf3013ea8adc27280b1236a26571",
+            "datavalue": {
+             "value": "https://researchonline.lse.ac.uk/id/eprint/133801/",
+             "type": "string"
+            },
+            "datatype": "url"
+           }
+          ],
+          "P813": [
+           {
+            "snaktype": "value",
+            "property": "P813",
+            "hash": "3f450b495a44b6d4e1cad48a01a6cde8a05d5371",
+            "datavalue": {
+             "value": {
+              "time": "+2026-02-12T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 11,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+             },
+             "type": "time"
+            },
+            "datatype": "time"
+           }
+          ]
+         },
+         "snaks-order": [
+          "P854",
+          "P813"
+         ]
+        }
+       ]
+      }
+     ],
+     "P14178": [
+      {
+       "mainsnak": {
+        "snaktype": "value",
+        "property": "P14178",
+        "hash": "b29466b404789673950fa26d31b775b15b130305",
+        "datavalue": {
+         "value": "xx0013059",
+         "type": "string"
+        },
+        "datatype": "external-id"
+       },
+       "type": "statement",
+       "id": "Q290220$C0DAC40E-8EFF-43F4-B35C-1D66DC3E3869",
+       "rank": "normal"
+      }
+     ]
+    },
+    "sitelinks": {
+     "arwiki": {
+      "site": "arwiki",
+      "title": "ليلى أبو العلا",
+      "badges": []
+     },
+     "arwikiquote": {
+      "site": "arwikiquote",
+      "title": "ليلى أبو العلا",
+      "badges": []
+     },
+     "arzwiki": {
+      "site": "arzwiki",
+      "title": "ليلى ابو العلا",
+      "badges": []
+     },
+     "azbwiki": {
+      "site": "azbwiki",
+      "title": "لیلا ابوالعلا",
+      "badges": []
+     },
+     "cawiki": {
+      "site": "cawiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "commonswiki": {
+      "site": "commonswiki",
+      "title": "Category:Leila Aboulela",
+      "badges": []
+     },
+     "dewiki": {
+      "site": "dewiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "enwiki": {
+      "site": "enwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "enwikiquote": {
+      "site": "enwikiquote",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "eowiki": {
+      "site": "eowiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "eswiki": {
+      "site": "eswiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "euwiki": {
+      "site": "euwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "fawiki": {
+      "site": "fawiki",
+      "title": "لیلا ابوالعلا",
+      "badges": []
+     },
+     "ffwiki": {
+      "site": "ffwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "fiwiki": {
+      "site": "fiwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "frwiki": {
+      "site": "frwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "glwiki": {
+      "site": "glwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "hawiki": {
+      "site": "hawiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "hywiki": {
+      "site": "hywiki",
+      "title": "Լեյլա Աբուլելա",
+      "badges": []
+     },
+     "idwiki": {
+      "site": "idwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "igwiki": {
+      "site": "igwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "itwiki": {
+      "site": "itwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "kawiki": {
+      "site": "kawiki",
+      "title": "ლეილა აბულელა",
+      "badges": []
+     },
+     "nlwiki": {
+      "site": "nlwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "rowiki": {
+      "site": "rowiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "ruwiki": {
+      "site": "ruwiki",
+      "title": "Абулела, Лейла",
+      "badges": []
+     },
+     "svwiki": {
+      "site": "svwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "swwiki": {
+      "site": "swwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     },
+     "urwiki": {
+      "site": "urwiki",
+      "title": "لیلیٰ ابوالعلا",
+      "badges": []
+     },
+     "viwiki": {
+      "site": "viwiki",
+      "title": "Leila Aboulela",
+      "badges": []
+     }
+    }
+   }
+  },
+  "success": 1
+ }
+}

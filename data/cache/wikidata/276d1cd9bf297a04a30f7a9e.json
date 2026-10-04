@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Nick Joaquin",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:27+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Nick Joaquin"
+  },
+  "search": [
+   {
+    "id": "Q1977234",
+    "title": "Q1977234",
+    "pageid": 1906063,
+    "concepturi": "http://www.wikidata.org/entity/Q1977234",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q1977234",
+    "display": {
+     "label": {
+      "value": "Nick Joaquin",
+      "language": "en"
+     },
+     "description": {
+      "value": "Filipino writer (1917–2004)",
+      "language": "en"
+     }
+    },
+    "label": "Nick Joaquin",
+    "description": "Filipino writer (1917–2004)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Nick Joaquin"
+    }
+   },
+   {
+    "id": "Q123194731",
+    "title": "Q123194731",
+    "pageid": 117438762,
+    "concepturi": "http://www.wikidata.org/entity/Q123194731",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q123194731",
+    "display": {
+     "label": {
+      "value": "Nick Joaquin and Groovy Kids: A Critique of HisStories for Children",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published in 2014",
+      "language": "en"
+     }
+    },
+    "label": "Nick Joaquin and Groovy Kids: A Critique of HisStories for Children",
+    "description": "scientific article published in 2014",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Nick Joaquin and Groovy Kids: A Critique of HisStories for Children"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

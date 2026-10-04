@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Ivo Andrić haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:38+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q47561",
+     "pageid": 49670,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Yugoslav novelist (1892–1975)",
+     "timestamp": "2026-10-02T15:06:56Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6099043",
+     "pageid": 5889665,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Bosnian Croat politician",
+     "timestamp": "2024-09-15T02:36:40Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q12633350",
+     "pageid": 13944576,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-05-16T01:57:32Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q11119639",
+     "pageid": 12318730,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Serbian costume designer and university professor",
+     "timestamp": "2026-08-12T07:16:26Z"
+    }
+   ]
+  }
+ }
+}

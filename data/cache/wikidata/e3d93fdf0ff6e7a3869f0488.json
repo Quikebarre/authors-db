@@ -1,0 +1,73 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Andrey Platonov",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:41+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Andrey Platonov"
+  },
+  "search": [
+   {
+    "id": "Q315147",
+    "title": "Q315147",
+    "pageid": 302950,
+    "concepturi": "http://www.wikidata.org/entity/Q315147",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q315147",
+    "display": {
+     "label": {
+      "value": "Andrei Platonov",
+      "language": "en"
+     },
+     "description": {
+      "value": "Russian author (1899–1951)",
+      "language": "en"
+     }
+    },
+    "label": "Andrei Platonov",
+    "description": "Russian author (1899–1951)",
+    "match": {
+     "type": "label",
+     "language": "tr",
+     "text": "Andrey Platonov"
+    },
+    "aliases": [
+     "Andrey Platonov"
+    ]
+   },
+   {
+    "id": "Q126779779",
+    "title": "Q126779779",
+    "pageid": 120790158,
+    "concepturi": "http://www.wikidata.org/entity/Q126779779",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q126779779",
+    "display": {
+     "label": {
+      "value": "Andrey Platonov: The Forgotten Dream of the Revolution",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Andrey Platonov: The Forgotten Dream of the Revolution",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Andrey Platonov: The Forgotten Dream of the Revolution"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

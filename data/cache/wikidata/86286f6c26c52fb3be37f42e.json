@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Sholem Aleichem haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:35+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q238090",
+     "pageid": 231480,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Jewish writer and playwright of Yiddish, who worked in Russian Empire, Switzerland, Germany and the United States (1859-1916)",
+     "timestamp": "2026-10-04T08:11:24Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q134881277",
+     "pageid": 128708012,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "President of the <span class=\"searchmatch\">Sholem</span> <span class=\"searchmatch\">Aleichem</span> College",
+     "timestamp": "2025-06-12T12:54:01Z"
+    }
+   ]
+  }
+ }
+}

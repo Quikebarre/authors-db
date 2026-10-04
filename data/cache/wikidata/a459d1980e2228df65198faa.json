@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Osamu Dazai haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:54+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q317685",
+     "pageid": 305283,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese author",
+     "timestamp": "2026-09-05T11:42:17Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q11570531",
+     "pageid": 12710467,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese author",
+     "timestamp": "2026-09-08T10:27:19Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q291672",
+     "pageid": 281947,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese author (1947–2016)",
+     "timestamp": "2026-09-21T10:55:59Z"
+    }
+   ]
+  }
+ }
+}

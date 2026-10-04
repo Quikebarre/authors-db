@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Giuseppe Tomasi di Lampedusa",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:44:47+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Giuseppe Tomasi di Lampedusa"
+  },
+  "search": [
+   {
+    "id": "Q213482",
+    "title": "Q213482",
+    "pageid": 208923,
+    "concepturi": "http://www.wikidata.org/entity/Q213482",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q213482",
+    "display": {
+     "label": {
+      "value": "Giuseppe Tomasi di Lampedusa",
+      "language": "en"
+     },
+     "description": {
+      "value": "Sicilian Prince and writer (1896-1957)",
+      "language": "en"
+     }
+    },
+    "label": "Giuseppe Tomasi di Lampedusa",
+    "description": "Sicilian Prince and writer (1896-1957)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Giuseppe Tomasi di Lampedusa"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

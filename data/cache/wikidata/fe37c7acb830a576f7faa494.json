@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Nassim Nicholas Taleb haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:59+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q333521",
+     "pageid": 319662,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Lebanese-American mathematical statistician, option trader, risk analyst and author (born 1960)",
+     "timestamp": "2026-09-15T06:38:46Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q115179603",
+     "pageid": 109808118,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "supreme court judge, grandfather of the author Nassim Nicholas Taleb",
+     "timestamp": "2026-06-06T05:51:33Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q43475924",
+     "pageid": 44691135,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "mother of <span class=\"searchmatch\">Nassim</span> <span class=\"searchmatch\">Nicholas</span> <span class=\"searchmatch\">Taleb</span>, daughter of Fouad Nicolas Ghosn, sister of Nicolas Ghosn",
+     "timestamp": "2026-06-06T05:48:34Z"
+    }
+   ]
+  }
+ }
+}

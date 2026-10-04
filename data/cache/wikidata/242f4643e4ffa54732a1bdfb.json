@@ -1,0 +1,98 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Ryunosuke Akutagawa",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:45+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Ryunosuke Akutagawa"
+  },
+  "search": [
+   {
+    "id": "Q186326",
+    "title": "Q186326",
+    "pageid": 185110,
+    "concepturi": "http://www.wikidata.org/entity/Q186326",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q186326",
+    "display": {
+     "label": {
+      "value": "Ryūnosuke Akutagawa",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese writer (1892–1927)",
+      "language": "en"
+     }
+    },
+    "label": "Ryūnosuke Akutagawa",
+    "description": "Japanese writer (1892–1927)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ryūnosuke Akutagawa"
+    }
+   },
+   {
+    "id": "Q424160",
+    "title": "Q424160",
+    "pageid": 400581,
+    "concepturi": "http://www.wikidata.org/entity/Q424160",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q424160",
+    "display": {
+     "label": {
+      "value": "Akutagawa Prize",
+      "language": "en"
+     },
+     "description": {
+      "value": "semi-annual Japanese literary award",
+      "language": "en"
+     }
+    },
+    "label": "Akutagawa Prize",
+    "description": "semi-annual Japanese literary award",
+    "match": {
+     "type": "label",
+     "language": "fi",
+     "text": "Ryūnosuke Akutagawa -palkinto"
+    },
+    "aliases": [
+     "Ryūnosuke Akutagawa -palkinto"
+    ]
+   },
+   {
+    "id": "Q127469295",
+    "title": "Q127469295",
+    "pageid": 121462268,
+    "concepturi": "http://www.wikidata.org/entity/Q127469295",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q127469295",
+    "display": {
+     "label": {
+      "value": "Ryunosuke Akutagawa’s Perception of the West and Japan in China Based on His Experience with Concessions All Over China",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Ryunosuke Akutagawa’s Perception of the West and Japan in China Based on His Experience with Concessions All Over China",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ryunosuke Akutagawa’s Perception of the West and Japan in China Based on His Experience with Concessions All Over China"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

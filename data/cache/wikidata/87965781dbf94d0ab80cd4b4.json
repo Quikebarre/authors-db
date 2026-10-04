@@ -1,0 +1,65 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Roberto Saviano",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:44:55+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Roberto Saviano"
+  },
+  "search": [
+   {
+    "id": "Q25163",
+    "title": "Q25163",
+    "pageid": 28559,
+    "concepturi": "http://www.wikidata.org/entity/Q25163",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q25163",
+    "display": {
+     "label": {
+      "value": "Roberto Saviano",
+      "language": "en"
+     },
+     "description": {
+      "value": "Italian journalist and writer (born 1979)",
+      "language": "en"
+     }
+    },
+    "label": "Roberto Saviano",
+    "description": "Italian journalist and writer (born 1979)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Roberto Saviano"
+    }
+   },
+   {
+    "id": "Q55903209",
+    "title": "Q55903209",
+    "pageid": 55855910,
+    "concepturi": "http://www.wikidata.org/entity/Q55903209",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q55903209",
+    "display": {
+     "label": {
+      "value": "Roberto Saviano: Writing Under Police Protection",
+      "language": "en"
+     }
+    },
+    "label": "Roberto Saviano: Writing Under Police Protection",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Roberto Saviano: Writing Under Police Protection"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Arundhati Roy haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:23+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q212801",
+     "pageid": 208323,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indian novelist, essayist, and activist",
+     "timestamp": "2026-09-28T16:35:48Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q56866516",
+     "pageid": 56782737,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher",
+     "timestamp": "2025-08-11T10:17:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q140564144",
+     "pageid": 134001677,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Brother of Arundhati Roy",
+     "timestamp": "2026-07-15T16:53:44Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q140564220",
+     "pageid": 134001758,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Father of novelist Arundhati Roy",
+     "timestamp": "2026-07-16T06:24:26Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q139365493",
+     "pageid": 132823158,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "1946-",
+     "timestamp": "2026-04-15T10:22:29Z"
+    }
+   ]
+  }
+ }
+}

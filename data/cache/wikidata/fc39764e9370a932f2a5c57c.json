@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Viktor Frankl haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:07+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q154723",
+     "pageid": 155954,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Austrian Holocaust survivor, psychiatrist, philosopher and author (1905–1997)",
+     "timestamp": "2026-09-19T09:08:27Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q53864888",
+     "pageid": 54314529,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German basketball player (born 1993)",
+     "timestamp": "2026-09-09T18:22:10Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q109335471",
+     "pageid": 104502660,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "second wife of <span class=\"searchmatch\">Viktor</span> <span class=\"searchmatch\">Frankl</span>",
+     "timestamp": "2026-06-17T15:56:37Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q94888199",
+     "pageid": 93832811,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Austrian mechanic, poet and resistance fighter",
+     "timestamp": "2026-07-24T20:21:25Z"
+    }
+   ]
+  }
+ }
+}

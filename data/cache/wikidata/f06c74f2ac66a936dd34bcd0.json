@@ -1,0 +1,90 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Kiran Desai",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:26+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Kiran Desai"
+  },
+  "search": [
+   {
+    "id": "Q228589",
+    "title": "Q228589",
+    "pageid": 222754,
+    "concepturi": "http://www.wikidata.org/entity/Q228589",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q228589",
+    "display": {
+     "label": {
+      "value": "Kiran Desai",
+      "language": "en"
+     },
+     "description": {
+      "value": "Indian author",
+      "language": "en"
+     }
+    },
+    "label": "Kiran Desai",
+    "description": "Indian author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Kiran Desai"
+    }
+   },
+   {
+    "id": "Q113715486",
+    "title": "Q113715486",
+    "pageid": 108476215,
+    "concepturi": "http://www.wikidata.org/entity/Q113715486",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q113715486",
+    "display": {
+     "label": {
+      "value": "Kiran Desai-Breun",
+      "language": "en"
+     }
+    },
+    "label": "Kiran Desai-Breun",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Kiran Desai-Breun"
+    }
+   },
+   {
+    "id": "Q141020835",
+    "title": "Q141020835",
+    "pageid": 134466262,
+    "concepturi": "http://www.wikidata.org/entity/Q141020835",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q141020835",
+    "display": {
+     "label": {
+      "value": "Kiran Desai: Det tabte land",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article published in Tidskriftet Antropologi, no. 56 (2007) (DOI: 10.7146/TA.V0I56.106791)",
+      "language": "en"
+     }
+    },
+    "label": "Kiran Desai: Det tabte land",
+    "description": "scholarly article published in Tidskriftet Antropologi, no. 56 (2007) (DOI: 10.7146/TA.V0I56.106791)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Kiran Desai: Det tabte land"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

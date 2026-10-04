@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Kyung-sook Shin",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:01+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Kyung-sook Shin"
+  },
+  "search": [
+   {
+    "id": "Q384293",
+    "title": "Q384293",
+    "pageid": 365642,
+    "concepturi": "http://www.wikidata.org/entity/Q384293",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q384293",
+    "display": {
+     "label": {
+      "value": "Shin Kyung-sook",
+      "language": "en"
+     },
+     "description": {
+      "value": "South Korean writer",
+      "language": "en"
+     }
+    },
+    "label": "Shin Kyung-sook",
+    "description": "South Korean writer",
+    "match": {
+     "type": "alias",
+     "language": "en",
+     "text": "Kyung-sook Shin"
+    },
+    "aliases": [
+     "Kyung-sook Shin"
+    ]
+   }
+  ],
+  "success": 1
+ }
+}

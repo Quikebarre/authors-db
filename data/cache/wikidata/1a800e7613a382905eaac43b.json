@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Christa Wolf haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:14+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q57382",
+     "pageid": 60202,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German novelist and essayist (1929–2011)",
+     "timestamp": "2026-09-22T08:13:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q72397879",
+     "pageid": 72050248,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-07-09T16:43:01Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q139515266",
+     "pageid": 132971107,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-05-13T22:54:32Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Sadegh Hedayat",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:59+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Sadegh Hedayat"
+  },
+  "search": [
+   {
+    "id": "Q315017",
+    "title": "Q315017",
+    "pageid": 302834,
+    "concepturi": "http://www.wikidata.org/entity/Q315017",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q315017",
+    "display": {
+     "label": {
+      "value": "Sadegh Hedayat",
+      "language": "en"
+     },
+     "description": {
+      "value": "Iranian writer",
+      "language": "en"
+     }
+    },
+    "label": "Sadegh Hedayat",
+    "description": "Iranian writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Sadegh Hedayat"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

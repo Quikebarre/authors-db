@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Jonathan Franzen",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:26+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Jonathan Franzen"
+  },
+  "search": [
+   {
+    "id": "Q316607",
+    "title": "Q316607",
+    "pageid": 304291,
+    "concepturi": "http://www.wikidata.org/entity/Q316607",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q316607",
+    "display": {
+     "label": {
+      "value": "Jonathan Franzen",
+      "language": "en"
+     },
+     "description": {
+      "value": "American writer",
+      "language": "en"
+     }
+    },
+    "label": "Jonathan Franzen",
+    "description": "American writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Jonathan Franzen"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

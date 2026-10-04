@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Hanan al-Shaykh",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:45+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Hanan al-Shaykh"
+  },
+  "search": [
+   {
+    "id": "Q290143",
+    "title": "Q290143",
+    "pageid": 280499,
+    "concepturi": "http://www.wikidata.org/entity/Q290143",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q290143",
+    "display": {
+     "label": {
+      "value": "Hanan al-Shaykh",
+      "language": "en"
+     },
+     "description": {
+      "value": "Lebanese writer",
+      "language": "en"
+     }
+    },
+    "label": "Hanan al-Shaykh",
+    "description": "Lebanese writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Hanan al-Shaykh"
+    }
+   },
+   {
+    "id": "Q130147338",
+    "title": "Q130147338",
+    "pageid": 124113878,
+    "concepturi": "http://www.wikidata.org/entity/Q130147338",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q130147338",
+    "display": {
+     "label": {
+      "value": "Hanan Al-Shaykh’s the Story of Zahra: A Post-Modern Feminist Literary Criticism of Liberation through Madness",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article published in 2018",
+      "language": "en"
+     }
+    },
+    "label": "Hanan Al-Shaykh’s the Story of Zahra: A Post-Modern Feminist Literary Criticism of Liberation through Madness",
+    "description": "scholarly article published in 2018",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Hanan Al-Shaykh’s the Story of Zahra: A Post-Modern Feminist Literary Criticism of Liberation through Madness"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

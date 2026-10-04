@@ -1,0 +1,98 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Sándor Márai",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:31+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Sándor Márai"
+  },
+  "search": [
+   {
+    "id": "Q36951",
+    "title": "Q36951",
+    "pageid": 39547,
+    "concepturi": "http://www.wikidata.org/entity/Q36951",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q36951",
+    "display": {
+     "label": {
+      "value": "Sándor Márai",
+      "language": "en"
+     },
+     "description": {
+      "value": "Hungarian writer (1900–1989)",
+      "language": "en"
+     }
+    },
+    "label": "Sándor Márai",
+    "description": "Hungarian writer (1900–1989)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Sándor Márai"
+    }
+   },
+   {
+    "id": "Q1212138",
+    "title": "Q1212138",
+    "pageid": 1153941,
+    "concepturi": "http://www.wikidata.org/entity/Q1212138",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q1212138",
+    "display": {
+     "label": {
+      "value": "Márai Sándor Prize",
+      "language": "en"
+     },
+     "description": {
+      "value": "award",
+      "language": "en"
+     }
+    },
+    "label": "Márai Sándor Prize",
+    "description": "award",
+    "match": {
+     "type": "alias",
+     "language": "en",
+     "text": "Sandor Marai Prize"
+    },
+    "aliases": [
+     "Sandor Marai Prize"
+    ]
+   },
+   {
+    "id": "Q92514332",
+    "title": "Q92514332",
+    "pageid": 91681530,
+    "concepturi": "http://www.wikidata.org/entity/Q92514332",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q92514332",
+    "display": {
+     "label": {
+      "value": "Sándor Márai and his account of painful Guillain-Barré syndrome",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published on 21 June 2019",
+      "language": "en"
+     }
+    },
+    "label": "Sándor Márai and his account of painful Guillain-Barré syndrome",
+    "description": "scientific article published on 21 June 2019",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Sándor Márai and his account of painful Guillain-Barré syndrome"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Giuseppe Tomasi di Lampedusa haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:47+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q213482",
+     "pageid": 208923,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Sicilian Prince and writer (1896-1957)",
+     "timestamp": "2026-09-29T08:17:57Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q772122",
+     "pageid": 725417,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Italian Roman Catholic cardinal",
+     "timestamp": "2026-09-12T23:40:17Z"
+    }
+   ]
+  }
+ }
+}

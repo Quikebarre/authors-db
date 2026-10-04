@@ -1,0 +1,75 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Jane Goodall haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:48:04+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 6
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q184746",
+     "pageid": 183686,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English primatologist and anthropologist (1934–2025)",
+     "timestamp": "2026-10-01T20:48:20Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q57195861",
+     "pageid": 57112888,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher 0000-0002-3761-161X",
+     "timestamp": "2025-10-02T07:28:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q75768265",
+     "pageid": 75256969,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(died 1655)",
+     "timestamp": "2026-07-18T22:00:39Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q75581451",
+     "pageid": 75071748,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Peerage person ID=224972",
+     "timestamp": "2023-07-05T06:59:04Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q112144557",
+     "pageid": 107051095,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "doctoral candidate at the London School of Economics and Political Science",
+     "timestamp": "2026-02-23T18:46:21Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6152650",
+     "pageid": 5947312,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Australian writer",
+     "timestamp": "2026-08-02T05:30:11Z"
+    }
+   ]
+  }
+ }
+}

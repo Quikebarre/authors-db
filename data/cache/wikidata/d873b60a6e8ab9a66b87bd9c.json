@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Xue Xinran",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:34+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Xue Xinran"
+  },
+  "search": [
+   {
+    "id": "Q463334",
+    "title": "Q463334",
+    "pageid": 437014,
+    "concepturi": "http://www.wikidata.org/entity/Q463334",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q463334",
+    "display": {
+     "label": {
+      "value": "Xue Xinran",
+      "language": "en"
+     },
+     "description": {
+      "value": "British-Chinese journalist",
+      "language": "en"
+     }
+    },
+    "label": "Xue Xinran",
+    "description": "British-Chinese journalist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Xue Xinran"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

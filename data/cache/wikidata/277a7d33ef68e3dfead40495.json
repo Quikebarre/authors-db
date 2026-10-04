@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Donna Tartt",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:27+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Donna Tartt"
+  },
+  "search": [
+   {
+    "id": "Q255339",
+    "title": "Q255339",
+    "pageid": 247793,
+    "concepturi": "http://www.wikidata.org/entity/Q255339",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q255339",
+    "display": {
+     "label": {
+      "value": "Donna Tartt",
+      "language": "en"
+     },
+     "description": {
+      "value": "American writer",
+      "language": "en"
+     }
+    },
+    "label": "Donna Tartt",
+    "description": "American writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Donna Tartt"
+    }
+   },
+   {
+    "id": "Q127491604",
+    "title": "Q127491604",
+    "pageid": 121484360,
+    "concepturi": "http://www.wikidata.org/entity/Q127491604",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q127491604",
+    "display": {
+     "label": {
+      "value": "Donna Tartt’s Dostoevsky: Trauma and the Displaced Self",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Donna Tartt’s Dostoevsky: Trauma and the Displaced Self",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Donna Tartt’s Dostoevsky: Trauma and the Displaced Self"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Liu Cixin haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:06+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q607588",
+     "pageid": 572063,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Chinese science fiction writer",
+     "timestamp": "2026-09-16T06:15:01Z"
+    }
+   ]
+  }
+ }
+}

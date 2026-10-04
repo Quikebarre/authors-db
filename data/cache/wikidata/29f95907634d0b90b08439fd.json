@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Michel Foucault haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:42+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q44272",
+     "pageid": 46457,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French philosopher (1926–1984)",
+     "timestamp": "2026-09-29T09:25:44Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q3379243",
+     "pageid": 3220441,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Academic French historian",
+     "timestamp": "2026-09-05T23:33:19Z"
+    }
+   ]
+  }
+ }
+}

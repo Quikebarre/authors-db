@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Karl Ove Knausgård haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:23+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q609317",
+     "pageid": 573728,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Norwegian author",
+     "timestamp": "2026-09-29T22:47:46Z"
+    }
+   ]
+  }
+ }
+}

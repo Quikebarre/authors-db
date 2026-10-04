@@ -1,4 +1,4 @@
-"""Almacenamiento en DuckDB por capas (raw_* -> stg_* -> finales). Cada paso es idempotente."""
+"""DuckDB storage in layers: raw tables, stg tables, and final tables. Each step is idempotent."""
 
 import csv
 import json
@@ -18,7 +18,7 @@ def load_seed(path: Path) -> list[str]:
 
 
 def build_raw_seed(con: duckdb.DuckDBPyConnection, run_id: str, seed_path: Path) -> None:
-    """raw_seed: el CSV tal cual, con su número de fila."""
+    """Create `raw_seed`. The table has the CSV rows without changes and a row number."""
     names = load_seed(seed_path)
     df = pd.DataFrame(
         {"run_id": run_id, "row_number": range(1, len(names) + 1), "author_name": names}
@@ -31,7 +31,7 @@ def build_raw_seed(con: duckdb.DuckDBPyConnection, run_id: str, seed_path: Path)
 def build_raw_responses(
     con: duckdb.DuckDBPyConnection, run_id: str, table: str, cache_dir: Path
 ) -> None:
-    """raw_<fuente>_responses: JSON crudo + url + params + retrieved_at desde la caché."""
+    """Create a table of raw responses. Load the JSON, URL, parameters, and time from the cache."""
     rows = []
     for path in sorted(cache_dir.glob("*.json")) if cache_dir.exists() else []:
         record = json.loads(path.read_text(encoding="utf-8"))
@@ -65,7 +65,7 @@ def build_raw_responses(
 
 
 def build_stg_seed_normalized(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
-    """stg_seed_normalized: normalización en Python, duplicados exactos en SQL."""
+    """Create `stg_seed_normalized`. Python normalizes names. SQL marks exact duplicates."""
     rows = []
     for row_number, seed_name in con.execute(
         "SELECT row_number, author_name FROM raw_seed ORDER BY row_number"

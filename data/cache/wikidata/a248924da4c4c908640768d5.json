@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Philip Pullman",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:27+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Philip Pullman"
+  },
+  "search": [
+   {
+    "id": "Q190220",
+    "title": "Q190220",
+    "pageid": 188640,
+    "concepturi": "http://www.wikidata.org/entity/Q190220",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q190220",
+    "display": {
+     "label": {
+      "value": "Philip Pullman",
+      "language": "en"
+     },
+     "description": {
+      "value": "English author",
+      "language": "en"
+     }
+    },
+    "label": "Philip Pullman",
+    "description": "English author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Philip Pullman"
+    }
+   },
+   {
+    "id": "Q113073072",
+    "title": "Q113073072",
+    "pageid": 107892109,
+    "concepturi": "http://www.wikidata.org/entity/Q113073072",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q113073072",
+    "display": {
+     "label": {
+      "value": "Philip Pullman’s His Dark Materials: Recreating Paradise Lost as a Narrative of Adolescence",
+      "language": "en"
+     },
+     "description": {
+      "value": "journal article from 'eSharp' published in 2018",
+      "language": "en"
+     }
+    },
+    "label": "Philip Pullman’s His Dark Materials: Recreating Paradise Lost as a Narrative of Adolescence",
+    "description": "journal article from 'eSharp' published in 2018",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Philip Pullman’s His Dark Materials: Recreating Paradise Lost as a Narrative of Adolescence"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "László Krasznahorkai haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:45:31+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q512062",
+     "pageid": 481599,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Hungarian novelist and screenwriter",
+     "timestamp": "2026-09-24T15:39:27Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Bapsi Sidhwa haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:46:37+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q2020488",
+     "pageid": 1948562,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Pakistani American author",
+     "timestamp": "2026-10-01T16:28:45Z"
+    }
+   ]
+  }
+ }
+}

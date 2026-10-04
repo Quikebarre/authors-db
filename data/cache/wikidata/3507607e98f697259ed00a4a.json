@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Kobo Abe",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:45:52+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Kobo Abe"
+  },
+  "search": [
+   {
+    "id": "Q186273",
+    "title": "Q186273",
+    "pageid": 185059,
+    "concepturi": "http://www.wikidata.org/entity/Q186273",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q186273",
+    "display": {
+     "label": {
+      "value": "Kōbō Abe",
+      "language": "en"
+     },
+     "description": {
+      "value": "Japanese writer, playwright, photographer and inventor",
+      "language": "en"
+     }
+    },
+    "label": "Kōbō Abe",
+    "description": "Japanese writer, playwright, photographer and inventor",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Kōbō Abe"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

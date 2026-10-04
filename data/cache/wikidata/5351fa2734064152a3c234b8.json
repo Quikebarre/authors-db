@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Tan Twan Eng haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:27+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q7662663",
+     "pageid": 7586066,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Malaysian writer",
+     "timestamp": "2026-09-13T19:47:15Z"
+    }
+   ]
+  }
+ }
+}

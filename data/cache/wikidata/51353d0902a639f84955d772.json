@@ -1,0 +1,75 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Gustave Flaubert haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:38+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 6
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q43444",
+     "pageid": 45644,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French novelist (1821–1880)",
+     "timestamp": "2026-09-21T04:26:40Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q111490634",
+     "pageid": 106447398,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "character created by <span class=\"searchmatch\">Gustave</span> <span class=\"searchmatch\">Flaubert</span>",
+     "timestamp": "2025-10-26T09:39:46Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q18197271",
+     "pageid": 19727134,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French painter (1846-1931)",
+     "timestamp": "2026-07-27T11:21:32Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q112467687",
+     "pageid": 107359364,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-04-01T02:23:35Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q53128628",
+     "pageid": 53835754,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French literary critic",
+     "timestamp": "2026-07-23T10:09:25Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q3587837",
+     "pageid": 3416325,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-10-04T07:41:25Z"
+    }
+   ]
+  }
+ }
+}

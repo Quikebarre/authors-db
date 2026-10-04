@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Milan Kundera haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:57+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q93166",
+     "pageid": 95376,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Franco-Czechoslovak poet and novelist (1929—2023)",
+     "timestamp": "2026-09-29T09:13:38Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76545677",
+     "pageid": 76030668,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "mother of <span class=\"searchmatch\">Milan</span> <span class=\"searchmatch\">Kundera</span>",
+     "timestamp": "2025-11-27T15:02:41Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q21028996",
+     "pageid": 23075188,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-06-12T01:58:39Z"
+    }
+   ]
+  }
+ }
+}

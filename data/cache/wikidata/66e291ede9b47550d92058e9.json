@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Marguerite Duras haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:51+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q153248",
+     "pageid": 154646,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "French writer and film director (1914-1996)",
+     "timestamp": "2026-09-18T08:02:16Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q12949604",
+     "pageid": 14422230,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-01-16T23:32:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q129938687",
+     "pageid": 123906940,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "8 Apr 1877 - 23 Aug 1956",
+     "timestamp": "2026-03-13T18:42:44Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q22117345",
+     "pageid": 24147859,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "consort princess of Lambesc",
+     "timestamp": "2024-03-07T20:05:09Z"
+    }
+   ]
+  }
+ }
+}

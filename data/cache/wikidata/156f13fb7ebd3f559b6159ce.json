@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Brandon Sanderson",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:48:25+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Brandon Sanderson"
+  },
+  "search": [
+   {
+    "id": "Q457608",
+    "title": "Q457608",
+    "pageid": 431684,
+    "concepturi": "http://www.wikidata.org/entity/Q457608",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q457608",
+    "display": {
+     "label": {
+      "value": "Brandon Sanderson",
+      "language": "en"
+     },
+     "description": {
+      "value": "American fantasy writer (born 1975)",
+      "language": "en"
+     }
+    },
+    "label": "Brandon Sanderson",
+    "description": "American fantasy writer (born 1975)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Brandon Sanderson"
+    }
+   },
+   {
+    "id": "Q21934251",
+    "title": "Q21934251",
+    "pageid": 23967409,
+    "concepturi": "http://www.wikidata.org/entity/Q21934251",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q21934251",
+    "display": {
+     "label": {
+      "value": "Brandon Sanderson bibliography",
+      "language": "en"
+     },
+     "description": {
+      "value": "bibliography of Brandon Sanderson",
+      "language": "en"
+     }
+    },
+    "label": "Brandon Sanderson bibliography",
+    "description": "bibliography of Brandon Sanderson",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Brandon Sanderson bibliography"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

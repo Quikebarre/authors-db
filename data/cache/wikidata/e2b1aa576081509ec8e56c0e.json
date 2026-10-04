@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Wisława Szymborska haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:25+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q42552",
+     "pageid": 44793,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Polish poet, Nobel Prize winner (1923–2012)",
+     "timestamp": "2026-08-10T01:25:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q42275658",
+     "pageid": 43558716,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-04-11T03:00:47Z"
+    }
+   ]
+  }
+ }
+}

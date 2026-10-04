@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Elif Batuman",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:46:40+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Elif Batuman"
+  },
+  "search": [
+   {
+    "id": "Q5360799",
+    "title": "Q5360799",
+    "pageid": 5127344,
+    "concepturi": "http://www.wikidata.org/entity/Q5360799",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q5360799",
+    "display": {
+     "label": {
+      "value": "Elif Batuman",
+      "language": "en"
+     },
+     "description": {
+      "value": "American writer and academic",
+      "language": "en"
+     }
+    },
+    "label": "Elif Batuman",
+    "description": "American writer and academic",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Elif Batuman"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

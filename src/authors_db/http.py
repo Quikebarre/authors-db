@@ -1,4 +1,4 @@
-"""Cliente HTTP con caché en disco, rate limiting y modo offline."""
+"""HTTP client with a disk cache, a rate limit, and an offline mode."""
 
 import hashlib
 import json
@@ -14,11 +14,11 @@ USER_AGENT = "authors-db/0.1 (https://github.com/Quikebarre/authors-db; technica
 
 
 class OfflineCacheMissError(RuntimeError):
-    """Se pidió una URL que no está en caché estando en modo offline."""
+    """Raised when the offline mode is on and the cache has no record for the request."""
 
 
 class CachedClient:
-    """GET JSON con caché de respuestas crudas (url, params, retrieved_at, response)."""
+    """Send GET requests for JSON. Save each raw response with its URL and retrieval time."""
 
     def __init__(
         self,
@@ -50,7 +50,7 @@ class CachedClient:
             time.sleep(wait)
 
     def get_json(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
-        """Devuelve la respuesta JSON, desde caché si existe."""
+        """Return the JSON response. Use the cache when it has a record for the request."""
         path = self._cache_path(url, params)
         if path.exists():
             return json.loads(path.read_text(encoding="utf-8"))["response"]

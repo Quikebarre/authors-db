@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Nguyễn Phan Quế Mai",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:47:19+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Nguyễn Phan Quế Mai"
+  },
+  "search": [
+   {
+    "id": "Q111472131",
+    "title": "Q111472131",
+    "pageid": 106430798,
+    "concepturi": "http://www.wikidata.org/entity/Q111472131",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q111472131",
+    "display": {
+     "label": {
+      "value": "Nguyễn Phan Quế Mai",
+      "language": "en"
+     },
+     "description": {
+      "value": "Vietnamese poet and author",
+      "language": "en"
+     }
+    },
+    "label": "Nguyễn Phan Quế Mai",
+    "description": "Vietnamese poet and author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Nguyễn Phan Quế Mai"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

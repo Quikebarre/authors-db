@@ -1,0 +1,75 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Stefan Zweig haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:44:15+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 6
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q78491",
+     "pageid": 81041,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Austrian writer (1881–1942)",
+     "timestamp": "2026-09-17T04:46:41Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q59526283",
+     "pageid": 59422809,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Second Stefan Zweig&#039;s spouse",
+     "timestamp": "2026-08-29T00:09:52Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q107150016",
+     "pageid": 102396513,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Austrian textile manufacturer and father of Stefan Zweig",
+     "timestamp": "2026-06-02T19:13:54Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q108815082",
+     "pageid": 104051302,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-06-02T19:15:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q2336628",
+     "pageid": 2257355,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Author and cameraman (1941–2024)",
+     "timestamp": "2026-07-24T09:02:40Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q136031962",
+     "pageid": 129750213,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German art dealer and publisher in Argentina (1904-)",
+     "timestamp": "2026-07-24T16:17:31Z"
+    }
+   ]
+  }
+ }
+}

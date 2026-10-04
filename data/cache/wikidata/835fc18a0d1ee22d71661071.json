@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Andrea Hirata haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:23+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q4755130",
+     "pageid": 4543781,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Indonesian writer",
+     "timestamp": "2026-09-27T05:58:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q91970913",
+     "pageid": 91147869,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher (ORCID 0000-0001-7797-424X)",
+     "timestamp": "2024-03-20T09:37:12Z"
+    }
+   ]
+  }
+ }
+}

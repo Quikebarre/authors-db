@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Miguel Syjuco haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:47:33+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q1768256",
+     "pageid": 1700445,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Filipino writer",
+     "timestamp": "2026-08-30T00:49:28Z"
+    }
+   ]
+  }
+ }
+}
