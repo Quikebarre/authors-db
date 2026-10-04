@@ -92,3 +92,22 @@ def test_parse_candidate_reads_all_open_library_ids_and_nationality():
     cand = parse_candidate(entity)
     assert cand.open_library_ids == ["OL1A", "OL2A"]
     assert (cand.nationality_qids, cand.language_qids) == (["Q298"], ["Q1321"])
+
+
+def ranked_time_claim(time: str, rank: str) -> dict:
+    return {**time_claim(time, 11), "rank": rank}
+
+
+def test_parse_candidate_uses_the_preferred_claim_and_ignores_deprecated_claims():
+    entity = {
+        "id": "Q153670",
+        "claims": {
+            "P31": [item("Q5")],
+            "P569": [
+                ranked_time_claim("+1900-01-01T00:00:00Z", "deprecated"),
+                ranked_time_claim("+1918-07-31T00:00:00Z", "normal"),
+                ranked_time_claim("+1919-07-31T00:00:00Z", "preferred"),
+            ],
+        },
+    }
+    assert parse_candidate(entity).birth_year == 1919

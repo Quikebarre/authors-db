@@ -24,6 +24,7 @@ from authors_db.wikidata import Candidate, WikidataSource
 
 FINAL_TABLES = ("authors", "author_works", "field_provenance")
 THREADS = 4
+OPEN_LIBRARY_THREADS = 12  # The rate limit of the client still sets the request rate.
 
 
 def code_version() -> str:
@@ -96,23 +97,25 @@ def enrich_open_library(
         if not cand.open_library_ids:
             return [(qid, None, backlink_status(None, qid), True, None)], []
         records = [source.author(ol_id) for ol_id in cand.open_library_ids]
-        selected = select_author(records, qid)
-        works = source.works(selected.ol_id) if selected and selected.found else None
+        all_works = {rec.ol_id: source.works(rec.ol_id) for rec in records if rec.found}
+        counts = {ol_id: w.work_count for ol_id, w in all_works.items()}
+        selected = select_author(records, qid, counts)
         rows: list[AuthorRow] = [
             (
                 qid,
                 rec,
                 backlink_status(rec, qid),
                 rec is selected,
-                works.work_count if rec is selected and works else None,
+                counts.get(rec.ol_id),
             )
             for rec in records
         ]
-        return rows, ([(qid, selected.ol_id, works)] if selected and works else [])
+        chosen_works = all_works.get(selected.ol_id) if selected else None
+        return rows, ([(qid, selected.ol_id, chosen_works)] if selected and chosen_works else [])
 
     author_rows: list[AuthorRow] = []
     work_rows: list[tuple[str, str, OlWorks]] = []
-    with ThreadPoolExecutor(max_workers=THREADS) as pool:
+    with ThreadPoolExecutor(max_workers=OPEN_LIBRARY_THREADS) as pool:
         for rows, works in pool.map(work, sorted(candidates.items())):
             author_rows += rows
             work_rows += works

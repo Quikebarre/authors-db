@@ -20,7 +20,7 @@ Each decision has four parts: the decision, the reason, the alternatives that we
 
 **Alternatives that we did not use.** VIAF and ISNI as the main source. They have less data about each author.
 
-**Consequences.** Open Library is not built yet. The tables `author_works` and `field_provenance` do not exist yet.
+**Consequences.** Open Library gives the work count and the main works. See D16.
 
 ## D3. Two searches for the candidates
 
@@ -159,3 +159,51 @@ The setup is fixed for each run:
 **Alternatives that we did not use.** No cache. Wikidata data changes, so two runs give different results.
 
 **Consequences.** The cache is part of the evidence and is in git. An offline run raises `OfflineCacheMissError` for a request that is not in the cache.
+
+## D16. Open Library: two requests for each author
+
+**Decision.** For each Open Library ID, we read the author record (`/authors/<id>.json`). We also read the search `search.json?author_key=<id>&sort=editions&limit=3`. The first request gives the name, the dates, and the Wikidata ID. The second request gives the number of works and the 3 works with the most editions.
+
+**Reason.** Two requests keep the work small. The sort by editions gives the main works. In a check, "J. K. Rowling" returned the Harry Potter books first.
+
+**Alternatives that we did not use.** The list `/authors/<id>/works.json`. It has no order by popularity.
+
+**Consequences.** Some Wikidata items have two Open Library IDs. We prefer the record that links back to the QID. Then we prefer the record with more works. For "Gabriel García Márquez", the first ID has 0 works and the second ID has the works.
+
+We do not search Open Library by name. This search would be a second problem of entity resolution. A QID with no Open Library ID gets the status `no_ol_id`.
+
+## D17. The Open Library link back to Wikidata is a check
+
+**Decision.** Each Open Library record can contain a Wikidata ID. We compare this ID with our QID. The result is `match`, `mismatch`, `absent`, `ol_not_found`, or `no_ol_id`. The result is in `authors.open_library_backlink`.
+
+**Reason.** The Open Library data is independent of our score. A `match` is evidence from a second source. A `mismatch` shows a possible false match.
+
+**Alternatives that we did not use.** No check. We would have no measure of precision, except a small manual sample.
+
+**Consequences.** The check covers only authors that have an Open Library ID. It cannot find an error that both sources share.
+
+## D18. Provenance and the conflict rule
+
+**Decision.** The table `field_provenance` has one row for each QID, field, and source. It has the value, the retrieval time, and a `conflict` flag. The conflict rule compares years only. The flag is NULL, and the note is `not_comparable`, if one year is absent or the text is not a plain date.
+
+**Reason.** A text such as "427 BC" or "c. 1207" is not comparable with a Wikidata year. A conflict flag in these cases would be a false alarm. The retrieval time moves from the cache record to the `stg_` tables, and from there to this table.
+
+**Alternatives that we did not use.** Compare the full date text. The formats differ between the sources.
+
+**Consequences.** We record conflicts and do not resolve them. The value in `authors` always comes from Wikidata.
+
+## D19. Dates, nationality, and language
+
+**Decision.** `authors` has `birth_year` and `death_year` as integers. The columns `birth_date` and `death_date` have a value only when Wikidata has day precision. The nationality comes from property P27 and the languages from property P1412. We read their labels from Wikidata in `en` and `mul`.
+
+**Reason.** An old version cut the date text and gave values such as `-0900-00-0` for Homer. A year with month precision gave `YYYY-00-00`, which is not a valid date.
+
+**Alternatives that we did not use.** A date column with the Wikidata text. It contains invalid dates.
+
+**Consequences.** The nationality is the value in Wikidata. For "Miguel de Cervantes", it is "Corona de Castilla", not "Spain".
+
+## Open decisions
+
+- **Alexandre Dumas.** The father and the son are both authors with the same name. The seed file has no other data to separate them. The correct result is one entry for the father and one entry for the son. We did not build this. Today the row has the status `ambiguous`.
+- **The score for namesakes.** The score has no rule for two humans with the same name and the same evidence. The model resolves these rows today.
+- **Authors with no Open Library ID.** We do not search Open Library by name. A search that we accept only when the Wikidata link equals our QID is a safe option.

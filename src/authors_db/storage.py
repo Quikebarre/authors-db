@@ -596,7 +596,7 @@ def build_author_works(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
 def build_field_provenance(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
     """Create `field_provenance`: source, value, and time for each field of each author.
 
-    The conflict flag compares years only. It is NULL when a year is missing or not comparable.
+    The conflict flag compares years only. It is NULL when a year is absent or not comparable.
     """
     con.execute(f"""
         CREATE OR REPLACE TABLE field_provenance AS
@@ -608,9 +608,11 @@ def build_field_provenance(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
              ol AS (SELECT * FROM stg_openlibrary_authors WHERE is_selected AND ol_id IS NOT NULL),
              cmp AS (
                  SELECT wd.qid,
-                        CASE WHEN wd.birth_year IS NULL OR ol.birth_year IS NULL THEN NULL
+                        CASE WHEN wd.birth_year IS NULL OR ol.birth_year IS NULL
+                                   OR (wd.birth_year < 0 AND ol.birth_year > 0) THEN NULL
                              ELSE wd.birth_year <> ol.birth_year END AS birth_conflict,
-                        CASE WHEN wd.death_year IS NULL OR ol.death_year IS NULL THEN NULL
+                        CASE WHEN wd.death_year IS NULL OR ol.death_year IS NULL
+                                   OR (wd.death_year < 0 AND ol.death_year > 0) THEN NULL
                              ELSE wd.death_year <> ol.death_year END AS death_conflict
                  FROM wd LEFT JOIN ol USING (qid)
              )

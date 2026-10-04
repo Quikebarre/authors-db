@@ -15,7 +15,9 @@ from authors_db.openlibrary import (
         ("1893", 1893),
         ("31 July 1965", 1965),
         ("May 5, 1818", 1818),
-        ("427 BC", None),
+        ("427 BC", -427),
+        ("September 28, 551 BCE", -551),
+        ("1019/1025", None),
         ("c. 1207", None),
         ("1207?", None),
         ("5th century", None),
@@ -61,3 +63,13 @@ def test_parse_author_reads_wikidata_remote_id_and_dates():
     }
     parsed = parse_author("OL256110A", record)
     assert (parsed.wikidata_qid, parsed.birth_year) == ("Q117018", 1893)
+
+
+def test_select_author_among_linked_records_prefers_the_one_with_more_works():
+    records = [author("OL1A", qid="Q1"), author("OL2A", qid="Q1")]
+    assert select_author(records, "Q1", {"OL1A": 0, "OL2A": 30}).ol_id == "OL2A"
+
+
+def test_select_author_prefers_backlink_over_work_count():
+    records = [author("OL1A", qid="Q9"), author("OL2A", qid="Q1")]
+    assert select_author(records, "Q1", {"OL1A": 500, "OL2A": 3}).ol_id == "OL2A"

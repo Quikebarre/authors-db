@@ -7,19 +7,23 @@ from authors_db.http import CachedClient
 
 BASE = "https://openlibrary.org"
 MAIN_WORKS = 3
-NOT_COMPARABLE_RE = re.compile(r"\bBC\b|\bB\.C\.|\bc\.|\bca\.|circa|\?|\bcentury\b", re.IGNORECASE)
+NOT_COMPARABLE_RE = re.compile(r"\bc\.|\bca\.|circa|\?|/|\bcentury\b", re.IGNORECASE)
+BC_RE = re.compile(r"\bB\.?C\.?(E\.?)?\b", re.IGNORECASE)
 YEAR_RE = re.compile(r"\b(\d{3,4})\b")
 
 
 def parse_year(text: str | None) -> int | None:
     """Return the year of an Open Library date text, or None if the text is not comparable.
 
-    A text with "BC", "c.", "circa", "?" or "century" is not comparable.
+    A year before the common era is negative. A text with "c.", "circa", "?", "/" or "century"
+    is not comparable.
     """
     if not text or NOT_COMPARABLE_RE.search(text):
         return None
     match = YEAR_RE.search(text)
-    return int(match.group(1)) if match else None
+    if not match:
+        return None
+    return -int(match.group(1)) if BC_RE.search(text) else int(match.group(1))
 
 
 @dataclass(frozen=True)
@@ -126,10 +130,16 @@ def backlink_status(author: OlAuthor | None, qid: str) -> str:
     return "match" if author.wikidata_qid == qid else "mismatch"
 
 
-def select_author(candidates: list[OlAuthor], qid: str) -> OlAuthor | None:
-    """Choose the record that links back to the QID. Else choose the first record found."""
+def select_author(
+    candidates: list[OlAuthor], qid: str, work_counts: dict[str, int] | None = None
+) -> OlAuthor | None:
+    """Choose the Open Library record of an author with more than one record.
+
+    A record that links back to the QID comes first. Then the record with more works comes first.
+    If no record is found, return the first record, so the caller can report the status.
+    """
+    counts = work_counts or {}
     found = [a for a in candidates if a.found]
-    for author in found:
-        if author.wikidata_qid == qid:
-            return author
-    return found[0] if found else (candidates[0] if candidates else None)
+    if not found:
+        return candidates[0] if candidates else None
+    return max(found, key=lambda a: (a.wikidata_qid == qid, counts.get(a.ol_id, 0)))

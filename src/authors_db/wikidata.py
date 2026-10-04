@@ -92,8 +92,13 @@ DAY_PRECISION = 11
 
 
 def _time_parts(entity: dict[str, Any], prop: str) -> tuple[int | None, str | None]:
-    """Return (year, date). The date is set only when Wikidata has day precision."""
-    for claim in entity.get("claims", {}).get(prop, []):
+    """Return (year, date). The date is set only when Wikidata has day precision.
+
+    A preferred claim comes first. A deprecated claim is ignored.
+    """
+    claims = [c for c in entity.get("claims", {}).get(prop, []) if c.get("rank") != "deprecated"]
+    claims.sort(key=lambda c: 0 if c.get("rank") == "preferred" else 1)
+    for claim in claims:
         value = claim.get("mainsnak", {}).get("datavalue", {}).get("value")
         if not isinstance(value, dict) or "time" not in value:
             continue
