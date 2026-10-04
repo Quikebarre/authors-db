@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Silvina Ocampo haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:42+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q442829",
+     "pageid": 417714,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine writer (1903–1993)",
+     "timestamp": "2026-08-20T21:29:47Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q107155274",
+     "pageid": 102401754,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentinean triple jump athlete",
+     "timestamp": "2026-08-25T01:02:29Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Arturo Pérez-Reverte",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:28+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Arturo Pérez-Reverte"
+  },
+  "search": [
+   {
+    "id": "Q155106",
+    "title": "Q155106",
+    "pageid": 156284,
+    "concepturi": "http://www.wikidata.org/entity/Q155106",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q155106",
+    "display": {
+     "label": {
+      "value": "Arturo Pérez-Reverte",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer and journalist",
+      "language": "en"
+     }
+    },
+    "label": "Arturo Pérez-Reverte",
+    "description": "Spanish writer and journalist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Arturo Pérez-Reverte"
+    }
+   },
+   {
+    "id": "Q136196464",
+    "title": "Q136196464",
+    "pageid": 129905839,
+    "concepturi": "http://www.wikidata.org/entity/Q136196464",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136196464",
+    "display": {
+     "label": {
+      "value": "Arturo Pérez-Reverte: Narrative Tricks and Narrative Strategies",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2007",
+      "language": "en"
+     }
+    },
+    "label": "Arturo Pérez-Reverte: Narrative Tricks and Narrative Strategies",
+    "description": "book 2007",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Arturo Pérez-Reverte: Narrative Tricks and Narrative Strategies"
+    }
+   },
+   {
+    "id": "Q5707297",
+    "title": "Q5707297",
+    "pageid": 5471646,
+    "concepturi": "http://www.wikidata.org/entity/Q5707297",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q5707297",
+    "display": {
+     "label": {
+      "value": "Arturo Juan Pérez-Reverte",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish footballer",
+      "language": "en"
+     }
+    },
+    "label": "Arturo Juan Pérez-Reverte",
+    "description": "Spanish footballer",
+    "match": {
+     "type": "label",
+     "language": "pl",
+     "text": "Arturo Pérez-Reverte"
+    },
+    "aliases": [
+     "Arturo Pérez-Reverte"
+    ]
+   }
+  ],
+  "success": 1
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Pepetela",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:38:50+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Pepetela"
+  },
+  "search": [
+   {
+    "id": "Q736858",
+    "title": "Q736858",
+    "pageid": 692993,
+    "concepturi": "http://www.wikidata.org/entity/Q736858",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q736858",
+    "display": {
+     "label": {
+      "value": "Pepetela",
+      "language": "en"
+     },
+     "description": {
+      "value": "Angolan writer",
+      "language": "en"
+     }
+    },
+    "label": "Pepetela",
+    "description": "Angolan writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Pepetela"
+    }
+   },
+   {
+    "id": "Q58097358",
+    "title": "Q58097358",
+    "pageid": 58012544,
+    "concepturi": "http://www.wikidata.org/entity/Q58097358",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q58097358",
+    "display": {
+     "label": {
+      "value": "Pepetela's proposal: desire and anarchy inThe Return of the Water Spirit",
+      "language": "en"
+     }
+    },
+    "label": "Pepetela's proposal: desire and anarchy inThe Return of the Water Spirit",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Pepetela's proposal: desire and anarchy inThe Return of the Water Spirit"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

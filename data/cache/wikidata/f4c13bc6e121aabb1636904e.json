@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Samanta Schweblin",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:39+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Samanta Schweblin"
+  },
+  "search": [
+   {
+    "id": "Q7408607",
+    "title": "Q7408607",
+    "pageid": 7318618,
+    "concepturi": "http://www.wikidata.org/entity/Q7408607",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q7408607",
+    "display": {
+     "label": {
+      "value": "Samanta Schweblin",
+      "language": "en"
+     },
+     "description": {
+      "value": "Argentine author (1978-)",
+      "language": "en"
+     }
+    },
+    "label": "Samanta Schweblin",
+    "description": "Argentine author (1978-)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Samanta Schweblin"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

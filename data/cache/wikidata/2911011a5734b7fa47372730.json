@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Elena Poniatowska",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:34+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Elena Poniatowska"
+  },
+  "search": [
+   {
+    "id": "Q261397",
+    "title": "Q261397",
+    "pageid": 253567,
+    "concepturi": "http://www.wikidata.org/entity/Q261397",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q261397",
+    "display": {
+     "label": {
+      "value": "Elena Poniatowska",
+      "language": "en"
+     },
+     "description": {
+      "value": "French-born Mexican journalist and author",
+      "language": "en"
+     }
+    },
+    "label": "Elena Poniatowska",
+    "description": "French-born Mexican journalist and author",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Elena Poniatowska"
+    }
+   },
+   {
+    "id": "Q136149616",
+    "title": "Q136149616",
+    "pageid": 129859833,
+    "concepturi": "http://www.wikidata.org/entity/Q136149616",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136149616",
+    "display": {
+     "label": {
+      "value": "Elena Poniatowska: An Intimate Biography",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2007",
+      "language": "en"
+     }
+    },
+    "label": "Elena Poniatowska: An Intimate Biography",
+    "description": "book 2007",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Elena Poniatowska: An Intimate Biography"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

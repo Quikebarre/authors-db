@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Almudena Grandes haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:30+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q274348",
+     "pageid": 265382,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish writer (1960-2021)",
+     "timestamp": "2026-08-11T20:46:57Z"
+    }
+   ]
+  }
+ }
+}

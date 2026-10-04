@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Inca Garcilaso de la Vega haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:38:51+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q334711",
+     "pageid": 320784,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish chronicler (1539-1616)",
+     "timestamp": "2026-09-19T15:52:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q311405",
+     "pageid": 299611,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish poet (1503-1536)",
+     "timestamp": "2026-09-20T11:47:36Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q5714962",
+     "pageid": 5479956,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish conquistador",
+     "timestamp": "2025-11-18T21:14:43Z"
+    }
+   ]
+  }
+ }
+}

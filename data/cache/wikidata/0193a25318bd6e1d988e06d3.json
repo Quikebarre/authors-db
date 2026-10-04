@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Natsume Soseki haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:38:49+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q180903",
+     "pageid": 180108,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Japanese novelist",
+     "timestamp": "2026-09-16T05:51:39Z"
+    }
+   ]
+  }
+ }
+}

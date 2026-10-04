@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Mariana Enríquez haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:41+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q5997426",
+     "pageid": 5776383,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine journalist, novelist, and short story writer",
+     "timestamp": "2026-09-15T07:08:01Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q3306494",
+     "pageid": 3153135,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Castilian noblewoman, 4th Lady of Casarrubios del Monte, member of the House of Córdoba and mother of Queen Juana <span class=\"searchmatch\">Enríquez</span> (c. 1394–1431)",
+     "timestamp": "2026-07-15T17:04:52Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q135355088",
+     "pageid": 129089065,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Northern Mariana Islands basketball player (born 2012)",
+     "timestamp": "2026-07-06T00:13:42Z"
+    }
+   ]
+  }
+ }
+}

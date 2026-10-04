@@ -19,3 +19,8 @@
 | 18:28:43 | 00:04:58 | PEDIDO | Usuario pide copiar el CLAUDE.md global a ai-usage/ como instrucciones, y mostrar resultados a medida que avance la normalización. |
 | 18:28:43 | 00:04:58 | VALIDADO | Copiado CLAUDE.md a ai-usage/03-claude-md-instrucciones.md (revisado: sin claves ni tokens, solo placeholders). |
 | 18:28:43 | 00:04:58 | VALIDADO | normalize() sobre la semilla real: 500 filas, 498 válidas, 2 inválidas (Anonymous, Various Authors), 0 cambios de clean_name, 0 colisiones de match_key (sin duplicados por grafía; los seudónimos se detectarán por QID). |
+| 18:37:48 | 00:14:03 | DECISION | Usuario valida: (1) candidatos = unión wbsearchentities + Cirrus humanos; (2) humano como filtro duro, traduciendo ítems-seudónimo al humano; (3) seguir con scoring y mostrar ejemplos antes de fijar umbrales. |
+| 18:39:18 | 00:15:33 | PROPUESTA | wikidata.py (unión de 2 búsquedas, filtro humano, seudónimo->persona vía P1535/P460, nombres extra P742/P1477), scoring.py (0.65*sim + writer 15 + OL 15 + sitelinks<=3) y explore_scoring.py. |
+| 18:39:18 | 00:15:33 | VALIDADO | 30 nombres casos especiales: top-1 correcto en 30/30. Los 6 pares de seudónimos probados (Rowling/Galbraith, Twain/Clemens, Eliot/Evans, Blixen/Dinesen, Gary/Ajar, Seuss/Geisel) colapsan al mismo QID. Márgenes top1-top2 de aciertos: 6.4 (Inca Garcilaso vs Garcilaso de la Vega) hasta >30; homónimos con OL+writer (Homer/Winslow Homer 16.7). |
+| 18:39:19 | 00:15:33 | PROPUESTA | Lanzado score_seed.py sobre las 500 filas en segundo plano para ver la distribución real de score/margen antes de fijar umbrales. |
+| 18:39:42 | 00:15:57 | VALIDADO | 11 tests nuevos (scoring + parseo Wikidata); 30 tests en total pasando, ruff limpio. |

@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Julio Cortázar haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:25+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q174210",
+     "pageid": 174159,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine writer and translator (1914–1984)",
+     "timestamp": "2026-09-29T08:57:22Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q139591990",
+     "pageid": 133047926,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-04-30T12:42:10Z"
+    }
+   ]
+  }
+ }
+}

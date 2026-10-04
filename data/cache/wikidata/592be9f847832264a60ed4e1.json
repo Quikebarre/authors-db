@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Theodor Seuss Geisel haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:38:53+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q298685",
+     "pageid": 287930,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American children&#039;s author and cartoonist (1904–1991)",
+     "timestamp": "2026-09-07T07:39:59Z"
+    }
+   ]
+  }
+ }
+}

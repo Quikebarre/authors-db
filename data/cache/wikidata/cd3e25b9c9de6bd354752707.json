@@ -1,0 +1,84 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "J. K. Rowling haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:38:38+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 7
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q34660",
+     "pageid": 37368,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English author (born 1965)",
+     "timestamp": "2026-10-04T01:46:07Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q109779308",
+     "pageid": 104883499,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "daughter of J.K Rowling",
+     "timestamp": "2026-06-19T06:56:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q106992566",
+     "pageid": 102249740,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1940-1980)",
+     "timestamp": "2026-09-30T08:54:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q112619574",
+     "pageid": 107504206,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British doctor; husband of <span class=\"searchmatch\">J</span>.<span class=\"searchmatch\">K</span>. <span class=\"searchmatch\">Rowling</span>",
+     "timestamp": "2025-05-25T08:06:02Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q112619493",
+     "pageid": 107504126,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Portuguese television journalist; first husband of <span class=\"searchmatch\">J</span>.<span class=\"searchmatch\">K</span>. <span class=\"searchmatch\">Rowling</span>",
+     "timestamp": "2025-07-21T12:09:18Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q106992568",
+     "pageid": 102249742,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1945-1991)",
+     "timestamp": "2026-06-26T02:54:45Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q139442352",
+     "pageid": 132899578,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-04-19T18:03:07Z"
+    }
+   ]
+  }
+ }
+}

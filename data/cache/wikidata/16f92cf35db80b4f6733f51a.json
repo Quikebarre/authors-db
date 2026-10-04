@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Gabriela Mistral haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:34+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q80871",
+     "pageid": 83348,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Chilean poet, diplomat and educator (1889–1957)",
+     "timestamp": "2026-09-30T22:21:28Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q141180875",
+     "pageid": 134633075,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "literary critic from Chile",
+     "timestamp": "2026-09-07T17:32:00Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q56318026",
+     "pageid": 56256606,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish pedagogue",
+     "timestamp": "2026-07-19T02:12:33Z"
+    }
+   ]
+  }
+ }
+}

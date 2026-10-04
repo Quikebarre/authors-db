@@ -1,0 +1,115 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "George Eliot haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:38:54+00:00",
+ "response": {
+  "batchcomplete": "",
+  "continue": {
+   "sroffset": 10,
+   "continue": "-||"
+  },
+  "query": {
+   "searchinfo": {
+    "totalhits": 23
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q131333",
+     "pageid": 133190,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English novelist, essayist, poet and journalist (1819–1880)",
+     "timestamp": "2026-09-28T12:47:44Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q5538949",
+     "pageid": 5299127,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English spy in the reign of Queen Elizabeth I",
+     "timestamp": "2021-03-29T23:55:26Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76315690",
+     "pageid": 75804629,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Peerage person ID=682981",
+     "timestamp": "2026-07-21T07:24:01Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76214849",
+     "pageid": 75703987,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Peerage person ID=610332",
+     "timestamp": "2026-07-20T17:26:47Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q21549350",
+     "pageid": 23591365,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1871-1927)",
+     "timestamp": "2025-06-20T14:30:32Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76276192",
+     "pageid": 75765113,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1864-1866)",
+     "timestamp": "2026-07-21T02:23:04Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q117246349",
+     "pageid": 112031798,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "10 Nov 1816 - 16 Oct 1895",
+     "timestamp": "2025-10-07T16:15:33Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q126125351",
+     "pageid": 120191830,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Of Arbroath; Scottish schoolteacher and author who corresponded with <span class=\"searchmatch\">George</span> <span class=\"searchmatch\">Eliot</span>.",
+     "timestamp": "2025-12-30T18:48:51Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q123417087",
+     "pageid": 117629053,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "friend of <span class=\"searchmatch\">George</span> <span class=\"searchmatch\">Eliot</span>",
+     "timestamp": "2025-11-27T06:56:41Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q43066540",
+     "pageid": 44308285,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1839-1901), Royal courtier and army officer; son of 3rd Earl of St Germans",
+     "timestamp": "2025-12-13T14:28:48Z"
+    }
+   ]
+  }
+ }
+}

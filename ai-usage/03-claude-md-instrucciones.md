@@ -106,9 +106,10 @@ def calculate_discount(price: float, rate: float) -> float:
         raise ValueError(f"Rate must be between 0 and 1, got {rate}")
     return price * (1 - rate)
 
+
 # ❌ INCORRECTO
 def calc(p, r):
-    return p * (1-r)
+    return p * (1 - r)
 ```
 
 ### Typing Avanzado
@@ -120,6 +121,7 @@ from collections.abc import Sequence, Callable, AsyncIterator
 # Usa TypeAlias para tipos complejos
 UserId: TypeAlias = str
 EventHandler: TypeAlias = Callable[[str, dict], None]
+
 
 # Usa Protocol para interfaces (no ABC cuando sea posible)
 @runtime_checkable
@@ -136,10 +138,12 @@ class Repository(Protocol[T]):
 class DomainError(Exception):
     """Base para errores de dominio."""
 
+
 class UserNotFoundError(DomainError):
     def __init__(self, user_id: str) -> None:
         super().__init__(f"User '{user_id}' not found")
         self.user_id = user_id
+
 
 # ✅ Captura específica, nunca except Exception genérico en producción
 try:
@@ -157,6 +161,7 @@ except DatabaseConnectionError as e:
 # config.py — Usa pydantic-settings
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
@@ -171,6 +176,7 @@ class Settings(BaseSettings):
     # Secrets (nunca loggear)
     api_key: str
     secret_key: str
+
 
 settings = Settings()  # Singleton, importar desde aquí
 ```
@@ -283,6 +289,7 @@ def test_user_repository_get_nonexistent_user_returns_none(): ...
 import pytest
 from unittest.mock import MagicMock, patch
 
+
 def test_order_service_creates_order_and_sends_notification():
     # Arrange
     repo = MagicMock(spec=OrderRepository)
@@ -306,9 +313,11 @@ def test_order_service_creates_order_and_sends_notification():
 import pytest
 from polyfactory.factories.pydantic_factory import ModelFactory
 
+
 class UserFactory(ModelFactory[User]):
     __model__ = User
     email = "test@example.com"
+
 
 @pytest.fixture
 def db_session():
@@ -318,6 +327,7 @@ def db_session():
     with Session(engine) as session:
         yield session
         session.rollback()
+
 
 @pytest.fixture
 def mock_external_api(respx_mock):
@@ -493,6 +503,7 @@ logger.info(f"User: {user}")  # NO si user tiene campos sensibles
 # ✅ Sanitizar inputs siempre
 from pydantic import BaseModel, validator
 
+
 class CreateUserRequest(BaseModel):
     email: EmailStr  # Pydantic valida formato
     password: str
@@ -504,8 +515,11 @@ class CreateUserRequest(BaseModel):
             raise ValueError("Password must be at least 12 characters")
         return v  # Nunca loggear esto
 
+
 # ✅ Timing-safe comparisons para tokens
 import hmac
+
+
 def verify_token(provided: str, expected: str) -> bool:
     return hmac.compare_digest(provided.encode(), expected.encode())
 ```
@@ -659,12 +673,14 @@ ml_project/
 # Siempre fijar seeds
 import random, numpy as np, torch
 
+
 def set_seed(seed: int = 42) -> None:
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
+
 
 # Siempre registrar experimentos
 import mlflow
@@ -696,18 +712,20 @@ Message: {message}
 Respond with only the category name.
 """
 
+
 # Evaluar outputs de LLMs con tests deterministas cuando sea posible
 def test_intent_classifier_returns_valid_category():
     classifier = IntentClassifier(model="gpt-4o-mini")
     result = classifier.classify("I want to cancel my subscription")
     assert result in VALID_CATEGORIES
 
+
 # Manejo de rate limits y retries
 from tenacity import retry, stop_after_attempt, wait_exponential
 
+
 @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
-async def call_llm_api(prompt: str) -> str:
-    ...
+async def call_llm_api(prompt: str) -> str: ...
 ```
 
 ---
@@ -777,18 +795,24 @@ Toda aplicación desplegada debe tener desde el día 1:
 async def health() -> dict:
     return {"status": "ok", "version": settings.app_version}
 
+
 # 2. Logging estructurado (JSON en producción)
 import structlog
+
 logger = structlog.get_logger()
 logger.info("order_created", order_id=order.id, user_id=user.id, amount=order.total)
 
 # 3. Métricas (Prometheus)
 from prometheus_client import Counter, Histogram
-REQUEST_COUNT = Counter("http_requests_total", "Total HTTP requests", ["method", "endpoint", "status"])
+
+REQUEST_COUNT = Counter(
+    "http_requests_total", "Total HTTP requests", ["method", "endpoint", "status"]
+)
 REQUEST_LATENCY = Histogram("http_request_duration_seconds", "HTTP request latency")
 
 # 4. Tracing (OpenTelemetry)
 from opentelemetry import trace
+
 tracer = trace.get_tracer(__name__)
 with tracer.start_as_current_span("process_order"):
     ...

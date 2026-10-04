@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Carlos Ruiz Zafón",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:29+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Carlos Ruiz Zafón"
+  },
+  "search": [
+   {
+    "id": "Q296752",
+    "title": "Q296752",
+    "pageid": 286343,
+    "concepturi": "http://www.wikidata.org/entity/Q296752",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q296752",
+    "display": {
+     "label": {
+      "value": "Carlos Ruiz Zafón",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer (1964-2020)",
+      "language": "en"
+     }
+    },
+    "label": "Carlos Ruiz Zafón",
+    "description": "Spanish writer (1964-2020)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Carlos Ruiz Zafón"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

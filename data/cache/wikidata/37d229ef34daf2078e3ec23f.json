@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Juan Rulfo haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:37+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q200661",
+     "pageid": 197388,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Mexican writer (1917–1986)",
+     "timestamp": "2026-09-25T19:28:18Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6299408",
+     "pageid": 6105641,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Mexican film director",
+     "timestamp": "2026-09-07T03:14:26Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q10499853",
+     "pageid": 11794501,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "footballer",
+     "timestamp": "2025-09-29T06:49:34Z"
+    }
+   ]
+  }
+ }
+}

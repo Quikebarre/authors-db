@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Ángeles Mastretta",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:38+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Ángeles Mastretta"
+  },
+  "search": [
+   {
+    "id": "Q252088",
+    "title": "Q252088",
+    "pageid": 244694,
+    "concepturi": "http://www.wikidata.org/entity/Q252088",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q252088",
+    "display": {
+     "label": {
+      "value": "Ángeles Mastretta",
+      "language": "en"
+     },
+     "description": {
+      "value": "Mexican writer",
+      "language": "en"
+     }
+    },
+    "label": "Ángeles Mastretta",
+    "description": "Mexican writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ángeles Mastretta"
+    }
+   },
+   {
+    "id": "Q136196473",
+    "title": "Q136196473",
+    "pageid": 129905848,
+    "concepturi": "http://www.wikidata.org/entity/Q136196473",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136196473",
+    "display": {
+     "label": {
+      "value": "Angeles Mastretta: Textual Multiplicity",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2005",
+      "language": "en"
+     }
+    },
+    "label": "Angeles Mastretta: Textual Multiplicity",
+    "description": "book 2005",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Angeles Mastretta: Textual Multiplicity"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

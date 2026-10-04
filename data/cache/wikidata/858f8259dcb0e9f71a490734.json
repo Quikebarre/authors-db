@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Valeria Luiselli",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:38+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Valeria Luiselli"
+  },
+  "search": [
+   {
+    "id": "Q15449810",
+    "title": "Q15449810",
+    "pageid": 17093541,
+    "concepturi": "http://www.wikidata.org/entity/Q15449810",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q15449810",
+    "display": {
+     "label": {
+      "value": "Valeria Luiselli",
+      "language": "en"
+     },
+     "description": {
+      "value": "Mexican writer",
+      "language": "en"
+     }
+    },
+    "label": "Valeria Luiselli",
+    "description": "Mexican writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Valeria Luiselli"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

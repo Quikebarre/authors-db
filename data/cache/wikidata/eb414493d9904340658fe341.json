@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "César Aira haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:41+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q166590",
+     "pageid": 167152,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine writer and translator",
+     "timestamp": "2026-08-08T23:20:27Z"
+    }
+   ]
+  }
+ }
+}
