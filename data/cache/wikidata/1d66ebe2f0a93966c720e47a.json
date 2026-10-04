@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Thomas Pynchon haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:23+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q35155",
+     "pageid": 37836,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American novelist (born 1937)",
+     "timestamp": "2026-09-16T06:07:45Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q115567658",
+     "pageid": 110133821,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "an 18th c American",
+     "timestamp": "2025-09-05T19:27:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q109854264",
+     "pageid": 104955517,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American educator (1823–1904)",
+     "timestamp": "2026-07-08T02:08:11Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q96215905",
+     "pageid": 94987290,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(1907-1995)",
+     "timestamp": "2023-05-09T20:45:48Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q65963051",
+     "pageid": 65591663,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "US author, who took his pseudonym from <span class=\"searchmatch\">Thomas</span> Pynchon&#039;s The Crying of Lot 49 (1966)",
+     "timestamp": "2026-04-18T12:40:50Z"
+    }
+   ]
+  }
+ }
+}

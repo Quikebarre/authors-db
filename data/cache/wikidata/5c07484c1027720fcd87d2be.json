@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Wole Soyinka haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:13+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q41488",
+     "pageid": 43769,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Nigerian writer (born 1934)",
+     "timestamp": "2026-08-11T20:16:08Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q123726178",
+     "pageid": 117917047,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "wife of Wole Soyinka",
+     "timestamp": "2026-03-03T11:24:41Z"
+    }
+   ]
+  }
+ }
+}

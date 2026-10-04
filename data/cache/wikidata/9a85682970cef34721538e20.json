@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Edith Wharton haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:41:57+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q276032",
+     "pageid": 266972,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer and designer (1862–1937)",
+     "timestamp": "2026-09-28T19:03:09Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q75966731",
+     "pageid": 75453788,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "(born 1906)",
+     "timestamp": "2026-07-21T15:50:41Z"
+    }
+   ]
+  }
+ }
+}

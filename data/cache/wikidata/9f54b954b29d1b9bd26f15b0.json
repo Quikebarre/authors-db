@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Alice Munro haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:54+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q234819",
+     "pageid": 228390,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Canadian writer (1931–2024)",
+     "timestamp": "2026-09-30T20:08:45Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q89358670",
+     "pageid": 88575033,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher",
+     "timestamp": "2026-07-17T02:34:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q125929883",
+     "pageid": 120014205,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "founder of Munro&#039;s books",
+     "timestamp": "2025-08-26T18:46:33Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76305573",
+     "pageid": 75794571,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Peerage person ID=676214",
+     "timestamp": "2025-04-27T23:53:35Z"
+    }
+   ]
+  }
+ }
+}

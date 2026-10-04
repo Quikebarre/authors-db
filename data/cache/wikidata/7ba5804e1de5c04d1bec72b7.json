@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Frances Hodgson Burnett haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:14+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q276028",
+     "pageid": 266969,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English-American playwright and author (1849–1924)",
+     "timestamp": "2026-10-04T17:32:23Z"
+    }
+   ]
+  }
+ }
+}

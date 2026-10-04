@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Colson Whitehead",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:21+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Colson Whitehead"
+  },
+  "search": [
+   {
+    "id": "Q509662",
+    "title": "Q509662",
+    "pageid": 479268,
+    "concepturi": "http://www.wikidata.org/entity/Q509662",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q509662",
+    "display": {
+     "label": {
+      "value": "Colson Whitehead",
+      "language": "en"
+     },
+     "description": {
+      "value": "American novelist (born 1969)",
+      "language": "en"
+     }
+    },
+    "label": "Colson Whitehead",
+    "description": "American novelist (born 1969)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Colson Whitehead"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

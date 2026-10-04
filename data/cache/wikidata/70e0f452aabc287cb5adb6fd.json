@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Ray Bradbury haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:40+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q40640",
+     "pageid": 42983,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American author and screenwriter (1920–2012)",
+     "timestamp": "2026-09-29T09:31:56Z"
+    }
+   ]
+  }
+ }
+}

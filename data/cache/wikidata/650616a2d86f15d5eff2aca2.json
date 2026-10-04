@@ -1,0 +1,75 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Harriet Beecher Stowe haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:07+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 6
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q102513",
+     "pageid": 105124,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American abolitionist and author (1811–1896)",
+     "timestamp": "2026-09-30T20:18:35Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q30002298",
+     "pageid": 31616684,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "African-American pharmacist",
+     "timestamp": "2026-07-03T06:18:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q66810107",
+     "pageid": 66401865,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "minister and abolitionist, brother of Harriet Beecher Stowe",
+     "timestamp": "2026-05-04T15:45:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q44523396",
+     "pageid": 45714303,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American author (1880–1963)",
+     "timestamp": "2026-06-30T11:32:34Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q87254689",
+     "pageid": 86490236,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "<span class=\"searchmatch\">Harriet</span> <span class=\"searchmatch\">Beecher</span> <span class=\"searchmatch\">Stowe</span> Professor Emerita of American Studies at King&#039;s College London",
+     "timestamp": "2021-01-31T16:21:52Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q16944097",
+     "pageid": 18546802,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American Congregational minister and author (1850–1934)",
+     "timestamp": "2026-07-10T07:27:13Z"
+    }
+   ]
+  }
+ }
+}

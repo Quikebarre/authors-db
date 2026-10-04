@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Yaa Gyasi",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:17+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Yaa Gyasi"
+  },
+  "search": [
+   {
+    "id": "Q27757818",
+    "title": "Q27757818",
+    "pageid": 29473875,
+    "concepturi": "http://www.wikidata.org/entity/Q27757818",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q27757818",
+    "display": {
+     "label": {
+      "value": "Yaa Gyasi",
+      "language": "en"
+     },
+     "description": {
+      "value": "Ghanaian-American novelist",
+      "language": "en"
+     }
+    },
+    "label": "Yaa Gyasi",
+    "description": "Ghanaian-American novelist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Yaa Gyasi"
+    }
+   },
+   {
+    "id": "Q130201639",
+    "title": "Q130201639",
+    "pageid": 124167826,
+    "concepturi": "http://www.wikidata.org/entity/Q130201639",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q130201639",
+    "display": {
+     "label": {
+      "value": "Yaa Gyasi. Transcendent Kingdom. New York: Knopf, 2020. 416 pp.",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article published in 2021",
+      "language": "en"
+     }
+    },
+    "label": "Yaa Gyasi. Transcendent Kingdom. New York: Knopf, 2020. 416 pp.",
+    "description": "scholarly article published in 2021",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Yaa Gyasi. Transcendent Kingdom. New York: Knopf, 2020. 416 pp."
+    }
+   }
+  ],
+  "success": 1
+ }
+}

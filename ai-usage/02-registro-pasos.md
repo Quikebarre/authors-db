@@ -26,3 +26,4 @@
 | 18:39:42 | 00:15:57 | VALIDADO | 11 tests nuevos (scoring + parseo Wikidata); 30 tests en total pasando, ruff limpio. |
 | 18:41:47 | 00:18:02 | VALIDADO | Score de toda la semilla falló en ~110/500 con HTTP 429 (8 hilos, 0.2s). Fix: intervalo 0.4s, 4 hilos, respeta Retry-After, 6 reintentos. La caché conserva lo ya descargado. |
 | 18:41:47 | 00:18:02 | DECISION | Usuario define almacenamiento DuckDB en capas: raw_* (seed, respuestas Wikidata/OpenLibrary desde data/cache/), stg_* (seed_normalized, wikidata_candidates, candidate_scores, match_decisions, openlibrary_authors/works), finales (authors, author_works, field_provenance) construidas con SQL desde stg_*, metadatos pipeline_runs; todas con run_id; pasos idempotentes (CREATE OR REPLACE); export CSV/Parquet solo de finales. |
+| 18:43:24 | 00:19:39 | PROPUESTA | storage.py capa raw_* (raw_seed, raw_*_responses desde data/cache/) y stg_seed_normalized (exact_dup_of con ventana SQL) + 4 tests. |

@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Shirley Jackson haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:34+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q239910",
+     "pageid": 233238,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer (1916-1965)",
+     "timestamp": "2026-09-02T18:08:29Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q56576070",
+     "pageid": 56516182,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Clarence Shirley Jackson, trade union leader (b at Ft William [Thunder Bay], Ont 1906; d 5 July 1993)",
+     "timestamp": "2021-11-03T12:56:05Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q41308532",
+     "pageid": 42630269,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Canadian mathematician and theologian (1872-1947)",
+     "timestamp": "2026-08-09T17:14:56Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q3482342",
+     "pageid": 3316577,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American physicist (born 1946)",
+     "timestamp": "2026-07-01T17:30:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q102185223",
+     "pageid": 98970707,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Ph.D. University of California, Berkeley 1967",
+     "timestamp": "2025-04-03T19:46:03Z"
+    }
+   ]
+  }
+ }
+}

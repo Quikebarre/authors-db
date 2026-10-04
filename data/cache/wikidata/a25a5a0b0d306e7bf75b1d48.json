@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "J. M. Coetzee haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:10+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q43293",
+     "pageid": 45494,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "South African and Australian writer and scholar (born 1940)",
+     "timestamp": "2026-09-22T20:56:59Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q72563330",
+     "pageid": 72226331,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher",
+     "timestamp": "2024-08-07T07:18:36Z"
+    }
+   ]
+  }
+ }
+}

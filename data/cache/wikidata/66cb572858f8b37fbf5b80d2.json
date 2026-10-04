@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Julian Barnes haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:04+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q295431",
+     "pageid": 285318,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English writer (born 1946)",
+     "timestamp": "2026-08-25T08:24:04Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q22986272",
+     "pageid": 25002853,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British actor (1949-)",
+     "timestamp": "2026-08-10T03:28:49Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6307346",
+     "pageid": 6113853,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American college football player, U.S. Army officer, businessman, mayor, state representative, state senator (1914-1997)",
+     "timestamp": "2025-05-31T23:11:28Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q114429160",
+     "pageid": 109118377,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American journalist",
+     "timestamp": "2026-06-30T06:52:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q123085",
+     "pageid": 125313,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English prioress and author",
+     "timestamp": "2026-07-24T20:39:30Z"
+    }
+   ]
+  }
+ }
+}

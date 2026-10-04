@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "W. B. Yeats haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:21+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q40213",
+     "pageid": 42571,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Irish poet and playwright (1865–1939)",
+     "timestamp": "2026-09-28T21:28:24Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q560488",
+     "pageid": 527906,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Irish artist (1871-1957)",
+     "timestamp": "2026-09-24T02:16:47Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q5548182",
+     "pageid": 5308385,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "wife of William Butler Yeats (1892–1968)",
+     "timestamp": "2026-04-04T13:19:26Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q6383970",
+     "pageid": 6196703,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Novelist, biographer, and critic",
+     "timestamp": "2026-07-23T14:14:10Z"
+    }
+   ]
+  }
+ }
+}

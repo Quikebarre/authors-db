@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Doris Lessing haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:09+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q40874",
+     "pageid": 43189,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British novelist, poet, playwright, librettist, biographer, and short story writer (1919–2013)",
+     "timestamp": "2026-09-29T09:31:35Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q95651242",
+     "pageid": 94527400,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "German romanist",
+     "timestamp": "2026-07-19T23:08:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q132970011",
+     "pageid": 126824008,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-12-27T04:46:18Z"
+    }
+   ]
+  }
+ }
+}

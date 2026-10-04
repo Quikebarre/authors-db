@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "F. Scott Fitzgerald haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:21+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q93354",
+     "pageid": 95541,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer (1896–1940)",
+     "timestamp": "2026-09-29T09:13:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q20961950",
+     "pageid": 23013955,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "secretary to writer <span class=\"searchmatch\">F</span>. <span class=\"searchmatch\">Scott</span> <span class=\"searchmatch\">Fitzgerald</span> (1916–2015)",
+     "timestamp": "2026-06-22T02:33:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q187324",
+     "pageid": 186068,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer (1900–1948)",
+     "timestamp": "2026-09-19T09:53:48Z"
+    }
+   ]
+  }
+ }
+}

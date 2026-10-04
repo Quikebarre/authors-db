@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Isaac Asimov haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:44+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q34981",
+     "pageid": 37681,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer and biochemist (1920–1992)",
+     "timestamp": "2026-09-28T10:52:31Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q107693884",
+     "pageid": 102977217,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "ex-wife of author Isaac Asimov",
+     "timestamp": "2026-06-23T22:13:10Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q95630740",
+     "pageid": 94507021,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Canadian game creator",
+     "timestamp": "2026-08-05T07:21:59Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q127234",
+     "pageid": 129280,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American physicist (1852–1931)",
+     "timestamp": "2026-08-19T20:53:51Z"
+    }
+   ]
+  }
+ }
+}

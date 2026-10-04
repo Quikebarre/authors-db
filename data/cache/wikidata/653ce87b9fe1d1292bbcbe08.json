@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Flannery O'Connor haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:42:33+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q234579",
+     "pageid": 228169,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "American writer (1925–1964)",
+     "timestamp": "2026-09-30T20:12:14Z"
+    }
+   ]
+  }
+ }
+}

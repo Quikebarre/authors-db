@@ -1,0 +1,65 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Zadie Smith",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:01+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Zadie Smith"
+  },
+  "search": [
+   {
+    "id": "Q140052",
+    "title": "Q140052",
+    "pageid": 141727,
+    "concepturi": "http://www.wikidata.org/entity/Q140052",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q140052",
+    "display": {
+     "label": {
+      "value": "Zadie Smith",
+      "language": "en"
+     },
+     "description": {
+      "value": "English novelist, essayist and short story writer (born 1975)",
+      "language": "en"
+     }
+    },
+    "label": "Zadie Smith",
+    "description": "English novelist, essayist and short story writer (born 1975)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Zadie Smith"
+    }
+   },
+   {
+    "id": "Q140977609",
+    "title": "Q140977609",
+    "pageid": 134421948,
+    "concepturi": "http://www.wikidata.org/entity/Q140977609",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q140977609",
+    "display": {
+     "label": {
+      "value": "Zadie Smith",
+      "language": "mul"
+     }
+    },
+    "label": "Zadie Smith",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Zadie Smith"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

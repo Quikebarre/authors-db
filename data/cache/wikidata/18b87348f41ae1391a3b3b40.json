@@ -1,0 +1,95 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Jeanette Winterson",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:43:04+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Jeanette Winterson"
+  },
+  "search": [
+   {
+    "id": "Q233584",
+    "title": "Q233584",
+    "pageid": 227251,
+    "concepturi": "http://www.wikidata.org/entity/Q233584",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q233584",
+    "display": {
+     "label": {
+      "value": "Jeanette Winterson",
+      "language": "en"
+     },
+     "description": {
+      "value": "English writer",
+      "language": "en"
+     }
+    },
+    "label": "Jeanette Winterson",
+    "description": "English writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Jeanette Winterson"
+    }
+   },
+   {
+    "id": "Q119979440",
+    "title": "Q119979440",
+    "pageid": 114447032,
+    "concepturi": "http://www.wikidata.org/entity/Q119979440",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q119979440",
+    "display": {
+     "label": {
+      "value": "Jeanette Winterson’s Existing Space: Existential Space under Power",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published in 2015",
+      "language": "en"
+     }
+    },
+    "label": "Jeanette Winterson’s Existing Space: Existential Space under Power",
+    "description": "scientific article published in 2015",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Jeanette Winterson’s Existing Space: Existential Space under Power"
+    }
+   },
+   {
+    "id": "Q128059613",
+    "title": "Q128059613",
+    "pageid": 122042746,
+    "concepturi": "http://www.wikidata.org/entity/Q128059613",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q128059613",
+    "display": {
+     "label": {
+      "value": "Jeanette Winterson’s The Stone Gods as an Ebullition of Genres",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Jeanette Winterson’s The Stone Gods as an Ebullition of Genres",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Jeanette Winterson’s The Stone Gods as an Ebullition of Genres"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

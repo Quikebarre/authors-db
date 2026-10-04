@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Hilary Mantel haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:01+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q465700",
+     "pageid": 439233,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British writer (1952–2022)",
+     "timestamp": "2026-08-22T21:39:20Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q124741282",
+     "pageid": 118928298,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-12-15T08:15:18Z"
+    }
+   ]
+  }
+ }
+}

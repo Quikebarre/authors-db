@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Zadie Smith haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:43:02+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q140052",
+     "pageid": 141727,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English novelist, essayist and short story writer (born 1975)",
+     "timestamp": "2026-09-17T08:34:51Z"
+    }
+   ]
+  }
+ }
+}
