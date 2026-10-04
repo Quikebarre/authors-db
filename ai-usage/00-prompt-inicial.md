@@ -39,9 +39,26 @@ Tratarlo como RESOLUCIÓN DE ENTIDADES con trazabilidad, no como scraping masivo
    e. Enriquecer desde Open Library. Los conflictos entre fuentes se registran, no se resuelven en silencio.
 4. Deduplicación: dos seed_name son el mismo autor si resuelven al MISMO QID u Open Library ID
    (evidencia externa). Marcar duplicate_of, no borrar filas.
-5. Almacenamiento: DuckDB con tablas authors, author_works, match_candidates (todos los candidatos
-   con puntuación, para auditoría) y field_provenance (source + retrieved_at por campo, flag de
-   conflicto). Export a CSV y Parquet en data/output/.
+5. Almacenamiento: DuckDB organizado EN CAPAS. Las tablas intermedias guardan datos procesados que
+   no son el resultado final, para que cada paso sea inspeccionable, auditable y reconstruible desde
+   el anterior sin volver a llamar a las APIs. Prefijo por capa:
+   - raw_* (tal cual llega, sin transformar):
+     raw_seed (author_name + row_number), raw_wikidata_responses y raw_openlibrary_responses
+     (JSON crudo + url + params + retrieved_at, cargado desde data/cache/).
+   - stg_* (intermedias: parseadas, normalizadas y puntuadas):
+     stg_seed_normalized (seed_name, display_name, match_key, is_invalid, exact_dup_of),
+     stg_wikidata_candidates (una fila por candidato con sus campos parseados),
+     stg_candidate_scores (features + score + rank por candidato),
+     stg_match_decisions (estado, mejor candidato, margen, match_reason, resolved_by),
+     stg_openlibrary_authors y stg_openlibrary_works (parseados).
+   - Tablas finales (resultado):
+     authors (una fila por seed_name, con duplicate_of), author_works,
+     field_provenance (source + retrieved_at por campo, flag de conflicto).
+   - Metadatos: pipeline_runs (run_id, inicio, fin, versión del código, parámetros, nº de filas por
+     tabla). Todas las tablas llevan run_id.
+   Las finales se construyen con SQL a partir de stg_*; cada paso es idempotente (CREATE OR REPLACE).
+   Export a CSV y Parquet en data/output/ solo de las tablas finales; las intermedias quedan en el
+   .duckdb para auditoría.
 6. Reproducibilidad: caché en disco de todas las respuestas HTTP crudas (JSON con url, params,
    retrieved_at) en data/cache/, modo --offline que solo usa la caché, rate limiting, User-Agent
    identificable, un único comando para ejecutar (make all / python -m authors_db run), opción --limit.

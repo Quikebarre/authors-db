@@ -218,6 +218,19 @@ Prompt de arranque generado para continuar el trabajo con un asistente de códig
 
 ---
 
+## Turno 8 — Usuario
+
+> no has incluido en las intrucciones de que en la base de datos genere tablas intermedias donde se
+> almacenen datos procesados pero que no son el resultado final
+
+## Turno 8 — Claude
+
+[Actualizado el punto 5 del prompt inicial: almacenamiento en capas `raw_*` → `stg_*` → tablas
+finales, más `pipeline_runs` con `run_id`. Las finales se construyen con SQL desde `stg_*`, los pasos
+son idempotentes y solo se exportan las finales.]
+
+---
+
 ## Qué he validado / decidido yo (completar)
 
 - [ ] Fuentes: Wikidata + Open Library
