@@ -1,6 +1,7 @@
 """DuckDB storage in layers: raw tables, stg tables, and final tables. Each step is idempotent."""
 
 import csv
+import gzip
 import json
 from pathlib import Path
 
@@ -33,12 +34,12 @@ def build_raw_responses(
 ) -> None:
     """Create a table of raw responses. Load the JSON, URL, parameters, and time from the cache."""
     rows = []
-    for path in sorted(cache_dir.glob("*.json")) if cache_dir.exists() else []:
-        record = json.loads(path.read_text(encoding="utf-8"))
+    for path in sorted(cache_dir.glob("*.json.gz")) if cache_dir.exists() else []:
+        record = json.loads(gzip.decompress(path.read_bytes()))
         rows.append(
             (
                 run_id,
-                path.stem,
+                path.name.removesuffix(".json.gz"),
                 record["url"],
                 json.dumps(record["params"], ensure_ascii=False, sort_keys=True),
                 record["retrieved_at"],

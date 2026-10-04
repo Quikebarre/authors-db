@@ -1,3 +1,4 @@
+import gzip
 import json
 from pathlib import Path
 
@@ -50,7 +51,7 @@ def test_build_raw_responses_loads_cache_records(con, tmp_path):
         "retrieved_at": "2026-10-04T18:00:00+00:00",
         "response": {"ok": True},
     }
-    (cache / "abc.json").write_text(json.dumps(record), encoding="utf-8")
+    (cache / "abc.json.gz").write_bytes(gzip.compress(json.dumps(record).encode()))
     storage.build_raw_responses(con, RUN, "raw_wikidata_responses", cache)
     url, params, ok = con.execute(
         "SELECT url, params, response->>'$.ok' FROM raw_wikidata_responses"

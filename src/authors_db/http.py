@@ -1,5 +1,6 @@
 """HTTP client with a disk cache, a rate limit, and an offline mode."""
 
+import gzip
 import hashlib
 import json
 import threading
@@ -39,7 +40,7 @@ class CachedClient:
 
     def _cache_path(self, url: str, params: dict[str, Any]) -> Path:
         raw = json.dumps([url, sorted(params.items())], ensure_ascii=False)
-        return self._cache_dir / f"{hashlib.sha256(raw.encode()).hexdigest()[:24]}.json"
+        return self._cache_dir / f"{hashlib.sha256(raw.encode()).hexdigest()[:24]}.json.gz"
 
     def _wait_for_slot(self) -> None:
         with self._lock:
@@ -53,7 +54,7 @@ class CachedClient:
         """Return the JSON response. Use the cache when it has a record for the request."""
         path = self._cache_path(url, params)
         if path.exists():
-            return json.loads(path.read_text(encoding="utf-8"))["response"]
+            return json.loads(gzip.decompress(path.read_bytes()))["response"]
         if self._offline:
             raise OfflineCacheMissError(f"{url} {params}")
         response = self._get_with_retry(url, params)
@@ -63,7 +64,7 @@ class CachedClient:
             "retrieved_at": datetime.now(UTC).isoformat(timespec="seconds"),
             "response": response,
         }
-        path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+        path.write_bytes(gzip.compress(json.dumps(record, ensure_ascii=False).encode("utf-8")))
         return response
 
     @staticmethod

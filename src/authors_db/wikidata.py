@@ -35,6 +35,8 @@ PSEUDONYM_TARGET_PROPS = ("P1535", "P460")
 EXTRA_NAME_PROPS = ("P742", "P1477", "P1559")
 SEARCH_LIMIT = 10
 FETCH_BATCH = 40
+# Wikidata often keeps the correct name only in "mul" or in another language.
+LANGUAGES = "en|es|fr|de|it|pt|ca|mul"
 
 
 @dataclass
@@ -159,7 +161,7 @@ class WikidataSource:
                 "action": "wbgetentities",
                 "ids": "|".join(ids[i : i + FETCH_BATCH]),
                 "format": "json",
-                "languages": "en|es",
+                "languages": LANGUAGES,
                 "props": "labels|aliases|descriptions|claims|sitelinks",
             }
             out.update(self._client.get_json(API, params).get("entities", {}))
