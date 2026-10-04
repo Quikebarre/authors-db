@@ -86,7 +86,9 @@ def _time_value(entity: dict[str, Any], prop: str) -> str | None:
 
 def _labels(entity: dict[str, Any]) -> tuple[str, str, list[str]]:
     labels = entity.get("labels", {})
-    label = (labels.get("en") or next(iter(labels.values()), {})).get("value", "")
+    # The "mul" label is the default name for all languages. Some "en" labels are wrong.
+    preferred = labels.get("mul") or labels.get("en") or next(iter(labels.values()), {})
+    label = preferred.get("value", "")
     desc = entity.get("descriptions", {}).get("en", {}).get("value", "")
     names = [v["value"] for v in labels.values()]
     for alias_list in entity.get("aliases", {}).values():

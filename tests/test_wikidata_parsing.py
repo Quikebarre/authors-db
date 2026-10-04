@@ -43,3 +43,15 @@ def test_pseudonym_targets_follows_used_by_property():
 def test_pseudonym_targets_for_regular_item_is_empty():
     entity = {"id": "Q34660", "claims": {"P31": [item("Q5")], "P1535": [item("Q1")]}}
     assert pseudonym_targets(entity) == []
+
+
+def test_parse_candidate_prefers_mul_label_over_wrong_english_label():
+    entity = {
+        "id": "Q117018",
+        "labels": {"en": {"value": "Vicente Hohoneo"}, "mul": {"value": "Vicente Huidobro"}},
+        "claims": {"P31": [item("Q5")]},
+    }
+    cand = parse_candidate(entity)
+    assert cand is not None
+    assert cand.label == "Vicente Huidobro"
+    assert "Vicente Hohoneo" in cand.names
