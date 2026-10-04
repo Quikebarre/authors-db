@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Diamela Eltit haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:14+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q2032745",
+     "pageid": 1960576,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Chilean writer (born 1947)",
+     "timestamp": "2026-08-12T23:34:36Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q136373723",
+     "pageid": 130064475,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Chilean lawyer, academic, and researcher",
+     "timestamp": "2026-08-13T02:27:37Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Machado de Assis haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:45+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 6
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q311145",
+     "pageid": 299366,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Brazilian writer (1839–1908)",
+     "timestamp": "2026-09-15T06:40:25Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q54100350",
+     "pageid": 54441976,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-07-23T00:52:40Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q9697643",
+     "pageid": 9899053,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "wife of writer Machado de Assis",
+     "timestamp": "2023-04-07T06:50:09Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q93152833",
+     "pageid": 92297733,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "researcher (ORCID 0000-0002-5682-2981)",
+     "timestamp": "2024-05-30T16:27:14Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q138576069",
+     "pageid": 132079962,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Brazilian journalist, writer and film director",
+     "timestamp": "2026-08-05T04:43:07Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q94112378",
+     "pageid": 93144412,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2025-11-08T17:46:15Z"
+    }
+   ]
+  }
+ }
+}

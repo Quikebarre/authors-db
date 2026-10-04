@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Roberto Arlt haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:15+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q188838",
+     "pageid": 187443,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine writer",
+     "timestamp": "2026-10-02T17:56:42Z"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "João Guimarães Rosa haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:48+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q13012",
+     "pageid": 14626,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Brazilian novelist (1908-1967)",
+     "timestamp": "2026-08-21T14:48:34Z"
+    }
+   ]
+  }
+ }
+}

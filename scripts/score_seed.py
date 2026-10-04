@@ -35,7 +35,7 @@ def main() -> None:
         row += [str(len(ranked)), top[0].reason if top[0] else "no_candidates"]
         return row
 
-    with ThreadPoolExecutor(max_workers=8) as pool, out_path.open("w", encoding="utf-8") as fh:
+    with ThreadPoolExecutor(max_workers=4) as pool, out_path.open("w", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t")
         w.writerow(["seed", "qid1", "label1", "score1", "qid2", "label2", "score2", "n", "reason1"])
         for i, row in enumerate(pool.map(run, names), 1):

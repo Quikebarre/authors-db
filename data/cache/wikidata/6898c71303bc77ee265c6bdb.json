@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Lídia Jorge",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:49+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Lídia Jorge"
+  },
+  "search": [
+   {
+    "id": "Q450913",
+    "title": "Q450913",
+    "pageid": 425430,
+    "concepturi": "http://www.wikidata.org/entity/Q450913",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q450913",
+    "display": {
+     "label": {
+      "value": "Lídia Jorge",
+      "language": "en"
+     },
+     "description": {
+      "value": "Portuguese writer",
+      "language": "en"
+     }
+    },
+    "label": "Lídia Jorge",
+    "description": "Portuguese writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Lídia Jorge"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

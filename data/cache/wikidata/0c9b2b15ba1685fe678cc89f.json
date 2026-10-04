@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Alejandra Pizarnik haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:08+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q272441",
+     "pageid": 263630,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentinian poet (1936-1972)",
+     "timestamp": "2026-08-10T07:28:56Z"
+    }
+   ]
+  }
+ }
+}

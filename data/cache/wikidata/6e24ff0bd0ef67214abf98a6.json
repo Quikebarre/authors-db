@@ -1,0 +1,66 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "George Orwell haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:20+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 5
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q3335",
+     "pageid": 4299,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British writer and journalist (1903–1950)",
+     "timestamp": "2026-09-26T06:25:23Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q31832272",
+     "pageid": 33316485,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "<span class=\"searchmatch\">George</span> Orwell&#039;s adopted son",
+     "timestamp": "2026-03-01T05:32:13Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q7561744",
+     "pageid": 7479782,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "wife of George Orwell (1918–1980)",
+     "timestamp": "2026-02-28T17:02:04Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q12346934",
+     "pageid": 13561997,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "British suffragette, socialist, esperantist and aunt to author <span class=\"searchmatch\">George</span> <span class=\"searchmatch\">Orwell</span>",
+     "timestamp": "2026-09-29T22:34:05Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q111430669",
+     "pageid": 106394871,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2026-09-10T10:40:55Z"
+    }
+   ]
+  }
+ }
+}

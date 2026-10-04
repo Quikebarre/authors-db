@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Ernesto Sabato haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:16+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q186630",
+     "pageid": 185398,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Argentine writer, painter and physicist (1911-2011)",
+     "timestamp": "2026-09-29T08:22:00Z"
+    }
+   ]
+  }
+ }
+}

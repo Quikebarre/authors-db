@@ -1,0 +1,123 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Rosa Montero",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:55+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Rosa Montero"
+  },
+  "search": [
+   {
+    "id": "Q1187562",
+    "title": "Q1187562",
+    "pageid": 1132398,
+    "concepturi": "http://www.wikidata.org/entity/Q1187562",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q1187562",
+    "display": {
+     "label": {
+      "value": "Rosa Montero",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer",
+      "language": "en"
+     }
+    },
+    "label": "Rosa Montero",
+    "description": "Spanish writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Rosa Montero"
+    }
+   },
+   {
+    "id": "Q57080438",
+    "title": "Q57080438",
+    "pageid": 56997353,
+    "concepturi": "http://www.wikidata.org/entity/Q57080438",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q57080438",
+    "display": {
+     "label": {
+      "value": "Rosa M Montero",
+      "language": "en"
+     },
+     "description": {
+      "value": "researcher",
+      "language": "en"
+     }
+    },
+    "label": "Rosa M Montero",
+    "description": "researcher",
+    "match": {
+     "type": "alias",
+     "language": "en",
+     "text": "Rosa Montero"
+    },
+    "aliases": [
+     "Rosa Montero"
+    ]
+   },
+   {
+    "id": "Q96429091",
+    "title": "Q96429091",
+    "pageid": 95120854,
+    "concepturi": "http://www.wikidata.org/entity/Q96429091",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q96429091",
+    "display": {
+     "label": {
+      "value": "Rosa Montero-Macías",
+      "language": "en"
+     },
+     "description": {
+      "value": "gynecologist",
+      "language": "en"
+     }
+    },
+    "label": "Rosa Montero-Macías",
+    "description": "gynecologist",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Rosa Montero-Macías"
+    }
+   },
+   {
+    "id": "Q129125159",
+    "title": "Q129125159",
+    "pageid": 123098236,
+    "concepturi": "http://www.wikidata.org/entity/Q129125159",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q129125159",
+    "display": {
+     "label": {
+      "value": "Rosa Montero o la libertad conquistada",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article",
+      "language": "en"
+     }
+    },
+    "label": "Rosa Montero o la libertad conquistada",
+    "description": "scholarly article",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Rosa Montero o la libertad conquistada"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

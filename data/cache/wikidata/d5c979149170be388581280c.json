@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Luis Mateo Díez",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:58+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Luis Mateo Díez"
+  },
+  "search": [
+   {
+    "id": "Q9025225",
+    "title": "Q9025225",
+    "pageid": 9090259,
+    "concepturi": "http://www.wikidata.org/entity/Q9025225",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q9025225",
+    "display": {
+     "label": {
+      "value": "Luis Mateo Díez",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer",
+      "language": "en"
+     }
+    },
+    "label": "Luis Mateo Díez",
+    "description": "Spanish writer",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Luis Mateo Díez"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

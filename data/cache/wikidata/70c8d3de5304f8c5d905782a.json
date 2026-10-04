@@ -1,0 +1,95 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Juan Marsé",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:59+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Juan Marsé"
+  },
+  "search": [
+   {
+    "id": "Q460109",
+    "title": "Q460109",
+    "pageid": 434013,
+    "concepturi": "http://www.wikidata.org/entity/Q460109",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q460109",
+    "display": {
+     "label": {
+      "value": "Juan Marsé",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer (1933–2020)",
+      "language": "en"
+     }
+    },
+    "label": "Juan Marsé",
+    "description": "Spanish writer (1933–2020)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Juan Marsé"
+    }
+   },
+   {
+    "id": "Q112952192",
+    "title": "Q112952192",
+    "pageid": 107799916,
+    "concepturi": "http://www.wikidata.org/entity/Q112952192",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q112952192",
+    "display": {
+     "label": {
+      "value": "Juan Marsé: Broadening the Definition of the Catalan Nation",
+      "language": "en"
+     },
+     "description": {
+      "value": "2020 doctoral thesis by Dana Guisasola at Victoria University of Wellington",
+      "language": "en"
+     }
+    },
+    "label": "Juan Marsé: Broadening the Definition of the Catalan Nation",
+    "description": "2020 doctoral thesis by Dana Guisasola at Victoria University of Wellington",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Juan Marsé: Broadening the Definition of the Catalan Nation"
+    }
+   },
+   {
+    "id": "Q123551472",
+    "title": "Q123551472",
+    "pageid": 117749660,
+    "concepturi": "http://www.wikidata.org/entity/Q123551472",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q123551472",
+    "display": {
+     "label": {
+      "value": "Juan Marsé, Who Wrote of Spain’s Dark Years, Is Dead at 87",
+      "language": "en"
+     },
+     "description": {
+      "value": "The New York Times article (July 23, 2020)",
+      "language": "en"
+     }
+    },
+    "label": "Juan Marsé, Who Wrote of Spain’s Dark Years, Is Dead at 87",
+    "description": "The New York Times article (July 23, 2020)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Juan Marsé, Who Wrote of Spain’s Dark Years, Is Dead at 87"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

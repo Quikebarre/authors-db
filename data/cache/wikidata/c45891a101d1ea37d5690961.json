@@ -1,0 +1,95 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Diamela Eltit",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:40:13+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Diamela Eltit"
+  },
+  "search": [
+   {
+    "id": "Q2032745",
+    "title": "Q2032745",
+    "pageid": 1960576,
+    "concepturi": "http://www.wikidata.org/entity/Q2032745",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q2032745",
+    "display": {
+     "label": {
+      "value": "Diamela Eltit",
+      "language": "en"
+     },
+     "description": {
+      "value": "Chilean writer (born 1947)",
+      "language": "en"
+     }
+    },
+    "label": "Diamela Eltit",
+    "description": "Chilean writer (born 1947)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Diamela Eltit"
+    }
+   },
+   {
+    "id": "Q136160995",
+    "title": "Q136160995",
+    "pageid": 129871214,
+    "concepturi": "http://www.wikidata.org/entity/Q136160995",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136160995",
+    "display": {
+     "label": {
+      "value": "Diamela Eltit: Essays on Chilean Literature, Politics, and Culture",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2023",
+      "language": "en"
+     }
+    },
+    "label": "Diamela Eltit: Essays on Chilean Literature, Politics, and Culture",
+    "description": "book 2023",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Diamela Eltit: Essays on Chilean Literature, Politics, and Culture"
+    }
+   },
+   {
+    "id": "Q136196496",
+    "title": "Q136196496",
+    "pageid": 129905870,
+    "concepturi": "http://www.wikidata.org/entity/Q136196496",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q136196496",
+    "display": {
+     "label": {
+      "value": "Diamela Eltit: Reading the Mother",
+      "language": "mul"
+     },
+     "description": {
+      "value": "book 2007",
+      "language": "en"
+     }
+    },
+    "label": "Diamela Eltit: Reading the Mother",
+    "description": "book 2007",
+    "match": {
+     "type": "label",
+     "language": "mul",
+     "text": "Diamela Eltit: Reading the Mother"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

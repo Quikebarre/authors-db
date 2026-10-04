@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Antonio Muñoz Molina",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:53+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Antonio Muñoz Molina"
+  },
+  "search": [
+   {
+    "id": "Q450335",
+    "title": "Q450335",
+    "pageid": 424879,
+    "concepturi": "http://www.wikidata.org/entity/Q450335",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q450335",
+    "display": {
+     "label": {
+      "value": "Antonio Muñoz Molina",
+      "language": "en"
+     },
+     "description": {
+      "value": "Spanish writer (born 1956)",
+      "language": "en"
+     }
+    },
+    "label": "Antonio Muñoz Molina",
+    "description": "Spanish writer (born 1956)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Antonio Muñoz Molina"
+    }
+   },
+   {
+    "id": "Q122200360",
+    "title": "Q122200360",
+    "pageid": 116529739,
+    "concepturi": "http://www.wikidata.org/entity/Q122200360",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q122200360",
+    "display": {
+     "label": {
+      "value": "Antonio Muñoz Molina’nın Los misterios de Madrid romanında Madrid’deki Franco sonrası kentsel ve kültürel değişimlerin izlerini sürmek",
+      "language": "en"
+     },
+     "description": {
+      "value": "scientific article published in 2022",
+      "language": "en"
+     }
+    },
+    "label": "Antonio Muñoz Molina’nın Los misterios de Madrid romanında Madrid’deki Franco sonrası kentsel ve kültürel değişimlerin izlerini sürmek",
+    "description": "scientific article published in 2022",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Antonio Muñoz Molina’nın Los misterios de Madrid romanında Madrid’deki Franco sonrası kentsel ve kültürel değişimlerin izlerini sürmek"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

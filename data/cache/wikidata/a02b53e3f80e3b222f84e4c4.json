@@ -1,0 +1,57 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Daniel Defoe haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:28+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 4
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q40946",
+     "pageid": 43258,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English trader, writer, and journalist (1660–1731)",
+     "timestamp": "2026-09-29T09:27:30Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q22336865",
+     "pageid": 24363630,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Pseudonym used by <span class=\"searchmatch\">Daniel</span> <span class=\"searchmatch\">Defoe</span>",
+     "timestamp": "2026-07-30T13:47:59Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76282177",
+     "pageid": 75770986,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "father of author <span class=\"searchmatch\">Daniel</span> <span class=\"searchmatch\">Defoe</span>",
+     "timestamp": "2026-07-21T03:07:04Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q93248659",
+     "pageid": 92386661,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "",
+     "timestamp": "2024-09-27T15:12:05Z"
+    }
+   ]
+  }
+ }
+}

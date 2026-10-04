@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Clarice Lispector haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:43+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q235955",
+     "pageid": 229437,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Ukrainian-Brazilian writer, poet, and journalist (1920–1977)",
+     "timestamp": "2026-09-06T06:42:10Z"
+    }
+   ]
+  }
+ }
+}

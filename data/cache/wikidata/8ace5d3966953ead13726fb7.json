@@ -1,0 +1,45 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "António Lobo Antunes",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:39:49+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "António Lobo Antunes"
+  },
+  "search": [
+   {
+    "id": "Q333849",
+    "title": "Q333849",
+    "pageid": 319971,
+    "concepturi": "http://www.wikidata.org/entity/Q333849",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q333849",
+    "display": {
+     "label": {
+      "value": "António Lobo Antunes",
+      "language": "en"
+     },
+     "description": {
+      "value": "Portuguese writer (1942-2026)",
+      "language": "en"
+     }
+    },
+    "label": "António Lobo Antunes",
+    "description": "Portuguese writer (1942-2026)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "António Lobo Antunes"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

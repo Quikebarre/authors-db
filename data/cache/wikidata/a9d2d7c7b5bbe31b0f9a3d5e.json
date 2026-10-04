@@ -1,0 +1,113 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Ricardo Güiraldes",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:40:11+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Ricardo Güiraldes"
+  },
+  "search": [
+   {
+    "id": "Q629931",
+    "title": "Q629931",
+    "pageid": 592486,
+    "concepturi": "http://www.wikidata.org/entity/Q629931",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q629931",
+    "display": {
+     "label": {
+      "value": "Ricardo Güiraldes",
+      "language": "en"
+     },
+     "description": {
+      "value": "Argentine writer (1886-1927)",
+      "language": "en"
+     }
+    },
+    "label": "Ricardo Güiraldes",
+    "description": "Argentine writer (1886-1927)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Ricardo Güiraldes"
+    }
+   },
+   {
+    "id": "Q57758894",
+    "title": "Q57758894",
+    "pageid": 57673260,
+    "concepturi": "http://www.wikidata.org/entity/Q57758894",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q57758894",
+    "display": {
+     "label": {
+      "value": "Biblioteca Ricardo Güiraldes",
+      "language": "en"
+     },
+     "description": {
+      "value": "public library in Buenos Aires",
+      "language": "en"
+     }
+    },
+    "label": "Biblioteca Ricardo Güiraldes",
+    "description": "public library in Buenos Aires",
+    "match": {
+     "type": "alias",
+     "language": "es",
+     "text": "Ricardo Güiraldes"
+    },
+    "aliases": [
+     "Ricardo Güiraldes"
+    ]
+   },
+   {
+    "id": "Q140650540",
+    "title": "Q140650540",
+    "pageid": 134084660,
+    "concepturi": "http://www.wikidata.org/entity/Q140650540",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q140650540",
+    "display": {
+     "label": {
+      "value": "Ricardo Guiraldes",
+      "language": "es"
+     }
+    },
+    "label": "Ricardo Guiraldes",
+    "match": {
+     "type": "label",
+     "language": "es",
+     "text": "Ricardo Guiraldes"
+    }
+   },
+   {
+    "id": "Q140670356",
+    "title": "Q140670356",
+    "pageid": 134103768,
+    "concepturi": "http://www.wikidata.org/entity/Q140670356",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q140670356",
+    "display": {
+     "label": {
+      "value": "Ricardo Guiraldes 48",
+      "language": "es"
+     }
+    },
+    "label": "Ricardo Guiraldes 48",
+    "match": {
+     "type": "label",
+     "language": "es",
+     "text": "Ricardo Guiraldes 48"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

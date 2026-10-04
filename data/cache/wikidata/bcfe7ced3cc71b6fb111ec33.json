@@ -1,0 +1,48 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Max Aub haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:01+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 3
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q356546",
+     "pageid": 340173,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish writer (1903–1972)",
+     "timestamp": "2026-09-06T21:48:09Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q20101470",
+     "pageid": 21771313,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish dressmaker and <span class=\"searchmatch\">Max</span> <span class=\"searchmatch\">Aub</span>&#039; wife (1902-1991)",
+     "timestamp": "2026-04-26T05:55:45Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q113006174",
+     "pageid": 107849134,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Spanish writer",
+     "timestamp": "2026-07-11T20:14:10Z"
+    }
+   ]
+  }
+ }
+}

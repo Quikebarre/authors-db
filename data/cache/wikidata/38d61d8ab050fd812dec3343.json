@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "António Lobo Antunes haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:39:50+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q333849",
+     "pageid": 319971,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Portuguese writer (1942-2026)",
+     "timestamp": "2026-09-29T04:14:55Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q7376025",
+     "pageid": 7284841,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Brazilian civil engineer and politician who disappeared during the military dictatorship",
+     "timestamp": "2026-07-22T21:34:22Z"
+    }
+   ]
+  }
+ }
+}

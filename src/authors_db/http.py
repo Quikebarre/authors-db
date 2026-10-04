@@ -24,7 +24,7 @@ class CachedClient:
         self,
         cache_dir: Path,
         offline: bool = False,
-        min_interval_s: float = 0.2,
+        min_interval_s: float = 0.4,
         timeout_s: float = 30.0,
     ) -> None:
         self._cache_dir = cache_dir
@@ -66,13 +66,19 @@ class CachedClient:
         path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
         return response
 
-    def _get_with_retry(self, url: str, params: dict[str, Any], attempts: int = 4) -> Any:
+    @staticmethod
+    def _retry_delay(resp: httpx.Response, attempt: int) -> float:
+        """Respeta Retry-After (segundos) si viene; si no, backoff exponencial."""
+        retry_after = resp.headers.get("Retry-After", "")
+        return float(retry_after) if retry_after.isdigit() else float(2 ** (attempt + 1))
+
+    def _get_with_retry(self, url: str, params: dict[str, Any], attempts: int = 6) -> Any:
         for attempt in range(attempts):
             self._wait_for_slot()
             try:
                 resp = self._client.get(url, params=params)
                 if resp.status_code in (429, 500, 502, 503, 504) and attempt < attempts - 1:
-                    time.sleep(2**attempt)
+                    time.sleep(self._retry_delay(resp, attempt))
                     continue
                 resp.raise_for_status()
                 return resp.json()

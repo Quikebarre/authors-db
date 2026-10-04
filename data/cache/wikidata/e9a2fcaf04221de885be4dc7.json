@@ -1,0 +1,39 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Elizabeth Barrett Browning haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:36+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 2
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q228494",
+     "pageid": 222667,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "English poet (1806–1861)",
+     "timestamp": "2026-08-26T10:31:13Z"
+    },
+    {
+     "ns": 0,
+     "title": "Q76099352",
+     "pageid": 75585749,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "youngest sister of Elizabeth Barrett Browning (1813-1868)",
+     "timestamp": "2026-07-20T01:53:49Z"
+    }
+   ]
+  }
+ }
+}

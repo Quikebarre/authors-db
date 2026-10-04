@@ -1,0 +1,70 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "wbsearchentities",
+  "search": "Alejandra Pizarnik",
+  "language": "en",
+  "type": "item",
+  "limit": 10,
+  "format": "json"
+ },
+ "retrieved_at": "2026-10-04T18:40:06+00:00",
+ "response": {
+  "searchinfo": {
+   "search": "Alejandra Pizarnik"
+  },
+  "search": [
+   {
+    "id": "Q272441",
+    "title": "Q272441",
+    "pageid": 263630,
+    "concepturi": "http://www.wikidata.org/entity/Q272441",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q272441",
+    "display": {
+     "label": {
+      "value": "Alejandra Pizarnik",
+      "language": "en"
+     },
+     "description": {
+      "value": "Argentinian poet (1936-1972)",
+      "language": "en"
+     }
+    },
+    "label": "Alejandra Pizarnik",
+    "description": "Argentinian poet (1936-1972)",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Alejandra Pizarnik"
+    }
+   },
+   {
+    "id": "Q129828877",
+    "title": "Q129828877",
+    "pageid": 123797882,
+    "concepturi": "http://www.wikidata.org/entity/Q129828877",
+    "repository": "wikidata",
+    "url": "//www.wikidata.org/wiki/Q129828877",
+    "display": {
+     "label": {
+      "value": "Alejandra Pizarnik y el Deseo de Trascender Las Fronteras del Lenguaje",
+      "language": "en"
+     },
+     "description": {
+      "value": "scholarly article published in 2018",
+      "language": "en"
+     }
+    },
+    "label": "Alejandra Pizarnik y el Deseo de Trascender Las Fronteras del Lenguaje",
+    "description": "scholarly article published in 2018",
+    "match": {
+     "type": "label",
+     "language": "en",
+     "text": "Alejandra Pizarnik y el Deseo de Trascender Las Fronteras del Lenguaje"
+    }
+   }
+  ],
+  "success": 1
+ }
+}

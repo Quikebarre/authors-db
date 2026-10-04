@@ -1,0 +1,30 @@
+{
+ "url": "https://www.wikidata.org/w/api.php",
+ "params": {
+  "action": "query",
+  "list": "search",
+  "format": "json",
+  "srsearch": "Idea Vilariño haswbstatement:P31=Q5",
+  "srlimit": 10
+ },
+ "retrieved_at": "2026-10-04T18:40:08+00:00",
+ "response": {
+  "batchcomplete": "",
+  "query": {
+   "searchinfo": {
+    "totalhits": 1
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "Q129533",
+     "pageid": 131497,
+     "size": null,
+     "wordcount": 0,
+     "snippet": "Uruguayan poet, essayist and literary critic (1920-2009)",
+     "timestamp": "2026-09-15T06:34:04Z"
+    }
+   ]
+  }
+ }
+}
