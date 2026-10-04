@@ -71,6 +71,10 @@ class OfflineModelCacheMissError(RuntimeError):
     """Raised when the offline mode is on and the cache has no answer for the request."""
 
 
+class ModelVersionError(RuntimeError):
+    """Raised when the installed model does not have the pinned digest."""
+
+
 class OllamaClient:
     """Chat client for a local Ollama server. Each answer is saved in a gzip cache."""
 
@@ -79,7 +83,10 @@ class OllamaClient:
         self._cache_dir = cache_dir
         self._offline = offline
         self._http = httpx.Client(base_url=config.OLLAMA_URL, timeout=timeout_s)
-        self.digest = self._read_digest()
+        self.digest = config.OLLAMA_MODEL_DIGEST
+        installed = self._read_digest()
+        if installed != "unavailable" and installed != self.digest:
+            raise ModelVersionError(f"Pinned {self.digest}, installed {installed}")
         cache_dir.mkdir(parents=True, exist_ok=True)
 
     def _read_digest(self) -> str:

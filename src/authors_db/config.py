@@ -17,3 +17,5 @@ MAX_CANDIDATES_FOR_ADJUDICATION = 4
 
 OLLAMA_URL = "http://localhost:11434"
 OLLAMA_MODEL = "qwen2.5:7b-instruct-q4_K_M"
+# The client refuses to run if the installed model has another digest.
+OLLAMA_MODEL_DIGEST = "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e"

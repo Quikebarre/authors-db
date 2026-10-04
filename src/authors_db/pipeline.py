@@ -50,19 +50,22 @@ def score_seed_names(
 
 
 def export_final_tables(con: duckdb.DuckDBPyConnection, output_dir: Path) -> None:
-    """Write the final tables to CSV and Parquet. The staging tables stay in the database."""
+    """Write the final tables to CSV and Parquet. The `stg_` tables stay in the database."""
     output_dir.mkdir(parents=True, exist_ok=True)
     for table in FINAL_TABLES:
         con.execute(f"COPY {table} TO '{output_dir / table}.csv' (HEADER, DELIMITER ',')")  # noqa: S608
         con.execute(f"COPY {table} TO '{output_dir / table}.parquet' (FORMAT PARQUET)")  # noqa: S608
 
 
-def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection, offline: bool) -> list[Adjudication]:
-    """Ask the model about each `ambiguous` row. The answers are cached."""
+def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection) -> list[Adjudication]:
+    """Ask the model about each `ambiguous` row. The answers are cached.
+
+    The model runs on this computer, so the offline mode of the HTTP client does not apply.
+    """
     evidence = storage.read_ambiguous_evidence(
         con, config.MAX_CANDIDATES_FOR_ADJUDICATION, config.MIN_MARGIN
     )
-    client = OllamaClient(config.CACHE_DIR / "ollama", offline=offline)
+    client = OllamaClient(config.CACHE_DIR / "ollama", offline=False)
     return [
         adjudicate_one(client, row_number, seed_name, candidates)
         for row_number, (seed_name, candidates) in evidence.items()
@@ -98,7 +101,7 @@ def run(limit: int | None = None, offline: bool = False, adjudicate: bool = Fals
     storage.build_stg_slm_adjudications(con, run_id, [])
     storage.build_stg_match_decisions(con, run_id, *decision_args)
     if adjudicate:
-        storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con, offline))
+        storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con))
         storage.build_stg_match_decisions(con, run_id, *decision_args)
     storage.build_authors(con, run_id)
     export_final_tables(con, config.OUTPUT_DIR)

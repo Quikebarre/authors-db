@@ -38,3 +38,5 @@
 | 19:17:44 | 00:53:59 | PROPUESTA | Descarga del modelo qwen2.5:7b-instruct-q4_K_M en Ollama (GPU RTX 2060 6GB) para el árbitro SLM; se fijará la versión por digest. |
 | 19:18:20 | 00:54:35 | PROPUESTA | Nombre canónico: etiqueta 'mul' antes que 'en' (Huidobro). Test añadido. |
 | 19:25:29 | 01:01:44 | PROPUESTA | adjudicate.py (SlmAnswer con Pydantic, OllamaClient temp 0 + seed 0 + digest fijado + caché gz), prompts.py versionado (adjudicate-v1), stg_slm_adjudications y decisiones en SQL: SLM primero, regla de dominancia (>=3x sitelinks y similitud de nombre no menor) solo si el SLM no elige, confianza x0.8. 43 tests. |
+| 19:34:59 | 01:11:14 | PROPUESTA | Modelo qwen2.5:7b-instruct-q4_K_M descargado, digest fijado en config (845dbda0ea48...) con comprobación de versión. Lanzado: python -m authors_db run --offline --adjudicate (45 filas ambiguous). |
+| 19:42:59 | 01:19:14 | VALIDADO | SLM sobre 45 ambiguous: 45/45 salidas JSON válidas, 45 veces elige 'A' (el top por score). Sospecha de sesgo de posición; para Dumas elige 'fils' (probable error: père tiene 174 sitelinks vs 107). Se lanza prueba con orden invertido. |
