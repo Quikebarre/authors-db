@@ -65,15 +65,15 @@ def export_final_tables(con: duckdb.DuckDBPyConnection, output_dir: Path) -> Non
         con.execute(f"COPY {table} TO '{output_dir / table}.parquet' (FORMAT PARQUET)")  # noqa: S608
 
 
-def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection) -> list[Adjudication]:
+def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection, offline: bool) -> list[Adjudication]:
     """Ask the model about each `ambiguous` row. The answers are cached.
 
-    The model runs on this computer, so the offline mode of the HTTP client does not apply.
+    In the offline mode, a request that is not in the cache raises an error.
     """
     evidence = storage.read_ambiguous_evidence(
         con, config.MAX_CANDIDATES_FOR_ADJUDICATION, config.MIN_MARGIN
     )
-    client = OllamaClient(config.CACHE_DIR / "ollama", offline=False)
+    client = OllamaClient(config.CACHE_DIR / "ollama", offline=offline)
     return [
         adjudicate_consistent(client, row_number, seed_name, candidates)
         for row_number, (seed_name, candidates) in evidence.items()
@@ -145,7 +145,7 @@ def run(limit: int | None = None, offline: bool = False, adjudicate: bool = Fals
     storage.build_stg_slm_adjudications(con, run_id, [])
     storage.build_stg_match_decisions(con, run_id, *decision_args)
     if adjudicate:
-        storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con))
+        storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con, offline))
         storage.build_stg_match_decisions(con, run_id, *decision_args)
     by_qid = {sc.candidate.qid: sc.candidate for _, ranked in scored.values() for sc in ranked}
     chosen_qids = con.execute(

@@ -84,7 +84,7 @@ The export contains only the final tables. The `stg_` tables stay in the `.duckd
 | `open_library_backlink` | `match`, `mismatch`, `absent`, `ol_not_found`, or `no_ol_id`. |
 | `open_library_work_count` | The number of works in Open Library. |
 | `resolved_by` | `rule`, `slm`, or `dominance_rule`. |
-| `confidence` | The score divided by 100. A row resolved by `slm` or `dominance_rule` has a factor of 0.8. |
+| `confidence` | The score divided by 100. A row resolved by `slm` or `dominance_rule` has a factor of 0.8. It is empty when `qid` is empty. |
 | `duplicate_of` | The first seed name that has the same `qid`. |
 
 ## Glossary

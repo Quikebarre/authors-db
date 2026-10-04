@@ -414,8 +414,7 @@ def build_stg_match_decisions(
                     ELSE 'top score ' || c.best_score || ' and margin ' || ROUND(c.margin, 1)
                          || ' meet the thresholds' END AS match_reason,
                c.resolved_by,
-               CASE WHEN c.is_invalid THEN NULL
-                    WHEN c.chosen_qid IS NULL THEN ROUND(c.best_score / 100, 3)
+               CASE WHEN c.is_invalid OR c.chosen_qid IS NULL THEN NULL
                     WHEN c.resolved_by = 'rule' THEN ROUND(sc.score / 100, 3)
                     ELSE ROUND(sc.score / 100 * {resolved_factor}, 3) END AS confidence
         FROM choice c

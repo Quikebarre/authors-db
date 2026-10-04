@@ -30,7 +30,11 @@ Each Open Library record can name its Wikidata ID. We compare this ID with our Q
 | `absent`: the Open Library record has no Wikidata ID | 27 |
 | `no_ol_id`: Wikidata has no Open Library ID | 13 |
 
-Of the 450 QIDs with a Wikidata ID in Open Library, 450 agree with our match. The lower bound of the 95% Wilson interval is 99.2%. The check cannot find an error that both sources share. It does not cover the 40 QIDs with no link.
+Of the 450 QIDs with a Wikidata ID in Open Library, 450 agree with our match. The lower bound of the 95% Wilson interval is 99.2%. A `match` means that the selected Open Library record names our QID.
+
+We also checked all records, not only the selected ones. The 579 records have 533 `match` and 46 `absent`. No record names another QID. The 13 QIDs with no Open Library ID have no record.
+
+The check cannot find an error that both sources share. It does not cover the 40 QIDs with no link.
 
 ## Conflicts between the sources
 
@@ -57,8 +61,9 @@ The agent marked 19 of 20 rows as correct. The lower bound of the 95% Wilson int
 - The top candidate was correct for 30 of 30 hand-picked names. The AI agent checked each result.
 - The 7 rows with `duplicate_of` are the 7 expected pseudonym pairs. No other pair shares a QID.
 - The seed file has no exact duplicates and no empty row.
-- The model gave valid JSON in 90 of 90 calls.
-- With reverse order of the candidates, the model kept the same answer in 44 of 45 rows.
+- The model gave valid JSON in 45 of 45 first calls. The column `is_valid_output` of `stg_slm_adjudications` shows this.
+- The answers for 44 of 45 rows agree in both orders of the candidates. The column `order_consistent` shows this.
+- A replay with `--offline --adjudicate` reproduced `author_works`, `field_provenance`, and `review_sample.csv` with no difference. The replay ignores `run_id`. `authors` differed in one row: the confidence of Alexandre Dumas, which we set to empty after the first run.
 - Two errors in our code appeared when we read the conflicts. The first error ignored the rank of the Wikidata claims. The second error read "BCE" as a year after the common era. We fixed both, with tests.
 
 ## What we did not check

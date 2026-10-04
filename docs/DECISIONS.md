@@ -108,7 +108,7 @@ The setup is fixed for each run:
 
 **Alternatives that we did not use.** One question per row. It accepts an answer that depends on the position.
 
-**Consequences.** The cost doubles: 90 calls for 45 rows. One row, "Alexandre Dumas", has no choice from the model.
+**Consequences.** The cost doubles: 90 calls for 45 rows. One row, "Alexandre Dumas", has no choice from the model. The final run gives the same result: 44 of 45 rows agree in both orders.
 
 ## D11. Dominance rule
 
