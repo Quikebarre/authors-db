@@ -5,6 +5,7 @@ The sample has two strata. The first has 10 rows that the rule matched, chosen w
 The second has the 10 rows that the model resolved with the lowest margin.
 The column `correct_human` stays empty for the reviewer.
 The columns `agent_verdict` and `agent_note` come from `ai-usage/04-agent-verdicts.csv`.
+The columns `correct_human` and `note_human` come from `data/input/human_verdicts.csv`.
 """
 
 import csv
@@ -19,6 +20,7 @@ RULE_ROWS = 10
 HARD_ROWS = 10
 OUTPUT = Path("data/output/review_sample.csv")
 AGENT_VERDICTS = Path("ai-usage/04-agent-verdicts.csv")
+HUMAN_VERDICTS = Path("data/input/human_verdicts.csv")
 COLUMNS = [
     "stratum",
     "seed_name",
@@ -56,6 +58,14 @@ QUERY = """
 """
 
 
+def read_verdicts(path: Path) -> dict[str, dict[str, str]]:
+    """Read a CSV of verdicts. The key is the seed name. Return an empty dict if no file exists."""
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as fh:
+        return {r["seed_name"]: r for r in csv.DictReader(fh)}
+
+
 def main() -> None:
     con = duckdb.connect(str(config.DB_PATH), read_only=True)
     rows = []
@@ -65,20 +75,22 @@ def main() -> None:
     ):
         sql = QUERY.format(stratum=stratum, condition=condition, limit=limit, order=order)
         rows += con.execute(sql).fetchall()
-    verdicts = {}
-    if AGENT_VERDICTS.exists():
-        with AGENT_VERDICTS.open(encoding="utf-8", newline="") as fh:
-            verdicts = {r["seed_name"]: r for r in csv.DictReader(fh)}
-    agent_columns = (COLUMNS.index("agent_verdict"), COLUMNS.index("agent_note"))
-    for index, row in enumerate(rows):
-        verdict = verdicts.get(row[1])
-        if verdict:
-            row = list(row)
-            row[agent_columns[0]], row[agent_columns[1]] = (
-                verdict["agent_verdict"],
-                verdict["agent_note"],
-            )
-            rows[index] = tuple(row)
+    agent = read_verdicts(AGENT_VERDICTS)
+    human = read_verdicts(HUMAN_VERDICTS)
+    index = {
+        name: COLUMNS.index(name)
+        for name in ("agent_verdict", "agent_note", "correct_human", "note_human")
+    }
+    for position, row in enumerate(rows):
+        values = list(row)
+        for source, names in (
+            (agent, ("agent_verdict", "agent_note")),
+            (human, ("correct_human", "note_human")),
+        ):
+            if verdict := source.get(row[1]):
+                for name in names:
+                    values[index[name]] = verdict[name]
+        rows[position] = tuple(values)
     with OUTPUT.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.writer(fh)
         writer.writerow(COLUMNS)

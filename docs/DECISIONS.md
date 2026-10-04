@@ -98,7 +98,7 @@ The setup is fixed for each run:
 
 **Alternatives that we did not use.** A model for all rows. This costs more and is harder to check. A model as a source of data. We never do this.
 
-**Consequences.** The model chose the candidate with the highest score in all 44 resolved rows. Its value in this run is the check of the rule, and the detection of one unstable row (D10).
+**Consequences.** The model chose the candidate with the highest score in all 44 resolved rows. The use of a model adds no information beyond the score for these rows. It only prevents a choice for one unstable row (D10).
 
 ## D10. The model must agree in two orders
 

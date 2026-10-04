@@ -21,6 +21,8 @@ Las entradas `VALIDADO` de `02-registro-pasos.md` son comprobaciones del agente,
 - Orden de resolución: primero el SLM; si no elige, la regla de dominancia.
 - Alexandre Dumas se queda `ambiguous`. La solución correcta sería una entrada para el padre y otra para el hijo; queda anotada como decisión abierta y no se implementó.
 - Anonymous y Various Authors se quedan en la tabla final con `is_author = false`.
+- Marcar las 20 filas de la muestra como correctas (`data/input/human_verdicts.csv`), sin notas por fila.
+- El uso del SLM no aporta nada sobre usar solo el score: las 44 filas que resuelve coinciden con el candidato de mayor score. Queda anotado en DECISIONS y QUALITY.
 - Almacenamiento en capas `raw_*`, `stg_*` y tablas finales, con `run_id` y pasos idempotentes.
 - Documentación en inglés siguiendo las reglas de ASD-STE100, sin afirmar certificación.
 - Embeddings descartados para deduplicar; los duplicados se detectan por QID.
@@ -38,7 +40,7 @@ Las entradas `VALIDADO` de `02-registro-pasos.md` son comprobaciones del agente,
 
 ## Lo que ninguna persona ha comprobado todavía
 
-- La columna `correct_human` de `data/output/review_sample.csv` está vacía. No hay precisión medida por una persona.
-- Las 44 elecciones del modelo. En las 44 eligió el candidato con mayor score.
+- La precisión fuera de la muestra de 20 filas. La persona marcó las 20 como correctas (cota inferior 83.9 %, Wilson 95 %).
+- Las 34 elecciones del modelo que no están en la muestra.
 - Los 40 autores sin enlace de vuelta en Open Library (27 sin Wikidata en OL y 13 sin ID de OL).
 - Los 15 autores con 0 obras en Open Library; no se encontró la causa.

@@ -1,6 +1,6 @@
 # Quality report
 
-This report uses the run of 2026-10-04 with the option `--adjudicate`. No person has checked the matches yet. The column `correct_human` in `data/output/review_sample.csv` is empty. The column `agent_verdict` holds the verdict of the AI agent. It is not a manual validation.
+This report uses the run of 2026-10-04 with the option `--adjudicate`. The project author marked the 20 rows of the sample as correct. The column `correct_human` in `data/output/review_sample.csv` holds this verdict. The column `agent_verdict` holds the verdict of the AI agent.
 
 ## Match status
 
@@ -49,12 +49,12 @@ The conflict flag compares the years of Wikidata and Open Library. The value in 
 
 The file `data/output/review_sample.csv` has 20 rows in two strata. The first stratum has 10 rows that the rule matched. A fixed hash chooses them. The second stratum has the 10 rows that the model resolved with the lowest margin.
 
-| Stratum | Rows | Agent: correct | Agent: plausible | Human verdict |
+| Stratum | Rows | Agent: correct | Agent: plausible | Human: correct |
 |---|---|---|---|---|
-| Rule | 10 | 10 | 0 | empty |
-| Model | 10 | 9 | 1 | empty |
+| Rule | 10 | 10 | 0 | 10 |
+| Model | 10 | 9 | 1 | 10 |
 
-The agent marked 19 of 20 rows as correct. The lower bound of the 95% Wilson interval for 19 of 20 is 76.4%. The sample is small. A person must fill the column `correct_human` before we can quote a precision.
+The project author marked 20 of 20 rows as correct. The lower bound of the 95% Wilson interval for 20 of 20 is 83.9%. The agent marked 19 rows as correct and 1 row as plausible (Mary Beard). The human verdict has no note for each row. The sample is small, and the rows of the model stratum are the rows with the lowest margin.
 
 ## What we checked
 
@@ -66,10 +66,16 @@ The agent marked 19 of 20 rows as correct. The lower bound of the 95% Wilson int
 - A replay with `--offline --adjudicate` reproduced `author_works`, `field_provenance`, and `review_sample.csv` with no difference. The replay ignores `run_id`. `authors` differed in one row: the confidence of Alexandre Dumas, which we set to empty after the first run.
 - Two errors in our code appeared when we read the conflicts. The first error ignored the rank of the Wikidata claims. The second error read "BCE" as a year after the common era. We fixed both, with tests.
 
+## The model adds no information beyond the score
+
+In all 44 rows that the model resolved, the model chose the candidate with the highest score. The same rule "choose the candidate with the highest score" gives the same result for these 44 rows. The model does not improve the matches in this run.
+
+The model changes one row. For Alexandre Dumas, the answer depends on the order of the candidates, so we do not choose. The highest score alone would choose the son.
+
 ## What we did not check
 
-- The precision of the matches. No person checked the 20 rows of the sample.
-- The 44 choices of the model. In all 44 rows, the model chose the candidate with the highest score. So the model confirms the rule and adds no new information in this run.
+- The precision of the matches outside the sample of 20 rows.
+- The 34 choices of the model that are not in the sample.
 - The 40 QIDs with no Open Library link.
 
 ## Doubtful cases
@@ -80,7 +86,7 @@ The agent marked 19 of 20 rows as correct. The lower bound of the 95% Wilson int
 | Various Authors | invalid | The name is not an author. | We keep the row with `is_author = false`. |
 | Alexandre Dumas | ambiguous | The father and the son have the same name and the same score of 98.0. The seed file has no other data. | We keep the status `ambiguous`. See the open decisions in `docs/DECISIONS.md`. |
 | Vicente Huidobro | matched | The `en` label in Wikidata is "Vicente Hohoneo". The `en` description is "colombian poet". | We use the `mul` label. The score is 96.0. The error is in Wikidata. |
-| Mary Beard | matched | The margin is 0.3. The model chose the classicist born in 1955. The historian Mary Ritter Beard is another possible target. | The agent marked the row as plausible. A person must decide. |
+| Mary Beard | matched | The margin is 0.3. The model chose the classicist born in 1955. The historian Mary Ritter Beard is another possible target. | The agent marked the row as plausible. The project author marked it as correct. |
 | Francisco de Quevedo | matched | Wikidata marks the year 1584 as preferred. Open Library has 1580. | We keep the Wikidata value. We set the conflict flag. |
 | Juan Carlos Onetti | matched | Wikidata has the death year 1994. Open Library has 1948. | We keep the Wikidata value. We set the conflict flag. |
 | Ferdowsi | matched | Wikidata has the death year 1020. Open Library has 940. | We keep the Wikidata value. We set the conflict flag. |

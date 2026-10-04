@@ -16,7 +16,7 @@ The input is a CSV file with 500 seed names. The pipeline finds each author in W
 | Layers `raw_*`, `stg_*`, and the final table `authors` | Done. |
 | Export of `authors` to CSV and Parquet | Done. |
 | Open Library, `author_works`, and `field_provenance` | Done. |
-| Sample of 20 matches for a human review | Done. The human column is empty. |
+| Sample of 20 matches for a human review | Done. The project author marked all 20 as correct. |
 | Command `make all` | Done. |
 
 ## Requirements
