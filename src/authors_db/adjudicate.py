@@ -6,7 +6,7 @@ The model only chooses between the candidates, or answers "none". It never creat
 import gzip
 import hashlib
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Literal, Protocol
 
@@ -56,6 +56,8 @@ class Adjudication:
     reason: str | None
     is_valid_output: bool
     raw_response: str
+    reverse_qid: str | None = None
+    order_consistent: bool = True
 
 
 class ChatClient(Protocol):
@@ -190,4 +192,26 @@ def adjudicate_one(
         reason,
         valid,
         raw,
+    )
+
+
+def adjudicate_consistent(
+    client: ChatClient, row_number: int, seed_name: str, candidates: list[CandidateEvidence]
+) -> Adjudication:
+    """Ask twice, with the candidates in reverse order the second time.
+
+    The choice counts only if both answers give the same candidate. This removes the
+    effect of the position of a candidate in the list.
+    """
+    forward = adjudicate_one(client, row_number, seed_name, candidates)
+    backward = adjudicate_one(client, row_number, seed_name, candidates[::-1])
+    consistent = forward.chosen_qid is not None and forward.chosen_qid == backward.chosen_qid
+    if consistent or forward.chosen_qid is None and backward.chosen_qid is None:
+        return replace(forward, reverse_qid=backward.chosen_qid, order_consistent=True)
+    return replace(
+        forward,
+        chosen_qid=None,
+        reverse_qid=backward.chosen_qid,
+        order_consistent=False,
+        reason=f"The answer depends on the order of the candidates. {forward.reason}",
     )

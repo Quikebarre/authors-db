@@ -9,7 +9,7 @@ from pathlib import Path
 import duckdb
 
 from authors_db import config, storage
-from authors_db.adjudicate import Adjudication, OllamaClient, adjudicate_one
+from authors_db.adjudicate import Adjudication, OllamaClient, adjudicate_consistent
 from authors_db.http import CachedClient
 from authors_db.normalize import normalize
 from authors_db.scoring import ScoredCandidate, rank
@@ -67,7 +67,7 @@ def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection) -> list[Adjudication]:
     )
     client = OllamaClient(config.CACHE_DIR / "ollama", offline=False)
     return [
-        adjudicate_one(client, row_number, seed_name, candidates)
+        adjudicate_consistent(client, row_number, seed_name, candidates)
         for row_number, (seed_name, candidates) in evidence.items()
     ]
 

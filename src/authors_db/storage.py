@@ -242,6 +242,8 @@ def build_stg_slm_adjudications(
             a.reason,
             a.is_valid_output,
             a.raw_response,
+            a.reverse_qid,
+            a.order_consistent,
         )
         for a in results
     ]
@@ -263,6 +265,8 @@ def build_stg_slm_adjudications(
                 "reason",
                 "is_valid_output",
                 "raw_response",
+                "reverse_qid",
+                "order_consistent",
             ],
         ).astype(
             {
@@ -271,6 +275,8 @@ def build_stg_slm_adjudications(
                 "reason": "string",
                 "choice": "string",
                 "is_valid_output": "bool",
+                "reverse_qid": "string",
+                "order_consistent": "bool",
             }
         ),
     )

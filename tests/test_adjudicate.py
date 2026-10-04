@@ -1,6 +1,11 @@
 import json
 
-from authors_db.adjudicate import CandidateEvidence, adjudicate_one, format_candidates
+from authors_db.adjudicate import (
+    CandidateEvidence,
+    adjudicate_consistent,
+    adjudicate_one,
+    format_candidates,
+)
 
 
 class FakeClient:
@@ -59,3 +64,36 @@ def test_adjudicate_one_sends_the_seed_name_in_the_user_message():
     client = FakeClient(json.dumps({"choice": "A", "reason": "x"}))
     adjudicate_one(client, 1, "Alexandre Dumas", CANDIDATES)
     assert "Seed name: Alexandre Dumas" in client.messages[-1]["content"]
+
+
+class OrderAwareClient(FakeClient):
+    """Answers with the letter of the first candidate in the list, like a biased model."""
+
+    def __init__(self, letter: str | None = None) -> None:
+        super().__init__("")
+        self._letter = letter
+
+    def chat(self, messages: list[dict[str, str]]) -> str:
+        if self._letter:
+            return json.dumps({"choice": self._letter, "reason": "fixed"})
+        # Always choose the candidate listed as "A".
+        return json.dumps({"choice": "A", "reason": "first"})
+
+
+def test_adjudicate_consistent_with_same_candidate_in_both_orders_keeps_choice():
+    class Stable(FakeClient):
+        def chat(self, messages: list[dict[str, str]]) -> str:
+            letter = "A" if "A. Alexandre Dumas (" in messages[-1]["content"] else "B"
+            return json.dumps({"choice": letter, "reason": "stable"})
+
+    result = adjudicate_consistent(Stable(""), 1, "Alexandre Dumas", CANDIDATES)
+    assert result.order_consistent
+    assert result.chosen_qid == "Q1"
+
+
+def test_adjudicate_consistent_with_position_bias_gives_no_choice():
+    result = adjudicate_consistent(OrderAwareClient(), 1, "Alexandre Dumas", CANDIDATES)
+    assert not result.order_consistent
+    assert result.chosen_qid is None
+    assert result.reverse_qid == "Q2"
+    assert "depends on the order" in (result.reason or "")

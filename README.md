@@ -10,11 +10,12 @@ The input is a CSV file with 500 seed names. The pipeline finds each author in W
 
 | Step | State |
 |---|---|
-| Normalization of seed names | Done. 19 tests. |
-| Search for candidates in Wikidata | Done. |
-| Score for each candidate | Done. The thresholds are not fixed. |
-| Storage layers `raw_*` and `stg_seed_normalized` | Done. 4 tests. |
-| Match status, Open Library, final tables, export | Not built. |
+| Normalization of seed names | Done. |
+| Search for candidates in Wikidata, and score for each candidate | Done. |
+| Match status, with the model and the dominance rule for `ambiguous` rows | Done. |
+| Layers `raw_*`, `stg_*`, and the final table `authors` | Done. |
+| Export of `authors` to CSV and Parquet | Done. |
+| Open Library, `author_works`, and `field_provenance` | Not built. |
 | Command `make all` | Not built. |
 
 ## Requirements
@@ -22,34 +23,59 @@ The input is a CSV file with 500 seed names. The pipeline finds each author in W
 - Python 3.11 or later.
 - [uv](https://docs.astral.sh/uv/) as the package manager.
 - Network access to the Wikidata API for the first run.
+- [Ollama](https://ollama.com/) for the option `--adjudicate`. A GPU with 6 GB of memory is enough.
 
 ## Installation
 
 1. Install `uv`.
 2. Clone the repository.
 3. Run `uv sync`.
+4. For the option `--adjudicate`, run `ollama pull qwen2.5:7b-instruct-q4_K_M`.
 
-## Commands
+## Run the pipeline
 
-Warning: Do not use fewer than 0.4 seconds between two requests. Wikidata returned HTTP 429 at 0.2 seconds with 8 threads. The client in `src/authors_db/http.py` already uses the safe values.
+Warning: Do not use fewer than 0.4 seconds between two requests. Wikidata returned HTTP 429 at 0.2 seconds with 8 threads. The client in `src/authors_db/http.py` already uses the safe value.
+
+1. Run the pipeline: `uv run python -m authors_db run`.
+2. To test with a few rows, add `--limit 20`.
+3. To use only the cache, add `--offline`. The command then makes no request to Wikidata.
+4. To resolve `ambiguous` rows with the model, add `--adjudicate`.
+5. Read the result in `data/output/authors.csv`, `data/output/authors.parquet`, and `data/output/authors.duckdb`.
+
+Note: The first full run makes more than 1,500 requests and takes more than 5 minutes. The client saves each response in `data/cache/`. The repository contains this cache, so `--offline --adjudicate` gives the same result without a network.
+
+## Other commands
 
 1. Run the tests: `uv run pytest`.
 2. Check the code style: `uv run ruff check .`
 3. Show the scores for one name: `uv run python scripts/explore_scoring.py "Mark Twain"`.
-4. Score the full seed file: `uv run python scripts/score_seed.py scores.tsv`.
-5. Check the documents: `uv run python scripts/check_ste.py`.
-
-Note: The first run of step 4 takes more than 5 minutes. The client saves each response in `data/cache/`. Later runs read the cache.
+4. Check the documents: `uv run python scripts/check_ste.py`.
 
 ## Storage layers
 
 The DuckDB database has one prefix for each layer. Each table has the column `run_id`. Each step uses `CREATE OR REPLACE`, so the user can run a step again.
 
-| Layer | Prefix | Content |
-|---|---|---|
-| Raw | `raw_` | The data as it arrives. No change. |
-| Staging | `stg_` | Parsed, normalized, and scored data. |
-| Final | none | The tables `authors`, `author_works`, and `field_provenance`. |
+| Layer | Tables |
+|---|---|
+| Raw | `raw_seed`, `raw_wikidata_responses`, `raw_openlibrary_responses` |
+| Staging | `stg_seed_normalized`, `stg_wikidata_candidates`, `stg_candidate_scores`, `stg_slm_adjudications`, `stg_match_decisions` |
+| Final | `authors` |
+| Metadata | `pipeline_runs` |
+
+The export contains only the final table. The `stg_` tables stay in the `.duckdb` file for audit.
+
+## Columns of `authors`
+
+| Column | Meaning |
+|---|---|
+| `seed_name` | The seed name, as it is in the input file. |
+| `is_author` | `false` for a seed name that is not an author, such as `Anonymous`. |
+| `invalid_reason` | The reason when `is_author` is `false`. |
+| `match_status` | The match status. |
+| `qid` | The Wikidata ID. It is empty if the status is not `matched`. |
+| `resolved_by` | `rule`, `slm`, or `dominance_rule`. |
+| `confidence` | The score divided by 100. A row resolved by `slm` or `dominance_rule` has a factor of 0.8. |
+| `duplicate_of` | The first seed name that has the same `qid`. |
 
 ## Glossary
 
@@ -61,9 +87,10 @@ The documents use one term for each concept.
 | candidate | A human in Wikidata that can be the author of a seed name. |
 | score | A number from 0 to 100 for one candidate. A higher number means a better match. |
 | margin | The score of the best candidate minus the score of the second candidate. |
-| match status | One of `matched`, `ambiguous`, or `not_found`. |
+| match status | One of `matched`, `ambiguous`, `not_found`, or `invalid`. |
+| model | The local language model that chooses between candidates. |
 | pseudonym | A name that an author uses in place of the real name. |
-| cache | The JSON files in `data/cache/` that hold the raw API responses. |
+| cache | The files in `data/cache/` that hold the raw responses of the APIs and of the model. |
 
 ## Note on the style of the text
 
