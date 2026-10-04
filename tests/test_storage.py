@@ -76,10 +76,10 @@ def scored_candidate(
         description="",
         names=[label],
         is_writer=True,
-        open_library_id="OL1A",
+        open_library_ids=["OL1A"],
         sitelinks=sitelinks,
-        birth="1900-01-01",
-        death=None,
+        birth_year=1900,
+        death_year=None,
     )
     return ScoredCandidate(cand, score, sim, label, "reason")
 
@@ -90,6 +90,8 @@ def build_chain(con, tmp_path, names, scored):
     storage.build_stg_candidates_and_scores(con, RUN, scored)
     storage.build_stg_slm_adjudications(con, RUN, [])
     storage.build_stg_match_decisions(con, RUN, min_score=80.0, min_margin=10.0)
+    storage.build_stg_wikidata_labels(con, RUN, {})
+    storage.build_stg_openlibrary(con, RUN, [], [])
     storage.build_authors(con, RUN)
 
 
@@ -209,3 +211,68 @@ def test_row_stays_ambiguous_when_model_and_dominance_rule_give_no_choice(con, t
     build_chain(con, tmp_path, ["Close"], ambiguous_pair(50, 40))
     rebuild_with(con, [adjudication(None)])
     assert con.execute("SELECT match_status, qid FROM authors").fetchone() == ("ambiguous", None)
+
+
+def ol_author(ol_id="OL1A", birth="1900", death=None, wikidata="Q7"):
+    from authors_db.openlibrary import OlAuthor
+
+    return OlAuthor(ol_id, "Name", birth, death, wikidata, "2026-10-04T00:00:00+00:00")
+
+
+def build_with_openlibrary(con, tmp_path, author, status="match"):
+    scored = {1: ("Clear", [scored_candidate("Q7", 98, "Clear")])}
+    build_chain(con, tmp_path, ["Clear"], scored)
+    from authors_db.openlibrary import OlWork, OlWorks
+
+    works = OlWorks(12, [OlWork("/works/OL1W", "Book A", 1950, 40)], "2026-10-04T00:00:00+00:00")
+    storage.build_stg_openlibrary(
+        con, RUN, [("Q7", author, status, True, 12)], [("Q7", "OL1A", works)]
+    )
+    storage.build_authors(con, RUN)
+    storage.build_author_works(con, RUN)
+    storage.build_field_provenance(con, RUN)
+
+
+def test_authors_takes_open_library_fields_from_the_selected_record(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author())
+    row = con.execute(
+        "SELECT open_library_id, open_library_backlink, open_library_work_count FROM authors"
+    ).fetchone()
+    assert row == ("OL1A", "match", 12)
+
+
+def test_author_works_has_one_row_for_each_main_work_keyed_by_qid(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author())
+    assert con.execute("SELECT qid, title, rank FROM author_works").fetchall() == [
+        ("Q7", "Book A", 1)
+    ]
+
+
+def conflicts(con, field):
+    return con.execute(
+        "SELECT source, conflict, note FROM field_provenance WHERE field = ? ORDER BY source",
+        [field],
+    ).fetchall()
+
+
+def test_field_provenance_flags_conflict_when_years_differ(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author(birth="1905"))
+    assert conflicts(con, "birth_year") == [("openlibrary", True, None), ("wikidata", True, None)]
+
+
+def test_field_provenance_has_no_conflict_when_years_are_equal(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author(birth="12 May 1900"))
+    assert conflicts(con, "birth_year") == [("openlibrary", False, None), ("wikidata", False, None)]
+
+
+def test_field_provenance_marks_not_comparable_instead_of_conflict(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author(birth="c. 1900"))
+    assert conflicts(con, "birth_year") == [
+        ("openlibrary", None, "not_comparable"),
+        ("wikidata", None, "not_comparable"),
+    ]
+
+
+def test_field_provenance_flags_backlink_mismatch(con, tmp_path):
+    build_with_openlibrary(con, tmp_path, ol_author(wikidata="Q999"), status="mismatch")
+    assert conflicts(con, "wikidata_qid") == [("openlibrary", True, None)]

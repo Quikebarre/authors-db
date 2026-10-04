@@ -11,6 +11,7 @@ import pandas as pd
 
 from authors_db.adjudicate import Adjudication, CandidateEvidence
 from authors_db.normalize import normalize
+from authors_db.openlibrary import OlAuthor, OlWorks
 from authors_db.scoring import ScoredCandidate
 
 RESPONSE_COLUMNS = ["run_id", "cache_key", "url", "params", "retrieved_at", "response"]
@@ -114,9 +115,14 @@ def build_stg_seed_normalized(con: duckdb.DuckDBPyConnection, run_id: str) -> No
     con.unregister("_norm_df")
 
 
-def _register_and_create(con: duckdb.DuckDBPyConnection, table: str, df: pd.DataFrame) -> None:
+def _register_and_create(
+    con: duckdb.DuckDBPyConnection, table: str, df: pd.DataFrame, list_columns: tuple[str, ...] = ()
+) -> None:
+    """Create a table from a data frame. An empty list has no type, so we cast list columns."""
+    replace = ", ".join(f"CAST({c} AS VARCHAR[]) AS {c}" for c in list_columns)
+    select = f"* REPLACE ({replace})" if replace else "*"
     con.register("_stage_df", df)
-    con.execute(f"CREATE OR REPLACE TABLE {table} AS SELECT * FROM _stage_df")  # noqa: S608
+    con.execute(f"CREATE OR REPLACE TABLE {table} AS SELECT {select} FROM _stage_df")  # noqa: S608
     con.unregister("_stage_df")
 
 
@@ -143,12 +149,17 @@ def build_stg_candidates_and_scores(
                     c.description,
                     c.names,
                     c.is_writer,
-                    c.open_library_id,
+                    c.open_library_ids,
                     c.sitelinks,
-                    c.birth,
-                    c.death,
+                    c.birth_year,
+                    c.death_year,
+                    c.birth_date,
+                    c.death_date,
+                    c.nationality_qids,
+                    c.language_qids,
                     c.found_via,
                     c.via_pseudonym,
+                    c.retrieved_at,
                 )
             )
             score_rows.append(
@@ -181,14 +192,33 @@ def build_stg_candidates_and_scores(
                 "description",
                 "names",
                 "is_writer",
-                "open_library_id",
+                "open_library_ids",
                 "sitelinks",
-                "birth",
-                "death",
+                "birth_year",
+                "death_year",
+                "birth_date",
+                "death_date",
+                "nationality_qids",
+                "language_qids",
                 "found_via",
                 "via_pseudonym",
+                "retrieved_at",
             ],
-        ).astype({"row_number": "int64", "sitelinks": "int64"}),
+        ).astype(
+            {
+                "row_number": "int64",
+                "sitelinks": "int64",
+                "birth_year": "Int64",
+                "death_year": "Int64",
+            }
+        ),
+        list_columns=(
+            "names",
+            "open_library_ids",
+            "nationality_qids",
+            "language_qids",
+            "found_via",
+        ),
     )
     _register_and_create(
         con,
@@ -287,8 +317,9 @@ def read_ambiguous_evidence(
 ) -> dict[int, tuple[str, list[CandidateEvidence]]]:
     """Read the `ambiguous` rows with the evidence of the candidates that cause the doubt."""
     rows = con.execute(f"""
-        SELECT s.row_number, s.seed_name, c.qid, c.label, s.best_name, c.description, c.birth,
-               c.death, c.is_writer, c.open_library_id IS NOT NULL, c.sitelinks
+        SELECT s.row_number, s.seed_name, c.qid, c.label, s.best_name, c.description,
+               CAST(c.birth_year AS VARCHAR), CAST(c.death_year AS VARCHAR), c.is_writer,
+               len(c.open_library_ids) > 0, c.sitelinks
         FROM stg_match_decisions d
         JOIN stg_candidate_scores s ON s.row_number = d.row_number
         JOIN stg_wikidata_candidates c ON c.row_number = s.row_number AND c.qid = s.qid
@@ -394,6 +425,129 @@ def build_stg_match_decisions(
     """)  # noqa: S608 - the values are constants from `config`
 
 
+def build_stg_wikidata_labels(
+    con: duckdb.DuckDBPyConnection, run_id: str, labels: dict[str, tuple[str, str | None]]
+) -> None:
+    """Create `stg_wikidata_labels` with the label of each country and language QID."""
+    rows = [(run_id, qid, label, retrieved) for qid, (label, retrieved) in sorted(labels.items())]
+    _register_and_create(
+        con,
+        "stg_wikidata_labels",
+        pd.DataFrame(rows, columns=["run_id", "qid", "label", "retrieved_at"]).astype("string"),
+    )
+
+
+def build_stg_openlibrary(
+    con: duckdb.DuckDBPyConnection,
+    run_id: str,
+    authors: list[tuple[str, OlAuthor | None, str, bool, int | None]],
+    works: list[tuple[str, str, OlWorks]],
+) -> None:
+    """Create `stg_openlibrary_authors` and `stg_openlibrary_works`.
+
+    Each author tuple has: QID, Open Library record, backlink status, selected flag, work count.
+    A QID without an Open Library ID has a row with `ol_id` empty and the status `no_ol_id`.
+    Each works tuple has: QID, Open Library ID, works.
+    """
+    author_rows = [
+        (
+            run_id,
+            qid,
+            rec.ol_id if rec else None,
+            rec.name if rec else None,
+            rec.birth_text if rec else None,
+            rec.death_text if rec else None,
+            rec.birth_year if rec else None,
+            rec.death_year if rec else None,
+            rec.wikidata_qid if rec else None,
+            status,
+            selected,
+            count,
+            rec.retrieved_at if rec else None,
+        )
+        for qid, rec, status, selected, count in authors
+    ]
+    _register_and_create(
+        con,
+        "stg_openlibrary_authors",
+        pd.DataFrame(
+            author_rows,
+            columns=[
+                "run_id",
+                "qid",
+                "ol_id",
+                "name",
+                "birth_text",
+                "death_text",
+                "birth_year",
+                "death_year",
+                "wikidata_qid",
+                "backlink_status",
+                "is_selected",
+                "work_count",
+                "retrieved_at",
+            ],
+        ).astype(
+            {
+                "birth_year": "Int64",
+                "death_year": "Int64",
+                "work_count": "Int64",
+                "ol_id": "string",
+                "name": "string",
+                "birth_text": "string",
+                "death_text": "string",
+                "wikidata_qid": "string",
+                "retrieved_at": "string",
+                "is_selected": "bool",
+            }
+        ),
+    )
+    work_rows = [
+        (
+            run_id,
+            qid,
+            ol_id,
+            rank_number,
+            w.work_key,
+            w.title,
+            w.first_publish_year,
+            w.edition_count,
+            ow.retrieved_at,
+        )
+        for qid, ol_id, ow in works
+        for rank_number, w in enumerate(ow.works, 1)
+    ]
+    _register_and_create(
+        con,
+        "stg_openlibrary_works",
+        pd.DataFrame(
+            work_rows,
+            columns=[
+                "run_id",
+                "qid",
+                "ol_id",
+                "rank",
+                "work_key",
+                "title",
+                "first_publish_year",
+                "edition_count",
+                "retrieved_at",
+            ],
+        ).astype(
+            {
+                "rank": "int64",
+                "first_publish_year": "Int64",
+                "edition_count": "Int64",
+                "qid": "string",
+                "ol_id": "string",
+                "work_key": "string",
+                "title": "string",
+                "retrieved_at": "string",
+            }
+        ),
+    )
+
+
 def build_authors(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
     """Create `authors` with SQL: one row for each seed name, with `duplicate_of`."""
     con.execute(f"""
@@ -401,13 +555,19 @@ def build_authors(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
         WITH base AS (
             SELECT d.row_number, d.seed_name, n.display_name, NOT n.is_invalid AS is_author,
                    n.invalid_reason, n.exact_dup_of, d.match_status, d.confidence,
-                   d.match_reason, d.resolved_by,
-                   d.chosen_qid AS qid
+                   d.match_reason, d.resolved_by, d.chosen_qid AS qid
             FROM stg_match_decisions d JOIN stg_seed_normalized n USING (row_number)
         )
         SELECT '{run_id}' AS run_id, b.row_number, b.seed_name, b.display_name, b.is_author,
                b.invalid_reason, b.match_status, b.qid, c.label AS canonical_name,
-               c.birth, c.death, c.open_library_id, b.confidence, b.match_reason, b.resolved_by,
+               c.birth_year, c.death_year, c.birth_date, c.death_date,
+               (SELECT string_agg(l.label, '; ' ORDER BY l.label) FROM stg_wikidata_labels l
+                WHERE list_contains(c.nationality_qids, l.qid)) AS nationality,
+               (SELECT string_agg(l.label, '; ' ORDER BY l.label) FROM stg_wikidata_labels l
+                WHERE list_contains(c.language_qids, l.qid)) AS languages,
+               o.ol_id AS open_library_id, o.backlink_status AS open_library_backlink,
+               o.work_count AS open_library_work_count,
+               b.confidence, b.match_reason, b.resolved_by,
                COALESCE(b.exact_dup_of,
                         CASE WHEN b.qid IS NOT NULL
                                   AND b.row_number > MIN(b.row_number) OVER (PARTITION BY b.qid)
@@ -416,7 +576,88 @@ def build_authors(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
                ) AS duplicate_of
         FROM base b
         LEFT JOIN stg_wikidata_candidates c ON c.row_number = b.row_number AND c.qid = b.qid
+        LEFT JOIN stg_openlibrary_authors o ON o.qid = b.qid AND o.is_selected
         ORDER BY b.row_number
+    """)  # noqa: S608 - the run id is generated by the pipeline
+
+
+def build_author_works(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
+    """Create `author_works`: the main works of each author. The key is the QID, not the row."""
+    con.execute(f"""
+        CREATE OR REPLACE TABLE author_works AS
+        SELECT '{run_id}' AS run_id, w.qid, w.ol_id AS open_library_id, w.rank, w.work_key,
+               w.title, w.first_publish_year, w.edition_count, w.retrieved_at
+        FROM stg_openlibrary_works w
+        WHERE w.qid IN (SELECT qid FROM authors WHERE qid IS NOT NULL)
+        ORDER BY w.qid, w.rank
+    """)  # noqa: S608 - the run id is generated by the pipeline
+
+
+def build_field_provenance(con: duckdb.DuckDBPyConnection, run_id: str) -> None:
+    """Create `field_provenance`: source, value, and time for each field of each author.
+
+    The conflict flag compares years only. It is NULL when a year is missing or not comparable.
+    """
+    con.execute(f"""
+        CREATE OR REPLACE TABLE field_provenance AS
+        WITH q AS (SELECT DISTINCT qid FROM authors WHERE qid IS NOT NULL),
+             wd AS (
+                 SELECT c.* FROM stg_wikidata_candidates c JOIN q USING (qid)
+                 QUALIFY ROW_NUMBER() OVER (PARTITION BY c.qid ORDER BY c.row_number) = 1
+             ),
+             ol AS (SELECT * FROM stg_openlibrary_authors WHERE is_selected AND ol_id IS NOT NULL),
+             cmp AS (
+                 SELECT wd.qid,
+                        CASE WHEN wd.birth_year IS NULL OR ol.birth_year IS NULL THEN NULL
+                             ELSE wd.birth_year <> ol.birth_year END AS birth_conflict,
+                        CASE WHEN wd.death_year IS NULL OR ol.death_year IS NULL THEN NULL
+                             ELSE wd.death_year <> ol.death_year END AS death_conflict
+                 FROM wd LEFT JOIN ol USING (qid)
+             )
+        SELECT '{run_id}' AS run_id, qid, field, source, value, retrieved_at, conflict,
+               CASE WHEN conflict IS NULL AND comparable THEN 'not_comparable' END AS note
+        FROM (
+            SELECT wd.qid, 'canonical_name' AS field, 'wikidata' AS source, wd.label AS value,
+                   wd.retrieved_at, CAST(NULL AS BOOLEAN) AS conflict, FALSE AS comparable
+            FROM wd
+            UNION ALL
+            SELECT wd.qid, 'birth_year', 'wikidata', CAST(wd.birth_year AS VARCHAR),
+                   wd.retrieved_at, cmp.birth_conflict, ol.qid IS NOT NULL
+            FROM wd JOIN cmp USING (qid) LEFT JOIN ol USING (qid)
+            UNION ALL
+            SELECT ol.qid, 'birth_year', 'openlibrary', ol.birth_text, ol.retrieved_at,
+                   cmp.birth_conflict, TRUE
+            FROM ol JOIN cmp USING (qid)
+            UNION ALL
+            SELECT wd.qid, 'death_year', 'wikidata', CAST(wd.death_year AS VARCHAR),
+                   wd.retrieved_at, cmp.death_conflict, ol.qid IS NOT NULL
+            FROM wd JOIN cmp USING (qid) LEFT JOIN ol USING (qid)
+            UNION ALL
+            SELECT ol.qid, 'death_year', 'openlibrary', ol.death_text, ol.retrieved_at,
+                   cmp.death_conflict, TRUE
+            FROM ol JOIN cmp USING (qid)
+            UNION ALL
+            SELECT wd.qid, 'open_library_id', 'wikidata',
+                   array_to_string(wd.open_library_ids, '; '), wd.retrieved_at,
+                   CAST(NULL AS BOOLEAN), FALSE
+            FROM wd WHERE len(wd.open_library_ids) > 0
+            UNION ALL
+            SELECT ol.qid, 'wikidata_qid', 'openlibrary', ol.wikidata_qid, ol.retrieved_at,
+                   CASE WHEN ol.wikidata_qid IS NULL THEN NULL
+                        ELSE ol.wikidata_qid <> ol.qid END, TRUE
+            FROM ol
+            UNION ALL
+            SELECT ol.qid, 'work_count', 'openlibrary', CAST(ol.work_count AS VARCHAR),
+                   ol.retrieved_at, CAST(NULL AS BOOLEAN), FALSE
+            FROM ol
+            UNION ALL
+            SELECT wd.qid, 'nationality', 'wikidata',
+                   (SELECT string_agg(l.label, '; ' ORDER BY l.label) FROM stg_wikidata_labels l
+                    WHERE list_contains(wd.nationality_qids, l.qid)),
+                   wd.retrieved_at, CAST(NULL AS BOOLEAN), FALSE
+            FROM wd WHERE len(wd.nationality_qids) > 0
+        )
+        ORDER BY qid, field, source
     """)  # noqa: S608 - the run id is generated by the pipeline
 
 

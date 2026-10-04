@@ -9,10 +9,10 @@ def make(qid: str = "Q1", names: list[str] | None = None, **kw) -> Candidate:
         "description": "",
         "names": names or ["x"],
         "is_writer": False,
-        "open_library_id": None,
+        "open_library_ids": [],
         "sitelinks": 0,
-        "birth": None,
-        "death": None,
+        "birth_year": None,
+        "death_year": None,
     }
     return Candidate(**{**base, **kw})
 
@@ -40,8 +40,8 @@ def test_name_similarity_token_subset_is_capped_below_exact():
 
 
 def test_score_candidate_writer_with_open_library_outranks_namesake():
-    author = make("Q1", ["Homer"], is_writer=True, open_library_id="OL1A")
-    painter = make("Q2", ["Homer"], open_library_id="OL2A")
+    author = make("Q1", ["Homer"], is_writer=True, open_library_ids=["OL1A"])
+    painter = make("Q2", ["Homer"], open_library_ids=["OL2A"])
     ranked = rank("homer", [painter, author])
     assert [s.candidate.qid for s in ranked] == ["Q1", "Q2"]
 
@@ -53,6 +53,8 @@ def test_score_candidate_sitelinks_only_break_ties():
 
 
 def test_score_candidate_reason_lists_evidence():
-    scored = score_candidate("homer", make(names=["Homer"], is_writer=True, open_library_id="OL1A"))
+    scored = score_candidate(
+        "homer", make(names=["Homer"], is_writer=True, open_library_ids=["OL1A"])
+    )
     assert "writer+15" in scored.reason
     assert "openlibrary+15" in scored.reason

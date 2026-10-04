@@ -12,10 +12,17 @@ from authors_db import config, storage
 from authors_db.adjudicate import Adjudication, OllamaClient, adjudicate_consistent
 from authors_db.http import CachedClient
 from authors_db.normalize import normalize
+from authors_db.openlibrary import (
+    OlAuthor,
+    OlWorks,
+    OpenLibrarySource,
+    backlink_status,
+    select_author,
+)
 from authors_db.scoring import ScoredCandidate, rank
-from authors_db.wikidata import WikidataSource
+from authors_db.wikidata import Candidate, WikidataSource
 
-FINAL_TABLES = ("authors",)
+FINAL_TABLES = ("authors", "author_works", "field_provenance")
 THREADS = 4
 
 
@@ -72,6 +79,46 @@ def adjudicate_ambiguous(con: duckdb.DuckDBPyConnection) -> list[Adjudication]:
     ]
 
 
+AuthorRow = tuple[str, OlAuthor | None, str, bool, int | None]
+
+
+def enrich_open_library(
+    source: OpenLibrarySource, candidates: dict[str, Candidate]
+) -> tuple[list[AuthorRow], list[tuple[str, str, OlWorks]]]:
+    """Read the Open Library records and the main works for each matched QID.
+
+    The record that links back to the QID is the selected record. A QID with no Open Library ID
+    gets one row with the status `no_ol_id`.
+    """
+
+    def work(item: tuple[str, Candidate]) -> tuple[list[AuthorRow], list[tuple[str, str, OlWorks]]]:
+        qid, cand = item
+        if not cand.open_library_ids:
+            return [(qid, None, backlink_status(None, qid), True, None)], []
+        records = [source.author(ol_id) for ol_id in cand.open_library_ids]
+        selected = select_author(records, qid)
+        works = source.works(selected.ol_id) if selected and selected.found else None
+        rows: list[AuthorRow] = [
+            (
+                qid,
+                rec,
+                backlink_status(rec, qid),
+                rec is selected,
+                works.work_count if rec is selected and works else None,
+            )
+            for rec in records
+        ]
+        return rows, ([(qid, selected.ol_id, works)] if selected and works else [])
+
+    author_rows: list[AuthorRow] = []
+    work_rows: list[tuple[str, str, OlWorks]] = []
+    with ThreadPoolExecutor(max_workers=THREADS) as pool:
+        for rows, works in pool.map(work, sorted(candidates.items())):
+            author_rows += rows
+            work_rows += works
+    return author_rows, work_rows
+
+
 def run(limit: int | None = None, offline: bool = False, adjudicate: bool = False) -> str:
     """Run all steps. Return the run id."""
     started = datetime.now(UTC)
@@ -85,12 +132,6 @@ def run(limit: int | None = None, offline: bool = False, adjudicate: bool = Fals
 
     client = CachedClient(config.CACHE_DIR / "wikidata", offline=offline, min_interval_s=0.4)
     scored = score_seed_names(names, WikidataSource(client))
-    storage.build_raw_responses(
-        con, run_id, "raw_wikidata_responses", config.CACHE_DIR / "wikidata"
-    )
-    storage.build_raw_responses(
-        con, run_id, "raw_openlibrary_responses", config.CACHE_DIR / "openlibrary"
-    )
     storage.build_stg_candidates_and_scores(con, run_id, scored)
     decision_args = (
         config.MIN_MATCH_SCORE,
@@ -103,7 +144,26 @@ def run(limit: int | None = None, offline: bool = False, adjudicate: bool = Fals
     if adjudicate:
         storage.build_stg_slm_adjudications(con, run_id, adjudicate_ambiguous(con))
         storage.build_stg_match_decisions(con, run_id, *decision_args)
+    by_qid = {sc.candidate.qid: sc.candidate for _, ranked in scored.values() for sc in ranked}
+    chosen_qids = con.execute(
+        "SELECT DISTINCT chosen_qid FROM stg_match_decisions WHERE chosen_qid IS NOT NULL"
+    ).fetchall()
+    chosen = {qid: by_qid[qid] for (qid,) in chosen_qids}
+    wikidata = WikidataSource(client)
+    label_qids = {q for c in chosen.values() for q in (*c.nationality_qids, *c.language_qids)}
+    storage.build_stg_wikidata_labels(con, run_id, wikidata.labels(label_qids))
+    ol_client = CachedClient(config.CACHE_DIR / "openlibrary", offline=offline, min_interval_s=0.5)
+    author_rows, work_rows = enrich_open_library(OpenLibrarySource(ol_client), chosen)
+    storage.build_stg_openlibrary(con, run_id, author_rows, work_rows)
+    storage.build_raw_responses(
+        con, run_id, "raw_wikidata_responses", config.CACHE_DIR / "wikidata"
+    )
+    storage.build_raw_responses(
+        con, run_id, "raw_openlibrary_responses", config.CACHE_DIR / "openlibrary"
+    )
     storage.build_authors(con, run_id)
+    storage.build_author_works(con, run_id)
+    storage.build_field_provenance(con, run_id)
     export_final_tables(con, config.OUTPUT_DIR)
     storage.record_pipeline_run(
         con,
@@ -113,8 +173,11 @@ def run(limit: int | None = None, offline: bool = False, adjudicate: bool = Fals
         {
             "limit": limit,
             "offline": offline,
+            "adjudicate": adjudicate,
+            "model": config.OLLAMA_MODEL if adjudicate else None,
             "min_score": config.MIN_MATCH_SCORE,
             "min_margin": config.MIN_MARGIN,
+            "dominance_ratio": config.DOMINANCE_RATIO,
         },
     )
     con.close()

@@ -55,3 +55,40 @@ def test_parse_candidate_prefers_mul_label_over_wrong_english_label():
     assert cand is not None
     assert cand.label == "Vicente Huidobro"
     assert "Vicente Hohoneo" in cand.names
+
+
+def time_claim(time: str, precision: int) -> dict:
+    return {"mainsnak": {"datavalue": {"value": {"time": time, "precision": precision}}}}
+
+
+def test_parse_candidate_keeps_negative_year_and_no_date_for_year_precision():
+    entity = {
+        "id": "Q6691",
+        "claims": {"P31": [item("Q5")], "P569": [time_claim("-0900-00-00T00:00:00Z", 9)]},
+    }
+    cand = parse_candidate(entity)
+    assert (cand.birth_year, cand.birth_date) == (-900, None)
+
+
+def test_parse_candidate_gives_full_date_for_day_precision():
+    entity = {
+        "id": "Q1",
+        "claims": {"P31": [item("Q5")], "P569": [time_claim("+1893-01-10T00:00:00Z", 11)]},
+    }
+    cand = parse_candidate(entity)
+    assert (cand.birth_year, cand.birth_date) == (1893, "1893-01-10")
+
+
+def test_parse_candidate_reads_all_open_library_ids_and_nationality():
+    entity = {
+        "id": "Q1",
+        "claims": {
+            "P31": [item("Q5")],
+            "P648": [string("OL1A"), string("OL2A")],
+            "P27": [item("Q298")],
+            "P1412": [item("Q1321")],
+        },
+    }
+    cand = parse_candidate(entity)
+    assert cand.open_library_ids == ["OL1A", "OL2A"]
+    assert (cand.nationality_qids, cand.language_qids) == (["Q298"], ["Q1321"])

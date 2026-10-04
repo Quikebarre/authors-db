@@ -58,7 +58,7 @@ def main() -> None:
         for s in ranked:
             c = s.candidate
             lines.append(
-                f"  {s.score:5.1f} {c.qid:<10} {c.label[:26]:<26} {c.birth or '':<10} "
+                f"  {s.score:5.1f} {c.qid:<10} {c.label[:26]:<26} {c.birth_year or '':<6} "
                 f"{c.description[:38]:<38} | {s.reason}"
             )
         return "\n".join(lines)

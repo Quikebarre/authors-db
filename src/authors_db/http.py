@@ -52,9 +52,13 @@ class CachedClient:
 
     def get_json(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
         """Return the JSON response. Use the cache when it has a record for the request."""
+        return dict(self.get_record(url, params)["response"])
+
+    def get_record(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
+        """Return the cache record: URL, parameters, retrieval time, and response."""
         path = self._cache_path(url, params)
         if path.exists():
-            return json.loads(gzip.decompress(path.read_bytes()))["response"]
+            return dict(json.loads(gzip.decompress(path.read_bytes())))
         if self._offline:
             raise OfflineCacheMissError(f"{url} {params}")
         response = self._get_with_retry(url, params)
@@ -65,7 +69,7 @@ class CachedClient:
             "response": response,
         }
         path.write_bytes(gzip.compress(json.dumps(record, ensure_ascii=False).encode("utf-8")))
-        return response
+        return record
 
     @staticmethod
     def _retry_delay(resp: httpx.Response, attempt: int) -> float:
@@ -81,6 +85,8 @@ class CachedClient:
                 if resp.status_code in (429, 500, 502, 503, 504) and attempt < attempts - 1:
                     time.sleep(self._retry_delay(resp, attempt))
                     continue
+                if resp.status_code == 404:
+                    return {"_http_status": 404}
                 resp.raise_for_status()
                 return resp.json()
             except httpx.TransportError:

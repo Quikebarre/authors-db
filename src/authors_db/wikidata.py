@@ -1,5 +1,6 @@
 """Search for candidates in Wikidata and parse the entities."""
 
+import re
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any
@@ -48,12 +49,22 @@ class Candidate:
     description: str
     names: list[str]
     is_writer: bool
-    open_library_id: str | None
+    open_library_ids: list[str]
     sitelinks: int
-    birth: str | None
-    death: str | None
+    birth_year: int | None
+    death_year: int | None
+    birth_date: str | None = None  # Only with day precision.
+    death_date: str | None = None
+    nationality_qids: list[str] = field(default_factory=list)
+    language_qids: list[str] = field(default_factory=list)
     found_via: list[str] = field(default_factory=list)
     via_pseudonym: str | None = None
+    retrieved_at: str | None = None
+
+    @property
+    def open_library_id(self) -> str | None:
+        """The first Open Library ID. The pipeline can choose another one later."""
+        return self.open_library_ids[0] if self.open_library_ids else None
 
 
 def _item_ids(entity: dict[str, Any], prop: str) -> list[str]:
@@ -76,12 +87,25 @@ def _string_values(entity: dict[str, Any], prop: str) -> list[str]:
     return out
 
 
-def _time_value(entity: dict[str, Any], prop: str) -> str | None:
+TIME_RE = re.compile(r"^([+-])(\d+)-(\d\d)-(\d\d)T")
+DAY_PRECISION = 11
+
+
+def _time_parts(entity: dict[str, Any], prop: str) -> tuple[int | None, str | None]:
+    """Return (year, date). The date is set only when Wikidata has day precision."""
     for claim in entity.get("claims", {}).get(prop, []):
         value = claim.get("mainsnak", {}).get("datavalue", {}).get("value")
-        if isinstance(value, dict) and "time" in value:
-            return str(value["time"]).lstrip("+")[:10]
-    return None
+        if not isinstance(value, dict) or "time" not in value:
+            continue
+        match = TIME_RE.match(str(value["time"]))
+        if not match:
+            continue
+        sign, digits, month, day = match.groups()
+        year = int(f"{sign}{digits}")
+        if value.get("precision", 0) >= DAY_PRECISION and month != "00" and day != "00":
+            return year, f"{sign if sign == '-' else ''}{digits.zfill(4)}-{month}-{day}"
+        return year, None
+    return None, None
 
 
 def _labels(entity: dict[str, Any]) -> tuple[str, str, list[str]]:
@@ -103,17 +127,23 @@ def parse_candidate(entity: dict[str, Any]) -> Candidate | None:
     if HUMAN not in _item_ids(entity, "P31"):
         return None
     label, desc, names = _labels(entity)
-    ol = _string_values(entity, "P648")
+    birth_year, birth_date = _time_parts(entity, "P569")
+    death_year, death_date = _time_parts(entity, "P570")
     return Candidate(
         qid=entity["id"],
         label=label,
         description=desc,
         names=names,
         is_writer=bool(WRITER_OCCUPATIONS & set(_item_ids(entity, "P106"))),
-        open_library_id=ol[0] if ol else None,
+        open_library_ids=_string_values(entity, "P648"),
         sitelinks=len(entity.get("sitelinks", {})),
-        birth=_time_value(entity, "P569"),
-        death=_time_value(entity, "P570"),
+        birth_year=birth_year,
+        death_year=death_year,
+        birth_date=birth_date,
+        death_date=death_date,
+        nationality_qids=_item_ids(entity, "P27"),
+        language_qids=_item_ids(entity, "P1412"),
+        retrieved_at=entity.get("_retrieved_at"),
     )
 
 
@@ -166,7 +196,9 @@ class WikidataSource:
                 "languages": LANGUAGES,
                 "props": "labels|aliases|descriptions|claims|sitelinks",
             }
-            out.update(self._client.get_json(API, params).get("entities", {}))
+            record = self._client.get_record(API, params)
+            for qid, entity in record["response"].get("entities", {}).items():
+                out[qid] = {**entity, "_retrieved_at": record["retrieved_at"]}
         return out
 
     def candidates(self, name: str) -> list[Candidate]:
@@ -210,3 +242,21 @@ class WikidataSource:
                         dict.fromkeys([*cand.names, *_labels(entities[pseudo_qid])[2]])
                     )
         return list(result.values())
+
+    def labels(self, qids: Iterable[str]) -> dict[str, tuple[str, str | None]]:
+        """Return (label, retrieved_at) for each QID, for example a country or a language."""
+        ids = sorted(set(qids))
+        out: dict[str, tuple[str, str | None]] = {}
+        for i in range(0, len(ids), FETCH_BATCH):
+            params = {
+                "action": "wbgetentities",
+                "ids": "|".join(ids[i : i + FETCH_BATCH]),
+                "format": "json",
+                "languages": "en|mul",
+                "props": "labels",
+            }
+            record = self._client.get_record(API, params)
+            for qid, entity in record["response"].get("entities", {}).items():
+                label = _labels(entity)[0]
+                out[qid] = (label, record["retrieved_at"])
+        return out
